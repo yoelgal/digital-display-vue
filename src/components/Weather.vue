@@ -223,7 +223,7 @@ export default {
   /*box-shadow: inset 0.3vh 0.3vh 0.5vh #161414, inset -0.2vh -0.2vh 0.1vh #5a5252;*/
   border-style: solid;
   border-color: #7f8fa6;
-  border-radius: 4.6vh;
+  border-radius: 4.7vh;
   background-color: #273c75;;
   margin-bottom: 3vh;
   padding: 0.5vh 2vh 0.5vh 2vh;
