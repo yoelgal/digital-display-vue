@@ -1,51 +1,56 @@
 <template>
   <div class="weather">
     <div class="weather-grid">
-      <div class="weather__time">
-        <div class="day__display">{{ polledData.forecast[0].time }}</div>
-        <img :src="polledData.forecast[0].icon" class="weatherIcon">
-        <div class="temp">{{ polledData.forecast[0].temp }}°C</div>
-        <div class="weatherDesc">{{ polledData.forecast[0].desc }}</div>
+      <div class="weather-grid-container">
+        <div class="weather__time">
+          <div class="day__display">{{ polledData.forecast[0].time }}</div>
+          <img :src="polledData.forecast[0].icon" class="weatherIcon">
+          <div class="temp">{{ polledData.forecast[0].temp }}°C</div>
+          <div class="weatherDesc">{{ polledData.forecast[0].desc }}</div>
+        </div>
+        <div class="weather__time">
+          <div class="day__display">{{ polledData.forecast[1].time }}</div>
+          <img :src="polledData.forecast[1].icon" class="weatherIcon">
+          <div class="temp">{{ polledData.forecast[1].temp }}°C</div>
+          <div class="weatherDesc">{{ polledData.forecast[2].desc }}</div>
+        </div>
+        <div class="weather__time">
+          <div class="day__display">{{ polledData.forecast[2].time }}</div>
+          <img :src="polledData.forecast[2].icon" class="weatherIcon">
+          <div class="temp">{{ polledData.forecast[2].temp }}°C</div>
+          <div class="weatherDesc">{{ polledData.forecast[2].desc }}</div>
+        </div>
+        <div class="weather__time">
+          <div class="day__display">{{ polledData.forecast[3].time }}</div>
+          <img :src="polledData.forecast[3].icon" class="weatherIcon">
+          <div class="temp">{{ polledData.forecast[3].temp }}°C</div>
+          <div class="weatherDesc">{{ polledData.forecast[3].desc }}</div>
+        </div>
+        <div class="weather__time">
+          <div class="day__display">{{ polledData.forecast[4].time }}</div>
+          <img :src="polledData.forecast[4].icon" class="weatherIcon">
+          <div class="temp">{{ polledData.forecast[4].temp }}°C</div>
+          <div class="weatherDesc">{{ polledData.forecast[4].desc }}</div>
+        </div>
       </div>
-      <div class="weather__time">
-        <div class="day__display">{{ polledData.forecast[1].time }}</div>
-        <img :src="polledData.forecast[1].icon" class="weatherIcon">
-        <div class="temp">{{ polledData.forecast[1].temp }}°C</div>
-        <div class="weatherDesc">{{ polledData.forecast[2].desc }}</div>
+
+      <div class="bottom_bar">
+        <div class="sunrise">
+          <!--        <img src="https://img.icons8.com/ios/50/000000/sunrise--v1.png" class="bottom_icon">-->
+                  <img src="../assets/iconmonstr-weather-107-240.png" class="bottom_icon">
+          <div class="sun__time">{{ polledData.sunrise }}</div>
+        </div>
+        <div class="sunset">
+          <!--        <img src="https://img.icons8.com/ios/100/000000/sunset--v1.png" class="bottom_icon">-->
+                  <img src="../assets/iconmonstr-weather-109-240.png" class="bottom_icon">
+          <div class="sun__time">{{ polledData.sunset }}</div>
+        </div>
       </div>
-      <div class="weather__time">
-        <div class="day__display">{{ polledData.forecast[2].time }}</div>
-        <img :src="polledData.forecast[2].icon" class="weatherIcon">
-        <div class="temp">{{ polledData.forecast[2].temp }}°C</div>
-        <div class="weatherDesc">{{ polledData.forecast[2].desc }}</div>
-      </div>
-      <div class="weather__time">
-        <div class="day__display">{{ polledData.forecast[3].time }}</div>
-        <img :src="polledData.forecast[3].icon" class="weatherIcon">
-        <div class="temp">{{ polledData.forecast[3].temp }}°C</div>
-        <div class="weatherDesc">{{ polledData.forecast[3].desc }}</div>
-      </div>
-      <div class="weather__time">
-        <div class="day__display">{{ polledData.forecast[4].time }}</div>
-        <img :src="polledData.forecast[4].icon" class="weatherIcon">
-        <div class="temp">{{ polledData.forecast[4].temp }}°C</div>
-        <div class="weatherDesc">{{ polledData.forecast[4].desc }}</div>
-      </div>
+
     </div>
 
 
-    <div class="bottom_bar">
-      <div class="sunrise">
-<!--        <img src="https://img.icons8.com/ios/50/000000/sunrise&#45;&#45;v1.png" class="bottom_icon">-->
-        <img src="../assets/iconmonstr-weather-107-240.png" class="bottom_icon">
-        <div class="sun__time">{{ polledData.sunrise }}</div>
-      </div>
-      <div class="sunset">
-<!--        <img src="https://img.icons8.com/ios/100/000000/sunset&#45;&#45;v1.png" class="bottom_icon">-->
-        <img src="../assets/iconmonstr-weather-109-240.png" class="bottom_icon">
-        <div class="sun__time">{{ polledData.sunset }}</div>
-      </div>
-    </div>
+
   </div>
 
 </template>
@@ -153,41 +158,48 @@ export default {
 .weather {
   grid-column: 1/5;
   grid-row: 2/6;
-  height: 100%;
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
   font-family: 'Poppins', sans-serif;
+
 }
 
 .weather-grid {
   display: grid;
-  grid-template-rows: repeat(1, 1fr);
-  grid-template-columns: repeat(5, 1fr);
-  column-gap: 0.1vw;
-  max-height: 60%;
-  grid-row: 1/2;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+  width: 100%;
+  height: 100%;
+
 }
 
+.weather-grid-container {
+  grid-column: 1/11;
+  grid-row:1/8;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+
 .weather__time {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   justify-content: space-around;
   text-align: center;
-  margin-top: 2vh;
+  height: 25vh;
 
-  grid-row-start: 1;
-  grid-row-end: 5;
-  padding-left: 0.5vw;
-  padding-right: 0.5vw;
 }
 
 .day__display {
   font-size: 2vw;
+
 }
 
 .temp {
   font-size: 3vh;
   text-align: center;
   margin-bottom: 1vh;
+
 }
 
 
@@ -196,10 +208,12 @@ export default {
   margin-bottom: 1vh;
   max-width: 6.5vw;
   align-content: center;
+
 }
 
 .weatherIcon {
   height: 10vh;
+
 }
 
 .sunrise {
@@ -211,6 +225,10 @@ export default {
   border-color: #7f8fa6;
   border-radius: 4.5vh;
   background-color: #273c75;;
+  margin-bottom: 3vh;
+  padding: 0.5vh 2vh 0.5vh 2vh;
+
+
 
 }
 
@@ -223,12 +241,17 @@ export default {
   border-color: #7f8fa6;
   border-radius: 4.5vh;
   background-color: #273c75;
+
+  margin-bottom: 3vh;
+  padding: 0.5vh 2vh 0.5vh 2vh;
+
 }
 
 .sun__time {
   font-size: 3vh;
   padding-bottom: 1vh;
   grid-row: 2/2;
+
 }
 
 .bottom_icon {
@@ -236,13 +259,16 @@ export default {
   height: 6vh;
   margin-bottom: 0vh;
   grid-row: 1/2;
+
 }
 
 .bottom_bar {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(5, 1fr);
-  grid-row: 2/2;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  grid-row: 8/11;
+  grid-column: 1/11;
+
 
 }
 

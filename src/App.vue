@@ -75,7 +75,7 @@ export default {
   gap: 2vh;
   padding: 3vh;
   height: 100vh;
-  background-color: #2f3640;
+  background-color: #7491ad;
   /*background-color: #e70404;*/
 }
 

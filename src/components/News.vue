@@ -4,7 +4,7 @@
       <div class='department-notices-title'>News Headlines
       </div>
       <div class='department-notices-data'>
-        <ul>
+        <ul class="department-notices-data-list">
           <li>{{ polledData[this.startNum+0].title }}</li>
           <li>{{ polledData[this.startNum+1].title }}</li>
           <li>{{ polledData[this.startNum+2].title }}</li>
@@ -16,6 +16,10 @@
 
 <script>
 import axios from "axios";
+
+
+
+
 
 export default {
   name: "Department-notices",
@@ -71,18 +75,22 @@ export default {
   font-family: "Kanit", sans-serif;
 }
 
-.department-notices-data ul {
+.department-notices-data-list {
   color: white;
   padding-left: 4vh;
   padding-top: 1vh;
   max-width: 95%;
+  font-size: 1.9vh;
+
+
 }
 
 .department-notices-data {
   grid-column: 1/14;
-  grid-row: 3/11;
+  grid-row: 2/11;
   font-size: 2vh;
   font-family: "kanit", sans-serif;
+
 }
 
 .department-notices-line-container {

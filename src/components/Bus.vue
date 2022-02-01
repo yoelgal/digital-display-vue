@@ -157,7 +157,7 @@ export default {
   font-size: 2.2vh;
   text-align: center;
   font-family: "Dongle", sans-serif;
-  box-shadow: 0.3vh 0.3vh 0.5vh #161414, -0.2vh -0.2vh 0.1vh #5a5252;
+  box-shadow: 0.3vh 0.3vh 0.5vh #161414, -0.2vh -0.2vh 0.1vh #d2cbcb;
   border-radius: 50%;
 }
 
@@ -170,7 +170,7 @@ export default {
   opacity: 0.5;
   font-size: 3vh;
   font-family: "Dongle", sans-serif;
-  box-shadow: inset 0.3vh 0.3vh 0.5vh #161414, inset -0.2vh -0.2vh 0.1vh #5a5252;
+  box-shadow: inset 0.3vh 0.3vh 0.5vh #161414, inset -0.2vh -0.2vh 0.1vh #c7bdbd;
   border-radius: 2vh;
 }
 
@@ -180,7 +180,7 @@ export default {
   padding-left: 0.5vw;
   border-radius: 2vh;
   font-family: "Dongle", sans-serif;
-  box-shadow: inset 0.1vh 0.1vh 0.5vh #161414, inset -0.1vh -0.1vh 0.1vh #5a5252;
+  box-shadow: inset 0.1vh 0.1vh 0.5vh #161414, inset -0.1vh -0.1vh 0.1vh #a8a3a3;
   width: 5vw;
 }
 
@@ -207,7 +207,8 @@ export default {
   width: 9.5vw;
   height: 14vh;
   border-radius: 2vh;
-  box-shadow: 0.1vh 0.1vh 0.1vh #e70404, -0vh -0vh 1vh rgb(114, 118, 122);
+  border: 0.2vh solid #ada7a7;
+  box-shadow: 0.3vh 0.3vh 0.1vh #ded9d9, -0vh -0vh 1vh rgb(114, 118, 122);
 }
 
 .square4 {
