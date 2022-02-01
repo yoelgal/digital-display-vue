@@ -62,7 +62,7 @@ export default {
   methods: {
     pollData() {
       this.polling = setInterval(async () => {
-        const bus = (await (await fetch('http://localhost:3000/bus')).json());
+        const bus = (await (await fetch('https://digital-display-express.herokuapp.com/bus')).json());
         // this.polledData = bus
         this.polledData = {
           edgware: [
@@ -94,6 +94,7 @@ export default {
 .bus {
   grid-column: 1/5;
   grid-row: 6/10;
+
 }
 
 .bus-grid-container {

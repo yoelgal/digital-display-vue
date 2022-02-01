@@ -11,9 +11,7 @@
       <div class="date">
         <h1>{{ day }}</h1>
         <br/>
-        <br/>
         <h1>{{ date }}</h1>
-        <br/>
         <br/>
         <h1>{{ month }}</h1>
       </div>
@@ -99,7 +97,7 @@ export default {
 <style scoped>
 .date-time {
   grid-column: 9/12;
-  grid-row: 3/10;
+  grid-row: 4/10;
 }
 
 .date-time-grid {

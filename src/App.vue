@@ -1,16 +1,16 @@
 <template>
   <div id="app">
     <div class="grid-container">
-      <Title></Title>
-      <school-notices></school-notices>
-      <department-notices></department-notices>
-      <period></period>
-      <weather></weather>
-      <bus></bus>
-      <room-uses></room-uses>
-      <facts></facts>
-      <lunch></lunch>
-      <date-time-dad-joke></date-time-dad-joke>
+      <Title class="bg"></Title>
+      <school-notices class="bg"></school-notices>
+      <department-notices class="bg"></department-notices>
+      <period class="bg"></period>
+      <weather class="bg"></weather>
+      <bus class="bg"></bus>
+      <room-uses class="bg"></room-uses>
+      <facts class="bg"></facts>
+      <lunch class="bg"></lunch>
+      <date-time-dad-joke class="bg"></date-time-dad-joke>
     </div>
   </div>
 </template>
@@ -19,7 +19,7 @@
 import Bus from './components/Bus.vue'
 import Title from './components/Title'
 import SchoolNotices from "@/components/School-notices";
-import departmentNotices from "@/components/Department-notices";
+import departmentNotices from "@/components/News";
 import period from "@/components/Period";
 import weather from "@/components/Weather";
 import roomUses from "@/components/Room-uses";
@@ -73,16 +73,16 @@ export default {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 2vh;
-  background: rgb(56, 52, 52);
   padding: 3vh;
   height: 100vh;
+  background-color: #2f3640;
 }
 
 .grid-container > div {
   padding: 0vh;
   color: white;
   border-radius: 2vh;
-  background: #444343de;
+  /*background: #444343de;*/
    /*box-shadow: 0.2vh 0.2vh 0.1vh #f10842, 0.5vh 0.5vh 1vh #4e4b4b,
     -0.4vh -0.4vh 0.1vh #12cbd8, -0.5vh -0.5vh 0.1vh #ffffff;*/
   /* 5px 5px 10px #4e4b4b,
@@ -90,5 +90,9 @@ export default {
   display: flex;
   box-shadow: 0.5vh 0.5vh 0.5vh black, -0vh 0vh 0.1vh #1f1c1c,
   inset 0.2vh 0.2vh 0.1vh black, inset -0vh -0vh 0.1vh #111010;
+}
+
+.bg {
+  background-color: #273c75;
 }
 </style>

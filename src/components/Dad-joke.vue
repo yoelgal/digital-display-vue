@@ -22,13 +22,13 @@ export default {
   methods: {
     pollData() {
       this.polling = setInterval(async () => {
-        const joke = (await (await fetch('http://localhost:3000/dad-joke')).json()).newText;
+        const joke = (await (await fetch('https://digital-display-express.herokuapp.com/dad-joke')).json()).newText;
         this.polledData = joke
       }, 86400000)
     },
     pullData() {
       axios
-          .get('http://localhost:3000/dad-joke')
+          .get('https://digital-display-express.herokuapp.com/dad-joke')
           .then(response => (this.polledData = response.data.newText))
     }
   },

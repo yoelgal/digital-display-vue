@@ -34,13 +34,13 @@ export default {
   methods: {
     pollData() {
       this.polling = setInterval(async () => {
-        const fact = (await (await fetch('http://localhost:3000/quotes')).json()).cs;
+        const fact = (await (await fetch('https://digital-display-express.herokuapp.com/quotes')).json()).cs;
         this.polledData = fact
       }, 86400000)
     },
     pullData() {
       axios
-          .get('http://localhost:3000/quotes')
+          .get('https://digital-display-express.herokuapp.com/quotes')
           .then(response => (this.polledData = response.data.cs))
     }
   },
