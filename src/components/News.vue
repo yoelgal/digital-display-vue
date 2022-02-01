@@ -81,7 +81,7 @@ export default {
 .department-notices-data {
   grid-column: 1/14;
   grid-row: 3/11;
-  font-size: 2vh;
+  font-size: 1.6vh;
   font-family: "kanit", sans-serif;
 }
 
