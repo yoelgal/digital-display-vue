@@ -75,8 +75,8 @@ export default {
   gap: 2vh;
   padding: 3vh;
   height: 100vh;
-  /*background-color: #2f3640;*/
-  background-color: #e70404;
+  background-color: #2f3640;
+  /*background-color: #e70404;*/
 }
 
 .grid-container > div {
