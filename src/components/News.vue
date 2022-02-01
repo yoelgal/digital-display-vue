@@ -5,9 +5,13 @@
       </div>
       <div class='department-notices-data'>
         <ul class="department-notices-data-list">
+          <hr/>
           <li>{{ polledData[this.startNum+0].title }}</li>
+          <hr/>
           <li>{{ polledData[this.startNum+1].title }}</li>
+          <hr/>
           <li>{{ polledData[this.startNum+2].title }}</li>
+          <hr/>
         </ul>
       </div>
     </div>
@@ -43,6 +47,9 @@ export default {
           .then(response => (this.polledData = response.data))
     }
   },
+  mounted() {
+    this.pullData()
+  },
   beforeDestroy() {
     clearInterval(this.polling)
   },
@@ -66,7 +73,7 @@ export default {
 }
 
 .department-notices-title {
-  grid-row: 1/4;
+  grid-row: 1/2;
   grid-column: 1/10;
 
   padding-left: 1vw;
@@ -81,13 +88,14 @@ export default {
   padding-top: 1vh;
   max-width: 95%;
   font-size: 1.9vh;
+  vert-align: middle;
 
 
 }
 
 .department-notices-data {
   grid-column: 1/14;
-  grid-row: 2/11;
+  grid-row: 2/10;
   font-size: 2vh;
   font-family: "kanit", sans-serif;
 
