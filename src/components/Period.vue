@@ -60,6 +60,10 @@ export default {
       }
     }
   },
+  mounted() {
+    const now = new dayjs().format('HHmm')
+    this.polledData = this.findPeriod(now)
+  },
   beforeDestroy() {
     clearInterval(this.polling)
   },
