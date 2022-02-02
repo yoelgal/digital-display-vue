@@ -3,21 +3,21 @@
     <div class='room-uses-grid-container'>
       <div class='room-uses-grid'>
         <div class='room-uses-title'>Room Uses</div>
-        <div class='room-uses-data-container'>
-          <table style='position: relative;left: 0.2vw;'>
-            <tr>
-              <th>IT 1</th>
-              <th>IT 2</th>
-              <th>IT 3</th>
-              <th style='border-right: none;'>IT 4</th>
-            </tr>
-            <tr>
-              <td>10C</td>
-              <td>9A</td>
-              <td>12A</td>
-              <td>13B</td>
-            </tr>
-          </table>
+        <div class='room-uses-data-container1'>
+          <ul style="margin-left: 1vw">
+            <li>IT 1:</li>
+            <p style="display:block">Class: 10C</p>
+            <li>IT 2:</li>
+            <p>Class: 10C</p>
+          </ul>
+        </div>
+        <div class='room-uses-data-container2'>
+          <ul>
+            <li>IT 1:</li>
+            <p style="display:block">Class: 10C</p>
+            <li>IT 2:</li>
+            <p>Class: 10C</p>
+          </ul>
         </div>
 
         <div class='room-line1'>
@@ -74,36 +74,24 @@ export default {
   font-family: "kanit", sans-serif;
 }
 
-.room-uses-data-container {
-  padding-top: 0.5vh;
+.room-uses-data-container1 {
   grid-row: 5/12;
-  grid-column: 2/19;
+  grid-column: 2/10;
   display: flex;
-  text-align: center;
-  flex-direction: row;
-  font-size: 5.2vh;
-  font-family: "Dongle", sans-serif;
-}
-
-.room-uses-data-container th {
-  border-bottom: 0.3vh dashed white;
-  border-radius: 2vh;
-}
-
-.room-uses-data-container th,
-td {
-  border-right: 0.3vh dashed white;
-  border-top-right-radius: 2vh;
-}
-
-.room1,
-.room2,
-.room3,
-.room4 {
-  width: 50%;
-  height: 100%;
+  flex-direction: column;
   font-size: 3vh;
   font-family: "Dongle", sans-serif;
+
+}
+
+.room-uses-data-container2 {
+  grid-row: 5/12;
+  grid-column: 13/19;
+  display: flex;
+  flex-direction: column;
+  font-size: 3vh;
+  font-family: "Dongle", sans-serif;
+
 }
 
 .logo {
