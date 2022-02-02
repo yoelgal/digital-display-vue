@@ -47,6 +47,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: 'HelloWorld',
   data() {
@@ -74,11 +76,26 @@ export default {
             bus.golders[1] || "N/A"
           ]
         }
-
-        const date = new Date()
-        this.polledDate = date
       }, 40000)
+    },
+    pullData() {
+      console.log('Bus mount')
+      axios
+          .get('https://digital-display-express.herokuapp.com/bus')
+          .then(response => (this.polledData = {
+            edgware: [
+              response.data.edgware[0] || "N/A",
+              response.data.edgware[1] || "N/A"
+            ],
+            golders: [
+              response.data.golders[0] || "N/A",
+              response.data.golders[1] || "N/A"
+            ]
+          }))
     }
+  },
+  mounted() {
+    this.pullData()
   },
   beforeDestroy() {
     clearInterval(this.polling)

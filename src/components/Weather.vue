@@ -175,14 +175,14 @@ export default {
   grid-column: 1/11;
   grid-row:1/8;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 
 }
 
 
 .weather__time {
-  display: flex;
+  /*display: flex;*/
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
@@ -213,7 +213,6 @@ export default {
 
 .weatherIcon {
   height: 10vh;
-
 }
 
 .sunrise {
@@ -222,6 +221,7 @@ export default {
   grid-column-start: 2;
   /*box-shadow: inset 0.3vh 0.3vh 0.5vh #161414, inset -0.2vh -0.2vh 0.1vh #5a5252;*/
   border-style: solid;
+  border-width: 2px;
   border-color: #7f8fa6;
   border-radius: 4.7vh;
   background-color: #273c75;;
@@ -241,6 +241,7 @@ export default {
   border-color: #7f8fa6;
   border-radius: 4.7vh;
   background-color: #273c75;
+  border-width: 2px;
 
   margin-bottom: 3vh;
   padding: 0.5vh 2vh 0.5vh 2vh;
@@ -255,7 +256,7 @@ export default {
 }
 
 .bottom_icon {
-  margin-top: 1vh;
+  margin-top: 0.5vh;
   height: 6vh;
   margin-bottom: 0vh;
   grid-row: 1/2;
