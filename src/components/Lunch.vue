@@ -55,12 +55,13 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .lunch {
-  grid-row: 3/11;
+  grid-row: 3/10;
   grid-column: 7/9;
   display: flex;
   flex-direction: column;
+
 }
 
 .lunch-title {
@@ -101,11 +102,10 @@ export default {
   flex-direction: column;
   text-align: center;
   font-family: "Dongle", sans-serif;
-}
-
-.lunch-underline {
 
 }
+
+
 
 .lunch img {
   width: 3vw;

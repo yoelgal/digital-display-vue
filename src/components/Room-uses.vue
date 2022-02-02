@@ -178,8 +178,9 @@ export default {
 
 .daily-fact-container {
   width: 100%;
-  height: 100%;
+  height: 70%;
   text-align: center;
+
 }
 
 .daily-fact p {
