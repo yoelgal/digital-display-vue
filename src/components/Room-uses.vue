@@ -19,20 +19,28 @@
             <p>Class: 10C</p>
           </ul>
         </div>
-
-        <div class='room-line1'>
-          <div>
+        <div class="room-quote-line">
+          <hr>
+        </div>
+        <div class="daily-quoteXX">
+          <div class="facts-title-bar">
+            <ion-icon style="padding-left: 1vw" class="book-icon" name="book"></ion-icon>
+            <div  class='fact-title'>Daily Quote</div>
+            <ion-icon style="padding-right: 1vw" class="book-icon" name="book"></ion-icon>
 
           </div>
-        </div>
-        <div class='room-line2'>
-          <div>
+          <div class="daily-fact-container">
+            <div class="daily-fact" :class="polledData.text.length>200?'smaller': 'regular'">
+              <p>
+                {{polledData.text}} - {{polledData.author}}
+              </p>
 
+            </div>
           </div>
         </div>
-        <div class='logo'>
-          <img src="../assets/logo.png" width="2" height="5" alt="">
-        </div>
+
+
+
       </div>
     </div>
 
@@ -40,19 +48,54 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
-  name: "Room-uses"
+  name1: "Room-uses",
+  name: "Facts",
+  data() {
+    return {
+      polling: null,
+      polledData: {
+        text: 'Loading quote...',
+        author: 'Loading author...'
+      }
+    }
+  },
+  methods: {
+    pollData() {
+      this.polling = setInterval(async () => {
+        const fact = (await (await fetch('https://digital-display-express.herokuapp.com/quotes')).json()).cs;
+        this.polledData = fact
+      }, 86400000)
+    },
+    pullData() {
+      axios
+          .get('https://digital-display-express.herokuapp.com/quotes')
+          .then(response => (this.polledData = response.data.cs))
+    }
+  },
+  mounted() {
+    this.pullData()
+  },
+  beforeDestroy() {
+    clearInterval(this.polling)
+  },
+  created() {
+    this.pollData()
+  }
 }
 </script>
 
 <style scoped>
 .room-uses {
   grid-column: 5/7;
-  grid-row: 3/8;
+  grid-row: 3/10;
 }
 
 .room-uses-grid-container {
   width: 100%;
+
 }
 
 .room-uses-grid {
@@ -61,31 +104,34 @@ export default {
   grid-template-rows: repeat(20, 1fr);
   width: 100%;
   height: 100%;
+
 }
 
 .room-uses-title {
   grid-column: 1/21;
-  grid-row: 1/6;
+  grid-row: 1/4;
   font-size: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: underline;
   font-family: "kanit", sans-serif;
+
 }
 
 .room-uses-data-container1 {
-  grid-row: 5/12;
+  grid-row: 4/10;
   grid-column: 2/10;
   display: flex;
   flex-direction: column;
   font-size: 3vh;
   font-family: "Dongle", sans-serif;
 
+
 }
 
 .room-uses-data-container2 {
-  grid-row: 5/12;
+  grid-row: 4/10;
   grid-column: 13/19;
   display: flex;
   flex-direction: column;
@@ -94,16 +140,59 @@ export default {
 
 }
 
-.logo {
-  grid-column: 3/18;
-  grid-row: 12/21;
+.room-quote-line{
+  grid-row: 10/12;
+  grid-column: 1/21;
+  padding-top: 3vh;
+}
+
+.daily-quoteXX {
+  grid-column: 1/21;
+  grid-row: 11/21;
+
+
+}
+.facts-title-bar {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: ;
+
 }
 
-.logo img {
-  width: 90%;
-  height: 90%;
+.fact-title {
+  letter-spacing: 1vh;
+  font-size: 3vh;
+  text-align: center;
+  text-decoration: underline;
+  font-family: "Kanit", sans-serif;
+
 }
+
+.book-icon {
+  padding-top: 1vh;
+  height: 5vh;
+  width: 3vw;
+
+}
+
+.daily-fact-container {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.daily-fact p {
+  margin-top: 3vh;
+  display: block;
+  font-family: "Kanit", sans-serif;
+  align-self: center;
+  vertical-align: middle;
+  padding-top: 2%;
+  padding-left: 6%;
+  padding-right: 6%;
+  justify-content: center;
+  /* font-family: "Dongle", sans-serif; */
+}
+
 </style>

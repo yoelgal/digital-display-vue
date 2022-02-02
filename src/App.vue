@@ -8,7 +8,7 @@
       <weather class="bg"></weather>
       <bus class="bg"></bus>
       <room-uses class="bg"></room-uses>
-      <facts class="bg"></facts>
+
       <lunch class="bg"></lunch>
       <date-time-dad-joke class="bg"></date-time-dad-joke>
     </div>
@@ -23,7 +23,6 @@ import departmentNotices from "@/components/News";
 import period from "@/components/Period";
 import weather from "@/components/Weather";
 import roomUses from "@/components/Room-uses";
-import facts from "@/components/Quote";
 import lunch from "@/components/Lunch";
 import dateTimeDadJoke from "@/components/Date-time-Dad-joke";
 
@@ -37,7 +36,6 @@ export default {
     period,
     weather,
     roomUses,
-    facts,
     lunch,
     dateTimeDadJoke
   }

@@ -18,42 +18,7 @@
 </template>
 
 <script>
-import axios from "axios";
 
-export default {
-  name: "Facts",
-  data() {
-    return {
-      polling: null,
-      polledData: {
-        text: 'Loading quote...',
-        author: 'Loading author...'
-      }
-    }
-  },
-  methods: {
-    pollData() {
-      this.polling = setInterval(async () => {
-        const fact = (await (await fetch('https://digital-display-express.herokuapp.com/quotes')).json()).cs;
-        this.polledData = fact
-      }, 86400000)
-    },
-    pullData() {
-      axios
-          .get('https://digital-display-express.herokuapp.com/quotes')
-          .then(response => (this.polledData = response.data.cs))
-    }
-  },
-  mounted() {
-    this.pullData()
-  },
-  beforeDestroy() {
-    clearInterval(this.polling)
-  },
-  created() {
-    this.pollData()
-  }
-}
 </script>
 
 <style scoped>

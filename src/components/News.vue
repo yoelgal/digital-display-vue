@@ -21,7 +21,31 @@
 <script>
 import axios from "axios";
 
-
+// const isOverflown = ({ clientHeight, scrollHeight }) =>
+//     scrollHeight > clientHeight;
+//
+// const parent = document.querySelector('.text-container')
+// console.log(isOverflown(parent));
+//
+// const resizeText = ({ element, parent }) => {
+//   let i = 3;
+//   let overflow = false;
+//   const maxSize = 128;
+//
+//   while (!overflow && i < maxSize) {
+//     element.style.fontSize = `${i}px`;
+//     overflow = isOverflown(parent);
+//     if (!overflow) i++;
+//   }
+//
+//
+//   element.style.fontSize = `${i - 1}px`;
+// };
+//
+// resizeText({
+//   element: document.querySelector(".text"),
+//   parent: document.querySelector(".text-container"),
+// });
 
 
 

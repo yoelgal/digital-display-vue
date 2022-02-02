@@ -57,7 +57,7 @@ export default {
 
 <style scoped>
 .lunch {
-  grid-row: 3/8;
+  grid-row: 3/11;
   grid-column: 7/9;
   display: flex;
   flex-direction: column;
@@ -78,8 +78,9 @@ export default {
   display: flex;
   flex-direction: column;
   /* grid-template-columns: repeat(10, 1fr); */
-  max-height: 34vh;
+  height: 100%;
   max-width: 100%;
+
 }
 
 .icons-items div {
@@ -103,13 +104,7 @@ export default {
 }
 
 .lunch-underline {
-  content: "";
-  width: 90%;
-  margin: auto;
 
-  border-radius: 50%;
-  border: 0.4vh solid black;
-  background: white;
 }
 
 .lunch img {
