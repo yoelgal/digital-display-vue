@@ -79,7 +79,6 @@ export default {
       }, 40000)
     },
     pullData() {
-      console.log('Bus mount')
       axios
           .get('https://digital-display-express.herokuapp.com/bus')
           .then(response => (this.polledData = {
