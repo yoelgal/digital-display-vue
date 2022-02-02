@@ -31,7 +31,7 @@
           </div>
         </div>
         <div class='logo'>
-          <img src="../assets/logo.png" width="2" height="5" alt="">
+          <img src="../assets/mookle420.png" width="2" height="5" alt="">
         </div>
       </div>
     </div>
