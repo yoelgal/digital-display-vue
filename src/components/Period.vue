@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       polling: null,
-      polledData: {period: 'Period', range: '00:00 - 00:00'}
+      polledData: {period: 'Period', range: 'loading...'}
     }
   },
   methods: {
@@ -59,7 +59,7 @@ export default {
       } else if (time >= "1550" && time < "1630") {
         return {period: '9', range: '15:50 - 16:30'}
       } else {
-        return {period: 'N/a', lower: '16:30', upper: '09:00'}
+        return {period: 'N/a', range: '16:30 - 09:00'}
       }
     }
   },
@@ -105,7 +105,8 @@ export default {
 }
 
 .period-length {
-  margin-top: 1vh;
+
+  margin-bottom: 2vh;
   font-size: 2vh;
   opacity: 0.7;
   text-align: center;
