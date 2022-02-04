@@ -66,7 +66,7 @@ export default {
         this.polledData = [news[this.startNum+0].title, news[this.startNum+1].title, news[this.startNum+2].title]
         this.textLength = this.polledData[0].length + this.polledData[1].length + this.polledData[2].length
         console.log(this.textLength)
-      }, 5000)
+      }, 30000)
     },
     pullData() {
       axios
