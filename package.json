@@ -12,7 +12,8 @@
     "core-js": "^3.6.5",
     "dayjs": "^1.10.7",
     "phosphor-vue": "^1.4.0",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-resize-text": "^0.1.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

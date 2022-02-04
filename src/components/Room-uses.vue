@@ -30,7 +30,7 @@
 
           </div>
           <div class="daily-fact-container">
-            <div class="daily-fact" :class="polledData.text.length>200?'smaller': 'regular'">
+            <div class="daily-fact" :class="polledData.text.length>100?'smaller': 'regular'">
               <p>
                 {{polledData.text}} - {{polledData.author}}
               </p>
@@ -65,9 +65,9 @@ export default {
   methods: {
     pollData() {
       this.polling = setInterval(async () => {
-        const fact = (await (await fetch('https://digital-display-express.herokuapp.com/quotes')).json()).cs;
+        const fact = (await (await fetch('https://fathomless-crag-41517.herokuapp.com/quotes')).json()).cs;
         this.polledData = fact
-      }, 86400000)
+      }, /*86400000*/ 10000)
     },
     pullData() {
       axios
@@ -156,7 +156,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: ;
 
 }
 
@@ -194,6 +193,14 @@ export default {
   padding-right: 6%;
   justify-content: center;
   /* font-family: "Dongle", sans-serif; */
+}
+
+.regular {
+  font-size: 2.5vh;
+}
+
+.smaller {
+  font-size: 2vh;
 }
 
 </style>

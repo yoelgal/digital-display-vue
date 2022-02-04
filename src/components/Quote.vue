@@ -11,7 +11,6 @@
         <p>
           {{polledData.text}} - {{polledData.author}}
         </p>
-
       </div>
     </div>
   </div>
@@ -73,7 +72,7 @@
 }
 
 .smaller {
-  font-size: 1.5vh;
+  font-size: 1.3vh;
 }
 
 </style>

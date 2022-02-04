@@ -1,6 +1,6 @@
 <template>
   <div class="title">
-    <img class="uk-flag" src="../assets/flag.jpg" alt="" />
+    <img class="uk-flag" src="../assets/logo.png" alt="" />
     <h1>Digital Dashboard</h1>
   </div>
 </template>
@@ -34,9 +34,9 @@ export default {
 }
 
 .uk-flag {
-  width: 3.5vw;
-  height: 5vh;
-  border-radius: 50%;
+  /*width: 3.5vw;*/
+  height: 7vh;
+  /*border-radius: 50%;*/
 }
 
 </style>

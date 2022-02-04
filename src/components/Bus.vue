@@ -64,7 +64,7 @@ export default {
   methods: {
     pollData() {
       this.polling = setInterval(async () => {
-        const bus = (await (await fetch('https://digital-display-express.herokuapp.com/bus')).json());
+        const bus = (await (await fetch('https://fathomless-crag-41517.herokuapp.com/bus')).json());
         // this.polledData = bus
         this.polledData = {
           edgware: [
@@ -80,7 +80,7 @@ export default {
     },
     pullData() {
       axios
-          .get('https://digital-display-express.herokuapp.com/bus')
+          .get('https://fathomless-crag-41517.herokuapp.com/bus')
           .then(response => (this.polledData = {
             edgware: [
               response.data.edgware[0] || "N/A",

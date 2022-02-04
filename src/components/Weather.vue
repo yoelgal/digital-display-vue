@@ -132,12 +132,12 @@ export default {
   methods: {
     pollData() {
       this.polling = setInterval(async () => {
-        const weather = (await (await fetch('https://digital-display-express.herokuapp.com/weather')).json());
+        const weather = (await (await fetch('https://fathomless-crag-41517.herokuapp.com/weather')).json());
         this.polledData = weather
       }, 300000)
     }, pullData() {
       axios
-          .get('https://digital-display-express.herokuapp.com/weather')
+          .get('https://fathomless-crag-41517.herokuapp.com/weather')
           .then(response => (this.polledData = response.data))
     }
   },

@@ -4,13 +4,13 @@
       <div class='department-notices-title'>News Headlines
       </div>
       <div class='department-notices-data'>
-        <ul class="department-notices-data-list">
+        <ul class="department-notices-data-list"  :class="this.textLength>330?'smaller': 'regular'" >
           <hr/>
-          <li>{{ polledData[this.startNum+0].title }}</li>
+          <li>{{ polledData[0] }}</li>
           <hr/>
-          <li>{{ polledData[this.startNum+1].title }}</li>
+          <li>{{ polledData[1] }}</li>
           <hr/>
-          <li>{{ polledData[this.startNum+2].title }}</li>
+          <li>{{ polledData[2] }}</li>
           <hr/>
         </ul>
       </div>
@@ -48,37 +48,42 @@ import axios from "axios";
 // });
 
 
-
 export default {
   name: "Department-notices",
   data() {
     return {
       polling: null,
       startNum: 0,
-      polledData: ['null', 'null', 'null']
+      polledData: ['loading...', 'loading...', 'loading...'],
+      textLength: 400
     }
   },
   methods: {
     pollData() {
       this.polling = setInterval(async () => {
-        const news = (await (await fetch('https://digital-display-express.herokuapp.com/news')).json());
-        this.polledData = news
-        this.startNum < 12 ? this.startNum +=3 : this.startNum=0
-      }, 60000)
-    }, pullData() {
+        const news = (await (await fetch('https://fathomless-crag-41517.herokuapp.com/news')).json());
+        this.startNum < 12 ? this.startNum += 3 : this.startNum = 0
+        this.polledData = [news[this.startNum+0].title, news[this.startNum+1].title, news[this.startNum+2].title]
+        this.textLength = this.polledData[0].length + this.polledData[1].length + this.polledData[2].length
+        console.log(this.textLength)
+      }, 5000)
+    },
+    pullData() {
       axios
-          .get('https://digital-display-express.herokuapp.com/news')
-          .then(response => (this.polledData = response.data))
+          .get('https://fathomless-crag-41517.herokuapp.com/news')
+          .then(response => (this.polledData =  [response.data[this.startNum+0].title, response.data[this.startNum+1].title, response.data[this.startNum+2].title]))
+      this.textLength = this.polledData[0].length + this.polledData[1].length + this.polledData[2].length
     }
   },
-  mounted() {
-    this.pullData()
-  },
+  // mounted() {
+  //   this.pullData()
+  // },
   beforeDestroy() {
     clearInterval(this.polling)
   },
   created() {
     this.pollData()
+
   }
 }
 </script>
@@ -111,7 +116,6 @@ export default {
   padding-left: 4vh;
   padding-top: 1vh;
   max-width: 95%;
-  font-size: 1.9vh;
   vert-align: middle;
 
 
@@ -120,9 +124,16 @@ export default {
 .department-notices-data {
   grid-column: 1/14;
   grid-row: 2/10;
-  font-size: 2vh;
   font-family: "kanit", sans-serif;
 
+}
+
+.regular {
+  font-size: 2vh;
+}
+
+.smaller {
+  font-size: 1.5vh;
 }
 
 .department-notices-line-container {
