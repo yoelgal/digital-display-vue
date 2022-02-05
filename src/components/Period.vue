@@ -94,6 +94,8 @@ export default {
 
 .period-number {
   text-align: center;
+  position: relative;
+  top:2vh;
 }
 
 .regular {
@@ -106,7 +108,8 @@ export default {
 
 .period-length {
 
-  margin-bottom: 2vh;
+  position:relative ;
+  top: 5vh;
   font-size: 2vh;
   opacity: 0.7;
   text-align: center;

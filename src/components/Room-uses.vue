@@ -180,6 +180,7 @@ export default {
   height: 70%;
   text-align: center;
 
+
 }
 
 .daily-fact p {

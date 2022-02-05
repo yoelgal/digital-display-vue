@@ -253,6 +253,7 @@ export default {
   padding-bottom: 1vh;
   grid-row: 2/2;
 
+
 }
 
 .bottom_icon {

@@ -138,18 +138,7 @@ export default {
   font-family: "Kanit", sans-serif;
 }
 
-.timer {
-  grid-row: 8/11;
-  grid-column: 13/15;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  font-size: 5vh;
-  padding: 2.5vh;
-  border: 0.3vh dashed #cdd9da;
-  font-family: "Dongle", sans-serif;
-}
+
 
 .stop1-name,
 .stop2-name {
@@ -173,42 +162,63 @@ export default {
   font-size: 2.2vh;
   text-align: center;
   font-family: "Dongle", sans-serif;
-  box-shadow: 0.3vh 0.3vh 0.5vh #161414, -0.2vh -0.2vh 0.1vh #d2cbcb;
-  border-radius: 50%;
+  border: 0.2vh solid white;
+  border-radius: 2vh;
+
+/* h6 is 'to edware' */
+
+
 }
 
 .stop1 h5,
 .stop2 h5 {
-  padding-top: 0.5vh;
-  padding-right: 0vw;
+
+  position: relative;
+  left: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 4vw;
-  padding-left: 0.5vw;
+  border-radius: 2vh;
   opacity: 0.5;
-  font-size: 3vh;
+  font-size: 4vh;
   font-family: "Dongle", sans-serif;
   box-shadow: inset 0.3vh 0.3vh 0.5vh #161414, inset -0.2vh -0.2vh 0.1vh #c7bdbd;
-  border-radius: 2vh;
+
 }
+
+/*h5 is second time*/
 
 .stop1 h4,
 .stop2 h4 {
-  font-size: 4vh;
+  font-size: 7vh;
   padding-left: 0.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 2vh;
   font-family: "Dongle", sans-serif;
-  box-shadow: inset 0.1vh 0.1vh 0.5vh #161414, inset -0.1vh -0.1vh 0.1vh #a8a3a3;
-  width: 5vw;
+  box-shadow: inset 0.2vh 0.2vh 0.5vh #161414, inset -0.2vh -0.2vh 0.1vh #a8a3a3;
+  width: 6vw;
+  height: 7vh;
+
+
 }
+
+/*h4 is main time*/
 
 
 .square1 {
   grid-row: 1/10;
   grid-column: 5/13;
+
 }
 
 .square2 {
-  grid-row: 11/21;
+  grid-row: 10/21;
   grid-column: 5/13;
+
+
 }
 
 .square3 {
@@ -223,7 +233,7 @@ export default {
   width: 9.5vw;
   height: 14vh;
   border-radius: 2vh;
-  border: 0.2vh solid #ada7a7;
+
   box-shadow: 0.3vh 0.3vh 0.1vh #ded9d9, -0vh -0vh 1vh rgb(114, 118, 122);
 }
 

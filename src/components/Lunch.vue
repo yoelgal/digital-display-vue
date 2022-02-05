@@ -6,7 +6,7 @@
         <img src="../assets/cooking-pot.png" width=40 height=50 alt="">
         <div id='lunchData'>
           <h4>Soup Of The Day:</h4>
-          <h5>x x x x x x x x x x</h5>
+          <h5  id = 'size-increase' >x x x x x x x x x x</h5>
         </div>
       </div>
       <div class='lunch-underline'></div>
@@ -14,7 +14,7 @@
         <img src="../assets/hamburger.png" width="40" height="50" alt="">
         <div id='lunchData'>
           <h4>Main Meal:</h4>
-          <h5>x x x x x x x x x x</h5>
+          <h5 id = 'size-increase'>x x x x x x x x x x</h5>
         </div>
       </div>
       <div class='lunch-underline'></div>
@@ -22,7 +22,7 @@
         <img src="../assets/fish.png" width="40" height="50" alt="">
         <div id='lunchData'>
           <h4>Vegetarian:</h4>
-          <h5>x x x x x x x x x x</h5>
+          <h5 id = 'size-increase' >x x x x x x x x x x</h5>
         </div>
       </div>
 
@@ -31,7 +31,7 @@
         <img src="../assets/egg-crack.png" width="40" height="50" alt="">
         <div id='lunchData'>
           <h4>Lighter Option:</h4>
-          <h5>x x x x x x x x x x</h5>
+          <h5  id = 'size-increase' >x x x x x x x x x x</h5>
         </div>
       </div>
       <div class='lunch-underline'></div>
@@ -39,7 +39,7 @@
         <img src="../assets/cookie.png" width="40" height="50" alt="">
         <div id='lunchData'>
           <h4>Dessert:</h4>
-          <h5>x x x x x x x x x x</h5>
+          <h5  id = 'size-increase' >x x x x x x x x x x</h5>
         </div>
       </div>
 
@@ -62,6 +62,17 @@ export default {
   display: flex;
   flex-direction: column;
 
+}
+
+
+.lunch-underline{
+  width: 90%;
+  margin: auto;
+  height: 0.2vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  border: 2px solid black;
+  border-radius: 2vh;
 }
 
 .lunch-title {
@@ -97,11 +108,12 @@ export default {
 #lunchData {
   width: 100%;
   height: 100%;
-  font-size: 2vh;
+
   display: flex;
   flex-direction: column;
   text-align: center;
   font-family: "Dongle", sans-serif;
+
 
 }
 
@@ -121,12 +133,18 @@ export default {
 #lunchData h5 {
   text-align: left;
   padding-left: 1vw;
-  font-size: 2vh;
   position: relative;
   bottom: 1vh;
+  font-size: 3.5vh;
+
+}
+
+#size-increase{
+  font-size: 4vh;
 }
 
 .soup {
+
 }
 
 .main {
@@ -139,6 +157,10 @@ export default {
 }
 
 .dessert {
+
+  position: relative;
+  bottom: 2vh;
+
 }
 
 </style>
