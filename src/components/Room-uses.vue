@@ -67,11 +67,11 @@ export default {
       this.polling = setInterval(async () => {
         const fact = (await (await fetch('https://fathomless-crag-41517.herokuapp.com/quotes')).json()).cs;
         this.polledData = fact
-      }, /*86400000*/ 10000)
+      }, 86400000)
     },
     pullData() {
       axios
-          .get('https://digital-display-express.herokuapp.com/quotes')
+          .get('https://fathomless-crag-41517.herokuapp.com/quotes')
           .then(response => (this.polledData = response.data.cs))
     }
   },

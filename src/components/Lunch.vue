@@ -3,7 +3,7 @@
     <div id='title' class="lunch-title"><h1>LUNCH</h1></div>
     <div class="icons-items">
       <div class='soup'>
-        <img src="../assets/cooking-pot.svg" width=40 height=50 alt="">
+        <img src="../assets/cooking-pot.png" width=40 height=50 alt="">
         <div id='lunchData'>
           <h4>Soup Of The Day:</h4>
           <h5  id = 'size-increase' >x x x x x x x x x x</h5>
@@ -11,7 +11,7 @@
       </div>
       <div class='lunch-underline'></div>
       <div class='main'>
-        <img src="../assets/hamburger.svg" width="40" height="50" alt="">
+        <img src="../assets/hamburger.png" width="40" height="50" alt="">
         <div id='lunchData'>
           <h4>Main Meal:</h4>
           <h5 id = 'size-increase'>x x x x x x x x x x</h5>
@@ -19,7 +19,7 @@
       </div>
       <div class='lunch-underline'></div>
       <div class='vegetarian'>
-        <img src="../assets/fish-simple.svg" width="40" height="50" alt="">
+        <img src="../assets/fish-simple.png" width="40" height="50" alt="">
         <div id='lunchData'>
           <h4>Vegetarian:</h4>
           <h5 id = 'size-increase' >x x x x x x x x x x</h5>
@@ -28,7 +28,7 @@
 
       <div class='lunch-underline'></div>
       <div class='lighter'>
-        <img src="../assets/fork-knife.svg" width="40" height="50" alt="">
+        <img src="../assets/fork-knife.png" width="40" height="50" alt="">
         <div id='lunchData'>
           <h4>Lighter Option:</h4>
           <h5  id = 'size-increase' >x x x x x x x x x x</h5>
@@ -36,7 +36,7 @@
       </div>
       <div class='lunch-underline'></div>
       <div class='dessert'>
-        <img src="../assets/cookie.svg" width="40" height="50" alt="">
+        <img src="../assets/cookie.png" width="40" height="50" alt="">
         <div id='lunchData'>
           <h4>Dessert:</h4>
           <h5  id = 'size-increase' >x x x x x x x x x x</h5>
