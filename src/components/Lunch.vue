@@ -6,7 +6,7 @@
         <img src="../assets/cooking-pot.png" width=40 height=50 alt="">
         <div id='lunchData'>
           <h4>Soup Of The Day:</h4>
-          <h5  id = 'size-increase' >{{ polledData.soup }}</h5>
+          <h5 id='size-increase'>{{ polledData.soup }}</h5>
         </div>
       </div>
       <div class='lunch-underline'></div>
@@ -14,7 +14,7 @@
         <img src="../assets/hamburger.png" width="40" height="50" alt="">
         <div id='lunchData'>
           <h4>Main Meal:</h4>
-          <h5 id = 'size-increase'>{{ polledData.main }}</h5>
+          <h5 id='size-increase'>{{ polledData.main }}</h5>
         </div>
       </div>
       <div class='lunch-underline'></div>
@@ -22,7 +22,7 @@
         <img src="../assets/fish-simple.png" width="40" height="50" alt="">
         <div id='lunchData'>
           <h4>Vegetarian:</h4>
-          <h5 id = 'size-increase' >{{ polledData.veg }}</h5>
+          <h5 id='size-increase'>{{ polledData.veg }}</h5>
         </div>
       </div>
 
@@ -31,7 +31,7 @@
         <img src="../assets/fork-knife.png" width="40" height="50" alt="">
         <div id='lunchData'>
           <h4>Lighter Option:</h4>
-          <h5  id = 'size-increase' >{{ polledData.light }}</h5>
+          <h5 id='size-increase'>{{ polledData.light }}</h5>
         </div>
       </div>
       <div class='lunch-underline'></div>
@@ -39,10 +39,9 @@
         <img src="../assets/cookie.png" width="40" height="50" alt="">
         <div id='lunchData'>
           <h4>Dessert:</h4>
-          <h5  id = 'size-increase' >{{ polledData.dessert }}</h5>
+          <h5 id='size-increase'>{{ polledData.dessert }}</h5>
         </div>
       </div>
-
 
 
     </div>
@@ -51,6 +50,7 @@
 
 <script>
 import axios from "axios";
+import dayjs from "dayjs";
 
 export default {
   name: "Lunch",
@@ -68,26 +68,29 @@ export default {
   methods: {
     pollData() {
       this.polling = setInterval(async () => {
+        const day = new dayjs().day()
         const menu = (await (await fetch('https://fathomless-crag-41517.herokuapp.com/lunch-menu')).json());
         this.polledData = {
-          soup: menu.mainLunch[0][0].soup,
-          main: menu.mainLunch[0][0].main,
-          veg: menu.mainLunch[0][0].veg,
-          light: menu.mainLunch[0][0].light,
-          dessert: menu.mainLunch[0][0].dessert
+          soup: menu.lunchMenu.mainLunch[menu.week - 1][day].soup,
+          main: menu.lunchMenu.mainLunch[menu.week - 1][day].main,
+          veg: menu.lunchMenu.mainLunch[menu.week - 1][day].veg,
+          light: menu.lunchMenu.mainLunch[menu.week - 1][day].light,
+          dessert: menu.lunchMenu.mainLunch[menu.week - 1][day].dessert
         }
-      }, 86400000)
+      }, 10000)
     },
     pullData() {
+      const day = new dayjs().day()
       axios
           .get('https://fathomless-crag-41517.herokuapp.com/lunch-menu')
           .then(response => (this.polledData = {
-            soup: response.data.mainLunch[0][0].soup,
-            main: response.data.mainLunch[0][0].main,
-            veg: response.data.mainLunch[0][0].veg,
-            light: response.data.mainLunch[0][0].light,
-            dessert: response.data.mainLunch[0][0].dessert
+            soup: response.data.lunchMenu.mainLunch[response.data.week - 1][day].soup,
+            main: response.data.lunchMenu.mainLunch[response.data.week - 1][day].main,
+            veg: response.data.lunchMenu.mainLunch[response.data.week - 1][day].veg,
+            light: response.data.lunchMenu.mainLunch[response.data.week - 1][day].light,
+            dessert: response.data.lunchMenu.mainLunch[response.data.week - 1][day].dessert
           }))
+      console.log(day)
     }
   },
   mounted() {
@@ -113,7 +116,7 @@ export default {
 }
 
 
-.lunch-underline{
+.lunch-underline {
   width: 90%;
   margin: auto;
   height: 0.2vh;
@@ -166,7 +169,6 @@ export default {
 }
 
 
-
 .lunch img {
   width: 3vw;
   height: 5vh;
@@ -178,6 +180,7 @@ export default {
   text-align: left;
   font-size: 3vh;
 }
+
 #lunchData h5 {
   text-align: left;
   padding-left: 1vw;
@@ -187,7 +190,7 @@ export default {
 
 }
 
-#size-increase{
+#size-increase {
   font-size: 4vh;
 }
 

@@ -64,7 +64,6 @@ export default {
         this.startNum < 12 ? this.startNum += 3 : this.startNum = 0
         this.polledData = [news[this.startNum+0].title, news[this.startNum+1].title, news[this.startNum+2].title]
         this.textLength = this.polledData[0].length + this.polledData[1].length + this.polledData[2].length
-        console.log(this.textLength)
       }, 60000)
     },
     pullData() {
