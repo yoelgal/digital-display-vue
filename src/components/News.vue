@@ -11,7 +11,6 @@
           <li>{{ polledData[1] }}</li>
           <hr/>
           <li>{{ polledData[2] }}</li>
-          <hr/>
         </ul>
       </div>
     </div>

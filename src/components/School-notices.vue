@@ -5,17 +5,17 @@
       <div class='school-notices-data'>
         <div class=notice1>
           <ul>
-            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+            <li>2nd XI football team enjoy another big win and continue their unbeaten streak!</li>
           </ul>
         </div>
         <div class=notice2>
           <ul>
-            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+            <li>Chicken Katsu Curry: Contender for Meal of the Year?</li>
           </ul>
         </div>
         <div class=notice3>
           <ul>
-            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+            <li>New groundbreaking dashboard system being trialled in the CS department - Dubbed as a 'work of art'</li>
           </ul>
         </div>
 

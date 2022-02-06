@@ -6,7 +6,7 @@
         <img src="../assets/cooking-pot.png" width=40 height=50 alt="">
         <div id='lunchData'>
           <h4>Soup Of The Day:</h4>
-          <h5  id = 'size-increase' >x x x x x x x x x x</h5>
+          <h5  id = 'size-increase' >{{ polledData.soup }}</h5>
         </div>
       </div>
       <div class='lunch-underline'></div>
@@ -14,7 +14,7 @@
         <img src="../assets/hamburger.png" width="40" height="50" alt="">
         <div id='lunchData'>
           <h4>Main Meal:</h4>
-          <h5 id = 'size-increase'>x x x x x x x x x x</h5>
+          <h5 id = 'size-increase'>{{ polledData.main }}</h5>
         </div>
       </div>
       <div class='lunch-underline'></div>
@@ -22,7 +22,7 @@
         <img src="../assets/fish-simple.png" width="40" height="50" alt="">
         <div id='lunchData'>
           <h4>Vegetarian:</h4>
-          <h5 id = 'size-increase' >x x x x x x x x x x</h5>
+          <h5 id = 'size-increase' >{{ polledData.veg }}</h5>
         </div>
       </div>
 
@@ -31,7 +31,7 @@
         <img src="../assets/fork-knife.png" width="40" height="50" alt="">
         <div id='lunchData'>
           <h4>Lighter Option:</h4>
-          <h5  id = 'size-increase' >x x x x x x x x x x</h5>
+          <h5  id = 'size-increase' >{{ polledData.light }}</h5>
         </div>
       </div>
       <div class='lunch-underline'></div>
@@ -39,7 +39,7 @@
         <img src="../assets/cookie.png" width="40" height="50" alt="">
         <div id='lunchData'>
           <h4>Dessert:</h4>
-          <h5  id = 'size-increase' >x x x x x x x x x x</h5>
+          <h5  id = 'size-increase' >{{ polledData.dessert }}</h5>
         </div>
       </div>
 
@@ -50,8 +50,56 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
-  name: "Lunch"
+  name: "Lunch",
+  data() {
+    return {
+      polledData: {
+        soup: "Loading...",
+        main: "Loading...",
+        veg: "Loading...",
+        light: "Loading...",
+        dessert: "Loading..."
+      }
+    }
+  },
+  methods: {
+    pollData() {
+      this.polling = setInterval(async () => {
+        const menu = (await (await fetch('https://fathomless-crag-41517.herokuapp.com/lunch-menu')).json());
+        this.polledData = {
+          soup: menu.mainLunch[0][0].soup,
+          main: menu.mainLunch[0][0].main,
+          veg: menu.mainLunch[0][0].veg,
+          light: menu.mainLunch[0][0].light,
+          dessert: menu.mainLunch[0][0].dessert
+        }
+      }, 86400000)
+    },
+    pullData() {
+      axios
+          .get('https://fathomless-crag-41517.herokuapp.com/lunch-menu')
+          .then(response => (this.polledData = {
+            soup: response.data.mainLunch[0][0].soup,
+            main: response.data.mainLunch[0][0].main,
+            veg: response.data.mainLunch[0][0].veg,
+            light: response.data.mainLunch[0][0].light,
+            dessert: response.data.mainLunch[0][0].dessert
+          }))
+    }
+  },
+  mounted() {
+    this.pullData()
+  },
+  beforeDestroy() {
+    clearInterval(this.polling)
+  },
+  created() {
+    this.pollData()
+  }
+
 }
 </script>
 
