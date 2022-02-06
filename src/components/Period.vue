@@ -109,7 +109,7 @@ export default {
 .period-length {
 
   position:relative ;
-  top: 5vh;
+  top: 2vh;
   font-size: 2vh;
   opacity: 0.7;
   text-align: center;

@@ -4,7 +4,7 @@
       <div class='department-notices-title'>News Headlines
       </div>
       <div class='department-notices-data'>
-        <ul class="department-notices-data-list"  :class="this.textLength>330?'smaller': 'regular'" >
+        <ul class="department-notices-data-list"  :class="this.textLength>300?'smaller': 'regular'" >
           <hr/>
           <li>{{ polledData[0] }}</li>
           <hr/>
@@ -66,7 +66,7 @@ export default {
         this.polledData = [news[this.startNum+0].title, news[this.startNum+1].title, news[this.startNum+2].title]
         this.textLength = this.polledData[0].length + this.polledData[1].length + this.polledData[2].length
         console.log(this.textLength)
-      }, 30000)
+      }, 60000)
     },
     pullData() {
       axios
@@ -75,9 +75,9 @@ export default {
       this.textLength = this.polledData[0].length + this.polledData[1].length + this.polledData[2].length
     }
   },
-  // mounted() {
-  //   this.pullData()
-  // },
+  mounted() {
+    this.pullData()
+  },
   beforeDestroy() {
     clearInterval(this.polling)
   },
@@ -115,7 +115,7 @@ export default {
   color: white;
   padding-left: 4vh;
   padding-top: 1vh;
-  max-width: 95%;
+  max-width: 98%;
   vert-align: middle;
 
 
@@ -133,7 +133,7 @@ export default {
 }
 
 .smaller {
-  font-size: 1.5vh;
+  font-size: 1.8vh;
 }
 
 .department-notices-line-container {
