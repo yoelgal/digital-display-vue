@@ -164,7 +164,6 @@ export default {
   height: 0.2vh;
 
   border-radius: 50%;
-  border: 0.4vh solid black;
   background: white;
 }
 

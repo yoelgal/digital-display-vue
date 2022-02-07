@@ -1,45 +1,48 @@
 <template>
   <div class="lunch">
-    <div id='title' class="lunch-title"><h1>LUNCH</h1></div>
+    <div  class="lunch-title"><h1>LUNCH</h1></div>
     <div class="icons-items">
       <div class='soup'>
-        <img src="../assets/cooking-pot.png" width=40 height=50 alt="">
-        <div id='lunchData'>
+        <img src="../assets/cooking-pot.png" width=512 height=512 alt="">
+        <div class='lunchData'>
           <h4>Soup Of The Day:</h4>
-          <h5 id='size-increase'>{{ polledData.soup }}</h5>
+          <h5 class='size-increase'>{{ polledData.soup }}</h5>
         </div>
       </div>
-      <div class='lunch-underline'></div>
+      <hr>
+
       <div class='main'>
-        <img src="../assets/hamburger.png" width="40" height="50" alt="">
-        <div id='lunchData'>
+        <img src="../assets/hamburger.png" width="512" height="512" alt="">
+        <div class='lunchData'>
           <h4>Main Meal:</h4>
-          <h5 id='size-increase'>{{ polledData.main }}</h5>
+
+          <h5 class='size-increase'>{{ polledData.main }}</h5>
+
         </div>
       </div>
-      <div class='lunch-underline'></div>
+      <hr>
       <div class='vegetarian'>
-        <img src="../assets/fish-simple.png" width="40" height="50" alt="">
-        <div id='lunchData'>
+        <img src="../assets/fish-simple.png" width="512" height="512" alt="">
+        <div class='lunchData'>
           <h4>Vegetarian:</h4>
-          <h5 id='size-increase'>{{ polledData.veg }}</h5>
+          <h5 class='size-increase'>{{ polledData.veg }}</h5>
         </div>
       </div>
 
-      <div class='lunch-underline'></div>
+      <hr>
       <div class='lighter'>
-        <img src="../assets/fork-knife.png" width="40" height="50" alt="">
-        <div id='lunchData'>
+        <img src="../assets/fork-knife.png" width="512" height="512" alt="">
+        <div class='lunchData'>
           <h4>Lighter Option:</h4>
-          <h5 id='size-increase'>{{ polledData.light }}</h5>
+          <h5 class='size-increase'>{{ polledData.light }}</h5>
         </div>
       </div>
-      <div class='lunch-underline'></div>
+      <hr>
       <div class='dessert'>
-        <img src="../assets/cookie.png" width="40" height="50" alt="">
-        <div id='lunchData'>
+        <img src="../assets/cookie.png" width="512" height="512" alt="">
+        <div class='lunchData'>
           <h4>Dessert:</h4>
-          <h5 id='size-increase'>{{ polledData.dessert }}</h5>
+          <h5 class='size-increase'>{{ polledData.dessert }}</h5>
         </div>
       </div>
 
@@ -116,16 +119,6 @@ export default {
 }
 
 
-.lunch-underline {
-  width: 90%;
-  margin: auto;
-  height: 0.2vh;
-  margin-top: 2vh;
-  margin-bottom: 2vh;
-  border: 2px solid black;
-  border-radius: 2vh;
-}
-
 .lunch-title {
   height: 25%;
   letter-spacing: 0.7vw;
@@ -135,31 +128,36 @@ export default {
   font-size: 3vh;
   font-family: "kanit", sans-serif;
   text-decoration: underline;
+
 }
 
 .icons-items {
   display: flex;
   flex-direction: column;
-  /* grid-template-columns: repeat(10, 1fr); */
+
   height: 100%;
   max-width: 100%;
+
+
 
 }
 
 .icons-items div {
   height: 20%;
   display: flex;
-  flex-direction: row;
+
+  margin-top: 1vh;
+
+
 }
 
 .icons-items h5 {
   display: inline;
 }
 
-#lunchData {
+.lunchData {
   width: 100%;
   height: 100%;
-
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -173,32 +171,44 @@ export default {
   width: 3vw;
   height: 5vh;
   padding-left: 0.5vw;
+  margin-top:1.5vh;
 }
 
-#lunchData h4 {
+.lunchData h4 {
   padding-left: 1vw;
   text-align: left;
   font-size: 3vh;
+  text-decoration: underline
+
 }
 
-#lunchData h5 {
+.lunchData h5 {
+  padding-top: 1vh;
   text-align: left;
-  padding-left: 1vw;
+  margin-left: 1vw;
+  padding-left: 0.5vw;
   position: relative;
   bottom: 1vh;
   font-size: 3.5vh;
+  height: 6vh;
+
+  border-radius: 2vh;
+  line-height: 2.4vh;
+
 
 }
 
-#size-increase {
+.size-increase {
   font-size: 4vh;
 }
 
 .soup {
 
+
 }
 
 .main {
+
 }
 
 .vegetarian {
@@ -210,7 +220,7 @@ export default {
 .dessert {
 
   position: relative;
-  bottom: 2vh;
+  bottom: 1vh;
 
 }
 

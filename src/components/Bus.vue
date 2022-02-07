@@ -200,7 +200,8 @@ export default {
   font-family: "Dongle", sans-serif;
   box-shadow: inset 0.2vh 0.2vh 0.5vh #161414, inset -0.2vh -0.2vh 0.1vh #a8a3a3;
   width: 6vw;
-  height: 7vh;
+  height: 6vh;
+
 
 
 }
@@ -233,7 +234,6 @@ export default {
   width: 9.5vw;
   height: 14vh;
   border-radius: 2vh;
-
   box-shadow: 0.3vh 0.3vh 0.1vh #ded9d9, -0vh -0vh 1vh rgb(114, 118, 122);
 }
 

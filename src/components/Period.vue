@@ -95,7 +95,8 @@ export default {
 .period-number {
   text-align: center;
   position: relative;
-  top:2vh;
+
+
 }
 
 .regular {
