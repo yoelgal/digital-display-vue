@@ -65,8 +65,8 @@ export default {
     return {
       polling: null,
       polledData: {
-        "sunrise": "2022-01-28T07:45:44.000Z",
-        "sunset": "2022-01-28T16:41:44.000Z",
+        "sunrise": "null",
+        "sunset": "null",
         "dayLengthMins": 536,
         "forecast": [
           {
