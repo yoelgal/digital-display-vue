@@ -6,17 +6,17 @@
         <div class='room-uses-data-container1'>
           <ul style="margin-left: 1vw">
             <li>IT 1:</li>
-            <p style="display:block">Class: 10C</p>
+            <p style="display:block">Unavailable</p>
             <li>IT 2:</li>
-            <p>Class: 10C</p>
+            <p>Unavailable</p>
           </ul>
         </div>
         <div class='room-uses-data-container2'>
           <ul>
-            <li>IT 1:</li>
-            <p style="display:block">Class: 10C</p>
-            <li>IT 2:</li>
-            <p>Class: 10C</p>
+            <li>IT 3:</li>
+            <p style="display:block">Unavailable</p>
+            <li>IT 4:</li>
+            <p>Unavailable</p>
           </ul>
         </div>
         <div class="room-quote-line">

@@ -127,7 +127,7 @@ export default {
 }
 
 .regular {
-  font-size: 2vh;
+  font-size: 1.9vh;
 }
 
 .smaller {
