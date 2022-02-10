@@ -4,7 +4,7 @@
       <div class='department-notices-title'>News Headlines
       </div>
       <div class='department-notices-data'>
-        <ul class="department-notices-data-list"  :class="this.textLength>300?'smaller': 'regular'" >
+        <ul class="department-notices-data-list"  :class="this.textLength>295?'smaller': 'regular'" >
           <hr/>
           <li>{{ polledData[0] }}</li>
           <hr/>
