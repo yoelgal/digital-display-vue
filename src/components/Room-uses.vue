@@ -1,48 +1,76 @@
 <template>
   <div class="room-uses">
-    <div class='room-uses-grid-container'>
-      <div class='room-uses-grid'>
-        <div class='room-uses-title'>Room Uses</div>
-        <div class='room-uses-data-container1'>
-          <ul style="margin-left: 1vw">
-            <li>IT 1:</li>
-            <p style="display:block">Unavailable</p>
-            <li>IT 2:</li>
-            <p>Unavailable</p>
-          </ul>
-        </div>
-        <div class='room-uses-data-container2'>
-          <ul>
-            <li>IT 3:</li>
-            <p style="display:block">Unavailable</p>
-            <li>IT 4:</li>
-            <p>Unavailable</p>
-          </ul>
-        </div>
-        <div class="room-quote-line">
-          <hr>
-        </div>
-        <div class="daily-quoteXX">
-          <div class="facts-title-bar">
-            <ion-icon style="padding-left: 1vw" class="book-icon" name="book"></ion-icon>
-            <div  class='fact-title'>Daily Quote</div>
-            <ion-icon style="padding-right: 1vw" class="book-icon" name="book"></ion-icon>
+<!--    <div class="room-overlay1">-->
+<!--      <h1>🗓 Room Uses</h1>-->
+<!--    </div>-->
+<!--    <div class="room-overlay2">-->
+<!--      <h1>IT 1:-->
+<!--      <br>-->
+<!--        10C-->
+<!--      </h1>-->
 
-          </div>
-          <div class="daily-fact-container">
-            <div class="daily-fact" :class="polledData.text.length>100?'smaller': 'regular'">
-              <p>
-                {{polledData.text}} - {{polledData.author}}
-              </p>
+<!--    </div>-->
+<!--    <div class="room-overlay3">-->
+<!--      <h1>IT 1:-->
+<!--        <br>-->
+<!--        10C-->
+<!--      </h1>-->
+<!--    </div>-->
+<!--    <div class="room-overlay4">-->
+<!--      <h1>IT 1:-->
+<!--        <br>-->
+<!--        10C-->
+<!--      </h1>-->
+<!--    </div>-->
+<!--    <div class="room-overlay5">-->
+<!--      <h1>IT 1:-->
+<!--        <br>-->
+<!--        10C-->
+<!--      </h1>-->
+<!--    </div>-->
+<!--    <div class='room-uses-grid-container'>-->
+<!--      <div class='room-uses-grid'>-->
+<!--        <div class='room-uses-title'>Room Uses</div>-->
+<!--        <div class='room-uses-data-container1'>-->
+<!--          <ul style="margin-left: 1vw">-->
+<!--            <li>IT 1:</li>-->
+<!--            <p style="display:block">Unavailable</p>-->
+<!--            <li>IT 2:</li>-->
+<!--            <p>Unavailable</p>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--        <div class='room-uses-data-container2'>-->
+<!--          <ul>-->
+<!--            <li>IT 3:</li>-->
+<!--            <p style="display:block">Unavailable</p>-->
+<!--            <li>IT 4:</li>-->
+<!--            <p>Unavailable</p>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--        <div class="room-quote-line">-->
+<!--          <hr>-->
+<!--        </div>-->
+<!--        <div class="daily-quoteXX">-->
+<!--          <div class="facts-title-bar">-->
+<!--            <ion-icon style="padding-left: 1vw" class="book-icon" name="book"></ion-icon>-->
+<!--            <div  class='fact-title'>Daily Quote</div>-->
+<!--            <ion-icon style="padding-right: 1vw" class="book-icon" name="book"></ion-icon>-->
 
-            </div>
-          </div>
-        </div>
+<!--          </div>-->
+<!--          <div class="daily-fact-container">-->
+<!--            <div class="daily-fact" :class="polledData.text.length>100?'smaller': 'regular'">-->
+<!--              <p>-->
+<!--                {{polledData.text}} - {{polledData.author}}-->
+<!--              </p>-->
+
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
 
 
 
-      </div>
-    </div>
+<!--      </div>-->
+<!--    </div>-->
 
   </div>
 </template>
@@ -88,10 +116,97 @@ export default {
 </script>
 
 <style scoped>
-.room-uses {
-  grid-column: 5/7;
-  grid-row: 3/10;
+/*.room-uses {*/
+/*  grid-column: 9/12;*/
+/*  grid-row: 7/10;*/
+/*  display:grid;*/
+/*  grid-template-rows:repeat(20, 1fr);*/
+/*  grid-template-columns:repeat(20, 1fr);*/
+/*  overflow: hidden;*/
+/*  z-index: 10;*/
+/*}*/
+
+.room-uses > div {
+
+  box-shadow: 0vh 0vh 0.1vh 0.5vh #fff;
 }
+
+.room-overlay1{
+  grid-row: 1/8;
+  grid-column: 13/21;
+  border-bottom-left-radius: 2vh;
+  background: linear-gradient(to bottom right, #e8e50e, #ee743f);
+}
+.room-overlay1 h1{
+  padding-left: 0.5vw;
+  padding-top: 1vh;
+}
+
+
+.room-overlay2{
+  grid-row: 10/21;
+  grid-column: 1/8;
+  border-top-right-radius: 2vh;
+  background:linear-gradient(to bottom right, #64e564, #3de00f);
+}
+
+.room-overlay2 h1{
+  padding-left: 1vw;
+  font-size: 5.5vh;
+}
+
+.room-overlay3{
+  grid-column: 7/15;
+  grid-row: 11/21;
+  background:linear-gradient(to bottom right, #64e564, #39e10a);
+  z-index:-2;
+  border-top-right-radius:2vh;
+}
+
+.room-overlay3 h1{
+  padding-left: 2.5vw;
+  font-size: 5.4vh;
+}
+
+
+.room-overlay4{
+  grid-column: 1/9;
+  grid-row: 1/12;
+  background:linear-gradient(to bottom right, #64e564, #92cc56);
+  z-index:-1;
+  border-bottom-right-radius: 2vh;
+  position: relative;
+  left: 0.2vw;
+}
+
+.room-overlay4 h1{
+  padding-left: 1vw;
+  font-size: 4.7vh;
+}
+
+
+.room-overlay5{
+  grid-row: 1/12;
+  grid-column: 8/14;
+  background:linear-gradient(to bottom right, #64e564, #9cd263);
+  z-index:-3;
+}
+
+.room-overlay5 h1{
+  padding-left: 1.85vw;
+  padding-top: 1vh;
+  font-size: 4vh;
+}
+
+
+
+
+
+
+
+
+
+
 
 .room-uses-grid-container {
   width: 100%;

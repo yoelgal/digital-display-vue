@@ -1,48 +1,48 @@
 <template>
   <div class="bus">
-    <div class='bus-grid-container'>
-      <div class='bus-grid'>
-        <div class='bus-title'>
-          <div>B</div>
-          <div>U</div>
-          <div>S</div>
-          <div><br /></div>
-          <div>T</div>
-          <div>I</div>
-          <div>M</div>
-          <div>E</div>
-          <div>S</div>
-        </div>
-        <div class='square1'>
-          <div class="stop1">
-            <div class='stop1-name'>The Three Hammers</div>
-            <h6>To Edgware</h6>
-            <hr />
-            <div style='display: flex; flex-direction: row;width: 10vw;justify-content: space-between;margin-top: 1vh;'>
-              <h4>{{ polledData.edgware[0] }}</h4>
-              <h5>{{ polledData.edgware[1] }}</h5>
-            </div>
-          </div>
-        </div>
-        <div class='square2'>
-          <div class="stop2">
-            <div class='stop2-name'>Mill Hill The Village</div>
-            <h6>To Golders Green</h6>
-            <hr />
-            <div  style='display: flex; flex-direction: row;width: 10vw;justify-content: space-between;margin-top: 1vh;'>
-              <h4>{{ polledData.golders[0] }}</h4>
-              <h5>{{ polledData.golders[1] }}</h5>
-            </div>
-          </div>
-        </div>
-        <div class='square3'>
-          <img src="../assets/ThreeHammers.png" alt="">
-        </div>
-        <div class='square4'>
-          <img src="../assets/ToGolders.png" alt="">
-        </div>
-      </div>
-    </div>
+<!--    <div class='bus-grid-container'>-->
+<!--      <div class='bus-grid'>-->
+<!--        <div class='bus-title'>-->
+<!--          <div>B</div>-->
+<!--          <div>U</div>-->
+<!--          <div>S</div>-->
+<!--          <div><br /></div>-->
+<!--          <div>T</div>-->
+<!--          <div>I</div>-->
+<!--          <div>M</div>-->
+<!--          <div>E</div>-->
+<!--          <div>S</div>-->
+<!--        </div>-->
+<!--        <div class='square1'>-->
+<!--          <div class="stop1">-->
+<!--            <div class='stop1-name'>The Three Hammers</div>-->
+<!--            <h6>To Edgware</h6>-->
+<!--            <hr />-->
+<!--            <div style='display: flex; flex-direction: row;width: 10vw;justify-content: space-between;margin-top: 1vh;'>-->
+<!--              <h4>{{ polledData.edgware[0] }}</h4>-->
+<!--              <h5>{{ polledData.edgware[1] }}</h5>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class='square2'>-->
+<!--          <div class="stop2">-->
+<!--            <div class='stop2-name'>Mill Hill The Village</div>-->
+<!--            <h6>To Golders Green</h6>-->
+<!--            <hr />-->
+<!--            <div  style='display: flex; flex-direction: row;width: 10vw;justify-content: space-between;margin-top: 1vh;'>-->
+<!--              <h4>{{ polledData.golders[0] }}</h4>-->
+<!--              <h5>{{ polledData.golders[1] }}</h5>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class='square3'>-->
+<!--          <img src="../assets/ThreeHammers.png" alt="">-->
+<!--        </div>-->
+<!--        <div class='square4'>-->
+<!--          <img src="../assets/ToGolders.png" alt="">-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
   </div>
 </template>
 
@@ -108,7 +108,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .bus {
-  grid-column: 1/5;
+  grid-column: 1/3;
   grid-row: 6/10;
 
 }

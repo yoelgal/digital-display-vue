@@ -1,18 +1,53 @@
 <template>
-  <div class="department-notices">
-    <div class='department-notices-grid'>
-      <div class='department-notices-title'>News Headlines
+  <div class="news">
+    <div class='news-grid'>
+      <div class="news-ellipse1"></div>
+      <div class="news-ellipse2"></div>
+      <div class="news-icon">
+        <img src='../assets/perspective__matte.png'>
       </div>
-      <div class='department-notices-data'>
-        <ul class="department-notices-data-list"  :class="this.textLength>295?'smaller': 'regular'" >
-          <hr/>
-          <li>{{ polledData[0] }}</li>
-          <hr/>
-          <li>{{ polledData[1] }}</li>
-          <hr/>
-          <li>{{ polledData[2] }}</li>
-        </ul>
+       <div class="news-overlay">
+        <div class="news-title">
+          Daily News
+        </div>
+        <div  class="news-underline1"></div>
+        <div class="newsDate">
+          <p>MON 14 FEB</p>
+        </div>
+         <div class="topStories">Top Stories</div>
+
+
+       </div>
+      <div class="news-data">
+        <div class="news-data1">
+          <div class="news-acc-data">
+            <p>{{ polledData[0] }}</p>
+          </div>
+          <div class="news-ellipse3"></div>
+          <div class="news-ellipse4"></div>
+
+        </div>
       </div>
+      <div class="news-overlay2">
+        <div class="news-ellipse5"></div>
+        <div class="news-ellipse6"></div>
+      </div>
+
+
+
+
+      <!--      <div class='department-notices-title'>News Headlines-->
+<!--      </div>-->
+<!--      <div class='department-notices-data'>-->
+<!--        <ul class="department-notices-data-list"  :class="this.textLength>295?'smaller': 'regular'" >-->
+<!--          <hr/>-->
+<!--          <li>{{ polledData[0] }}</li>-->
+<!--          <hr/>-->
+<!--          <li>{{ polledData[1] }}</li>-->
+<!--          <hr/>-->
+<!--          <li>{{ polledData[2] }}</li>-->
+<!--        </ul>-->
+<!--      </div>-->
     </div>
   </div>
 </template>
@@ -87,17 +122,250 @@ export default {
 </script>
 
 <style scoped>
-.department-notices {
-  grid-column: 9/12;
-  grid-row: 1/4;
+.news-ellipse1{
+  background-color: #d51c57;
+  border-radius: 50%;
+  width: 0.9vw;
+  height: 1.4vh;
+  position: absolute;
+  left: 7vw;
+  top: 1vh;
 }
 
-.department-notices-grid {
+.news-ellipse2{
+  background-color: #d51c57;
+  border-radius: 50%;
+  width: 0.6vw;
+  height: 1vh;
+  position: absolute;
+  left: 8vw;
+  top: 3vh;
+}
+
+
+.news {
+  grid-column: 9/12;
+  grid-row: 1/4;
+  overflow: hidden;
+}
+
+.news-grid {
   display: grid;
   grid-template-rows: repeat(10, 1fr);
   grid-template-columns: repeat(13, 1fr);
   width: 100%;
+  height: 100%;
 }
+
+.news-overlay{
+  background: white;
+  grid-row: 1/11;
+  grid-column: 1/6;
+  border-bottom-right-radius: 3vh;
+  border-top-right-radius: 3vh;
+  /*border-top: 0.2vh solid #2196f3;*/
+  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #2196f3;
+}
+
+.news-title{
+  font-size: 3vh;
+  padding-top: 1vh;
+  padding-left: 0.3vw;
+  grid-row: 1/3;
+  width:5vw;
+}
+
+.news-icon{
+  grid-row: 7/8;
+  margin-top: 1.5vh;
+  grid-column: 4/11;
+  z-index: 1;
+}
+
+.news-icon img{
+  width: 3vw;
+  height: 5vh;
+}
+
+
+.news-underline1{
+  border: 0.08vh solid grey;
+  width: 100%;
+  height: 0.1vh;
+
+}
+.newsDate{
+   font-size:1.5vh;
+   grid-row: 3/5;
+   grid-column: 1/3;
+   display: flex;
+   align-content: flex-start
+}
+
+.newsDate p {
+  font-weight: 200;
+  margin-left: 0.2vw;
+  padding-top: 1vh;
+
+}
+
+.topStories{
+  margin-left: 0.2vw;
+  margin-top: 2vh;
+  font-size: 4vh;
+  color: #d51c57;
+  font-weight: 600;
+}
+
+.topStories::first-line{
+  color: black;
+}
+
+.news-data{
+  grid-row: 1/8;
+  grid-column: 4/13;
+  position: relative;
+  left: 1.6vw;
+  /*background-color: #2196f3;*/
+  background-color: white;
+  border-top-right-radius: 1vh;
+  display: grid;
+  grid-template-rows: repeat(20, 1fr);
+  grid-template-columns: repeat(20, 1fr);
+  z-index:-1;
+  border-bottom-right-radius: 2vh;
+  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #2196f3;
+
+
+}
+
+.news-data > div{
+  /*background: white;*/
+
+}
+
+.news-data1{
+  grid-row: 2/17;
+  grid-column: 5/20;
+  border-radius: 2vh;
+
+  /*box-shadow: inset 0.2vh 0.2vh 0.2vh #2196f3,*/
+  /*inset -0.2vh -0.2vh 0.2vh #2196f3;*/
+
+}
+
+/*#949494*/
+
+.news-acc-data{
+  width: 100%;
+  height: 90%;
+  position:relative;
+  top: 10%;
+}
+
+.news-acc-data p {
+  color: black;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  font-size: 1.6vh;
+}
+
+.news-ellipse3{
+  background-color: #d51c57;
+  border-radius: 50%;
+  width: 0.7vw;
+  height: 1vh;
+  position: absolute;
+  left:15vw;
+  top: 19.5vh;
+}
+
+.news-ellipse4{
+  background-color: #d51c57;
+  border-radius: 50%;
+  width: 0.9vw;
+  height: 1.4vh;
+  position: absolute;
+  left: 16vw;
+  top: 18vh;
+
+}
+
+.news-wave {
+
+  margin-top: 2vh;
+  height: 4vh;
+}
+
+.news-wave img{
+  height: 100%;
+  width: 100%;
+}
+
+.news-overlay2{
+  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #2196f3;
+  background: white;
+  grid-row: 1/11;
+  grid-column: 1/14;
+  z-index: -2;
+  position: relative;
+  bottom: 0.9vh;
+  right: 0.4vw;
+  border-bottom-right-radius: 2vh;
+}
+
+.news-ellipse5{
+  background-color: #d51c57;
+  border-radius: 50%;
+  width: 0.9vw;
+  height: 1.4vh;
+  position: relative;
+  left: 11vw;
+  top: 25vh;
+
+}
+.news-ellipse6{
+  background-color: #d51c57;
+  border-radius: 50%;
+  width: 0.9vw;
+  height: 1.4vh;
+  position: relative;
+  left: 24vw;
+  top: 26.1vh;
+}
+
+
+/*.news-underline2{*/
+/*  position: relative;*/
+/*  border-radius:2vh;*/
+/*  height:0.5vh;*/
+/*  background-color: #2196f3;*/
+/*  box-shadow: 0vh 0.2vh 0.3vh #d51c57;*/
+
+/*}*/
+
+/*.news-underline3{*/
+/*  position: relative;*/
+/*  top: 2vh;*/
+/*  border-radius:2vh;*/
+/*  height:0.5vh;*/
+/*  background-color: #2196f3;*/
+/*  box-shadow: 0vh 0.2vh 0.3vh #d51c57;*/
+/*}*/
+
+
+
+
+
+
+/*.newsDate img{*/
+/*  width: 2vw;*/
+/*  height: 3vh;*/
+/*  margin-top: 1vh;*/
+/*  margin-left: 0.5vw;*/
+
+/*}*/
+
 
 .department-notices-title {
   grid-row: 1/2;

@@ -1,43 +1,42 @@
 <template>
   <div id="app">
     <div class="grid-container">
-      <Title class="bg"></Title>
+      <fixtures class="bg"></fixtures>
       <school-notices class="bg"></school-notices>
       <department-notices class="bg"></department-notices>
-      <period class="bg"></period>
+      <news class="bg"></news>
       <weather class="bg"></weather>
       <bus class="bg"></bus>
-      <room-uses class="bg"></room-uses>
-
+<!--      <room-uses class="bg"></room-uses>-->
       <lunch class="bg"></lunch>
       <date-time-dad-joke class="bg"></date-time-dad-joke>
     </div>
   </div>
 </template>
-
 <script>
 import Bus from './components/Bus.vue'
-import Title from './components/Title'
 import SchoolNotices from "@/components/School-notices";
-import departmentNotices from "@/components/News";
-import period from "@/components/Period";
+import news from "@/components/News";
+import departmentNotices from "@/components/Department-notices";
 import weather from "@/components/Weather";
-import roomUses from "@/components/Room-uses";
+// import roomUses from "@/components/Room-uses";
 import lunch from "@/components/Lunch";
 import dateTimeDadJoke from "@/components/Date-time-Dad-joke";
+import fixtures from "@/components/Fixtures";
 
 export default {
   name: 'App',
   components: {
     Bus,
-    Title,
+    fixtures,
+    news,
     SchoolNotices,
     departmentNotices,
-    period,
     weather,
-    roomUses,
+    // roomUses,
     lunch,
-    dateTimeDadJoke
+    dateTimeDadJoke,
+
   }
 }
 </script>
@@ -45,13 +44,15 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 @import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Kanit:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Kanit:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 
-  color: whitesmoke;
 
 }
 
@@ -66,6 +67,32 @@ export default {
   */
 }
 
+.grid-container::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient( to bottom,#af0808, #9a609a);
+  opacity: 0.5;
+  clip-path: circle(30% at right 70%);
+
+}
+
+.grid-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#e91e63,#2196f3 );
+  clip-path: circle(20% at 10% 100%);
+  /*clip-path: circle(20% at 50% 0%);*/
+  opacity: 0.5;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -73,25 +100,28 @@ export default {
   gap: 2vh;
   padding: 3vh;
   height: 100vh;
-  background-color: #7491ad;
+  background-color: #272748;
   /*background-color: #e70404;*/
 }
 
 .grid-container > div {
-  padding: 0vh;
-  color: white;
+  z-index: 1;
+  background: rgba(206, 182, 182, 0.1);
+  box-shadow: 1vh 1vh 3vh rgba(0, 0, 0, 0.5);
   border-radius: 2vh;
-  /*background: #444343de;*/
-   /*box-shadow: 0.2vh 0.2vh 0.1vh #f10842, 0.5vh 0.5vh 1vh #4e4b4b,
-    -0.4vh -0.4vh 0.1vh #12cbd8, -0.5vh -0.5vh 0.1vh #ffffff;*/
-  /* 5px 5px 10px #4e4b4b,
-             -5px -5px 10px #ffffff; */
-  display: flex;
-  box-shadow: 0.5vh 0.5vh 0.5vh black, -0vh 0vh 0.1vh #1f1c1c,
-  inset 0.2vh 0.2vh 0.1vh black, inset -0vh -0vh 0.1vh #111010;
+  border-top: 0.2vh solid rgba(255, 255, 255, 0.5);
+  border-left: 0.2vh solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(0.5vh);
 }
 
 .bg {
-  background-color: #273c75;
+  z-index: 1;
+  background: rgba(206, 182, 182, 0.1);
+  box-shadow: 1vh 1vh 3vh rgba(0, 0, 0, 0.5);
+  border-radius: 2vh;
+  border-top: 0.2vh solid rgba(255, 255, 255, 0.5);
+  border-left: 0.2vh solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(0.5vh);
+
 }
 </style>

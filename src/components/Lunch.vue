@@ -1,53 +1,68 @@
 <template>
+<!--  title
+list of options
+current week
+times for remove, fifth form,fourth form in main -->
   <div class="lunch">
-    <div  class="lunch-title"><h1>LUNCH</h1></div>
-    <div class="icons-items">
-      <div class='soup'>
-        <img src="../assets/cooking-pot.png" width=512 height=512 alt="">
-        <div class='lunchData'>
-          <h4>Soup Of The Day:</h4>
-          <h5 class='size-increase'>{{ polledData.soup }}</h5>
-        </div>
-      </div>
-      <hr>
-
-      <div class='main'>
-        <img src="../assets/hamburger.png" width="512" height="512" alt="">
-        <div class='lunchData'>
-          <h4>Main Meal:</h4>
-
-          <h5 class='size-increase'>{{ polledData.main }}</h5>
-
-        </div>
-      </div>
-      <hr>
-      <div class='vegetarian'>
-        <img src="../assets/fish-simple.png" width="512" height="512" alt="">
-        <div class='lunchData'>
-          <h4>Vegetarian:</h4>
-          <h5 class='size-increase'>{{ polledData.veg }}</h5>
-        </div>
-      </div>
-
-      <hr>
-      <div class='lighter'>
-        <img src="../assets/fork-knife.png" width="512" height="512" alt="">
-        <div class='lunchData'>
-          <h4>Lighter Option:</h4>
-          <h5 class='size-increase'>{{ polledData.light }}</h5>
-        </div>
-      </div>
-      <hr>
-      <div class='dessert'>
-        <img src="../assets/cookie.png" width="512" height="512" alt="">
-        <div class='lunchData'>
-          <h4>Dessert:</h4>
-          <h5 class='size-increase'>{{ polledData.dessert }}</h5>
-        </div>
-      </div>
-
-
+    <div class="lunch-overlay1">
+      <h1>Lunch Menu 🍽</h1>
     </div>
+    <div class="lunch-overlay2"></div>
+    <div class="lunch-overlay3"></div>
+
+
+
+<!--   </div>-->
+
+
+<!--    <div  class="lunch-title"><h1>LUNCH</h1></div>-->
+<!--    <div class="icons-items">-->
+<!--      <div class='soup'>-->
+<!--        <img src="../assets/cooking-pot.png" width=512 height=512 alt="">-->
+<!--        <div class='lunchData'>-->
+<!--          <h4>Soup Of The Day:</h4>-->
+<!--          <h5 class='size-increase'>{{ polledData.soup }}</h5>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <hr>-->
+
+<!--      <div class='main'>-->
+<!--        <img src="../assets/hamburger.png" width="512" height="512" alt="">-->
+<!--        <div class='lunchData'>-->
+<!--          <h4>Main Meal:</h4>-->
+
+<!--          <h5 class='size-increase'>{{ polledData.main }}</h5>-->
+
+<!--        </div>-->
+<!--      </div>-->
+<!--      <hr>-->
+<!--      <div class='vegetarian'>-->
+<!--        <img src="../assets/fish-simple.png" width="512" height="512" alt="">-->
+<!--        <div class='lunchData'>-->
+<!--          <h4>Vegetarian:</h4>-->
+<!--          <h5 class='size-increase'>{{ polledData.veg }}</h5>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <hr>-->
+<!--      <div class='lighter'>-->
+<!--        <img src="../assets/fork-knife.png" width="512" height="512" alt="">-->
+<!--        <div class='lunchData'>-->
+<!--          <h4>Lighter Option:</h4>-->
+<!--          <h5 class='size-increase'>{{ polledData.light }}</h5>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <hr>-->
+<!--      <div class='dessert'>-->
+<!--        <img src="../assets/cookie.png" width="512" height="512" alt="">-->
+<!--        <div class='lunchData'>-->
+<!--          <h4>Dessert:</h4>-->
+<!--          <h5 class='size-increase'>{{ polledData.dessert }}</h5>-->
+<!--        </div>-->
+<!--      </div>-->
+
+
+<!--    </div>-->
   </div>
 </template>
 
@@ -111,25 +126,120 @@ export default {
 
 <style>
 .lunch {
-  grid-row: 3/10;
-  grid-column: 7/9;
-  display: flex;
-  flex-direction: column;
+  grid-row: 4/7;
+  grid-column: 5/9;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.lunch-overlay1{
+  box-shadow: 0vh 0vh 0.1vh 0.7vh #51e847,0vh 0vh 0.1vh 1.6vh #038519;
+  grid-row: 1/7;
+  background: #0a251a;
+  grid-column: 1/6;
+  position: relative;
+  top: 1vh;
+  right: 1vw;
+  border-bottom-right-radius: 10vh;
+  border-top-right-radius: 10vh;
+}
+
+.lunch-overlay1 h1{
+  position: relative;
+  left: 2vw;
+  font-size: 5.5vh;
+  color: white;
+}
+
+.lunch-overlay2{
+  background: #0a251a;
+  box-shadow: 0vh 0vh 0.1vh 0.7vh #51e847,0vh 0vh 0.1vh 1.6vh #038519;
+  grid-row: 1/11;
+  grid-column: 5/11;
+  position: relative;
+  right: 1vw;
+  bottom: 1vh;
+  border-bottom-right-radius: 5vh;
+  border-bottom-left-radius: 5vh;
+  z-index: -1;
+}
+
+.lunch-overlay3{
+  background: #0a251a;
+  box-shadow: 0vh 0vh 0.1vh 0.7vh #51e847,0vh 0vh 0.1vh 1.6vh #038519;
+  grid-column: 1/11;
+  grid-row: 5/11;
+  z-index:-2;
+  position: relative;
+}
+
+
+
+.lunch-grid{
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  height: 100%;
+  width: 100%;
+}
+
+.overlay1{
+  background-color:white;
+  border-top-left-radius: 2vh;
+  grid-row: 8/11;
+  grid-column: 1/11;
+}
+
+.overlay3{
+  background-color: white;
+  grid-row: 7/10;
+  grid-column: 9/11;
 
 }
 
+.overlay2{
+  background: #2196f3;
+  background: linear-gradient(to bottom right, #1384dc, blue);
+  background: #2196f3;
+  grid-row: 1/11;
+  grid-column: 1/11;
+  z-index: -1;
+
+
+}
+
+.overlay4{
+  border-radius: 10vh;
+  background: #2196f3;
+  grid-row: 6/8;
+  grid-column: 8/11;
+  z-index: 10;
+
+}
 
 .lunch-title {
-  height: 25%;
-  letter-spacing: 0.7vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3vh;
-  font-family: "kanit", sans-serif;
-  text-decoration: underline;
+
+  grid-row: 2/3;
+  grid-column: 2/6;
+  font-size: 2vh;
 
 }
+
+.lunch-underline1{
+  background-color: red;
+  position: absolute;
+  width: 20vw;
+  height: 1vh;
+
+}
+
+
+
+
+
+
 
 .icons-items {
   display: flex;
