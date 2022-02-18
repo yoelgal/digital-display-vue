@@ -241,9 +241,7 @@ export default {
   font-weight: bolder;
   padding-left: 0.5vw;
   font-size: 2.5vh;
-  text-decoration: underline;
-  text-decoration-color: white;
-  text-decoration-thickness:0.1vh;
+
 
 
 }

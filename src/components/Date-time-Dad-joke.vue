@@ -1,11 +1,11 @@
 <template>
   <div class="date-time">
     <div class="date-overlay1">
-      <h1>{{hours}}:{{mins}}:{{secs}}</h1>
+      <h1>10:17:00</h1>
       <div class="date-line1"></div>
-      <h2>📅 {{ day }} {{ date }} {{ month }}</h2>
+      <h2>📅 THU 17 FEB</h2>
       <div class="date-clock-icon">
-        <img src='../assets/3Dclock.png'>
+
       </div>
 
     </div>
@@ -49,6 +49,36 @@
         <p>for some reason i can't get filler text on webstorm so I am writing this instead.</p>
       </div>
     </div>
+<!--    <div class="date-time-grid">-->
+<!--      <div class='date-time-line1-container'>-->
+<!--        <div class='date-time-line1'></div>-->
+<!--      </div>-->
+<!--      <div class="time">-->
+<!--        <p>{{ hours.local }}:{{ mins }}:{{ secs }}</p>-->
+<!--      </div>-->
+<!--      <dad-joke></dad-joke>-->
+<!--      <div class="date">-->
+<!--        <h1>{{ day }}</h1>-->
+<!--        <br/>-->
+<!--        <h1>{{ date }}</h1>-->
+<!--        <br/>-->
+<!--        <h1>{{ month }}</h1>-->
+<!--      </div>-->
+<!--      <div class="international-times">-->
+<!--        <div>-->
+<!--          <div style="font-size: 3vh; text-align: center;text-decoration: underline;">NYC</div>-->
+<!--          <div>{{ hours.NYC }}:{{ mins }}</div>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--          <div style="font-size: 3vh;text-align: center;text-decoration: underline;">SYD</div>-->
+<!--          <div>{{ hours.SYD }}:{{ mins }}</div>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--          <div style="font-size: 3vh;text-align: center;text-decoration: underline;">TKY</div>-->
+<!--          <div>{{ hours.TKY }}:{{ mins }}</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
   </div>
 </template>
 
@@ -62,10 +92,15 @@ export default {
   },
   data() {
     return {
-      days: ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"],
-      months: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
+      days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
       polling: null,
-      hours: "00",
+      hours: {
+        local: "00",
+        NYC: "-5",
+        SYD: "+11",
+        TKY: "+9",
+      },
       mins: "00",
       secs: "00",
       day: "day...",
@@ -80,7 +115,9 @@ export default {
           this.polling = setInterval(() => {
             const date = new Date()
             //hours
-            this.hours = date.getHours().toString().padStart(2, '0')
+            this.hours.local = date.getHours().toString().padStart(2, '0')
+            // this.hours.NYC = this.convertTZ(date, "EST").getHours().toString().padStart(2, '0')
+            // this.hours.SYD = this.convertTZ(date, "AEST").getHours().toString().padStart(2, '0')
 
             this.mins = date.getMinutes().toString().padStart(2, '0')
             this.secs = date.getSeconds().toString().padStart(2, '0')
@@ -89,6 +126,10 @@ export default {
             this.date = date.getDate()
             this.month = this.months[date.getMonth()]
           }, 1000)
+        }
+        ,
+        convertTZ(date, tzString) {
+          return new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tzString}));
         }
       }
   ,
@@ -103,6 +144,7 @@ export default {
 </script>
 
 
+
 <style scoped>
 .date-time {
   grid-column: 9/12;
@@ -115,11 +157,11 @@ export default {
 }
 
 
-.date-overlay1 {
+.date-overlay1{
   grid-row: 1/4;
   grid-column: 1/9;
   background: #dc4b4b;
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #2196f3, 0vh 0vh 0.1vh 1.6vh #1c3da8;
+  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #2196f3,0vh 0vh 0.1vh 1.6vh #1c3da8;
   border-bottom-left-radius: 2vh;
   border-bottom-right-radius: 2vh;
   display: flex;
@@ -127,22 +169,24 @@ export default {
 
 }
 
-.date-overlay1 h1 {
+.date-overlay1 h1{
   font-size: 8.2vh;
   position: relative;
   left: 1vw;
 }
 
-.date-line1 {
+.date-line1{
   position: relative;
   left: 0.5vw;
   bottom: 1vh;
-  border: 0.2vh solid #090808;
+  border: 0.2vh solid #ece3e3;
+  background-color: white;
   width: 70%;
   height: 0.1vh;
+  border-radius: 2vh;
 }
 
-.date-clock-icon {
+.date-clock-icon{
   position: relative;
   left: 13.4vw;
   width: 5vw;
@@ -151,7 +195,7 @@ export default {
 }
 
 
-.date-clock-icon img {
+.date-clock-icon img{
   width: 5vw;
   height: 8vh;
   position: relative;
@@ -159,25 +203,25 @@ export default {
   left: 1.5vw;
 }
 
-.date-overlay1 h2 {
+.date-overlay1 h2{
   font-size: 3vh;
   position: relative;
   left: 1vw;
 
 }
 
-.date-overlay2 {
-  z-index: -2;
+.date-overlay2{
+  z-index:-2;
   grid-row: 1/11;
   grid-column: 1/11;
   position: relative;
   right: 1vw;
   background: #dc4b4b;
   border-radius: 2vh;
-  box-shadow: 0vh 0vh 0.1vh 0.7vh #2196f3, 0vh 0vh 0.1vh 1.6vh #1c3da8;
+  box-shadow: 0vh 0vh 0.1vh 0.7vh #2196f3,0vh 0vh 0.1vh 1.6vh #1c3da8;
 }
 
-.room-title h1 {
+.room-title h1{
   font-size: 4vh;
   position: relative;
   top: 20vh;
@@ -194,7 +238,6 @@ export default {
   border-radius: 2vh;
   text-align: center;
 }
-
 .room-container2 {
   width: 5vw;
   height: 10vh;
@@ -205,39 +248,38 @@ export default {
   border-radius: 2vh;
   text-align: center;
 }
-
 .room-container3 {
-  width: 5vw;
-  height: 10vh;
-  position: relative;
-  top: 0vh;
-  left: 13.5vw;
-  border: 0.2vh solid white;
-  border-radius: 2vh;
-  text-align: center;
-}
-
+   width: 5vw;
+   height: 10vh;
+   position: relative;
+   top: 0vh;
+   left: 13.5vw;
+   border: 0.2vh solid white;
+   border-radius: 2vh;
+   text-align: center;
+ }
 .room-container4 {
-  width: 5vw;
-  height: 10vh;
-  position: relative;
-  bottom: 10vh;
-  left: 19.5vw;
-  border: 0.2vh solid white;
-  border-radius: 2vh;
-  text-align: center;
+    width: 5vw;
+    height: 10vh;
+    position: relative;
+    bottom: 10vh;
+    left: 19.5vw;
+    border: 0.2vh solid white;
+    border-radius: 2vh;
+    text-align: center;
 }
-
-.date-line2 {
-  border: 0.2vh solid #090808;
+.date-line2{
+  border: 0.2vh solid black;
+  background-color: white;
   width: 90%;
   height: 0.1vh;
   position: relative;
   left: 1.5vw;
   bottom: 9vh;
+  border-radius: 2vh;
 }
 
-.quote-title-container {
+.quote-title-container{
   width: 13vw;
   height: 7vh;
   position: relative;
@@ -246,7 +288,7 @@ export default {
   font-size: 1.5vh;
 }
 
-.quote-container {
+.quote-container{
   width: 7vw;
   height: 16vh;
   position: relative;
@@ -255,10 +297,9 @@ export default {
   font-weight: 400;
 }
 
-.date-overlay3 {
+.date-overlay3{
 
 }
-
 /*.date-overlay4{*/
 /*  background: #dc4b4b;*/
 /*  box-shadow: 0vh 0vh 0.1vh 0.7vh #2196f3,0vh 0vh 0.1vh 1.6vh #1c3da8;*/
@@ -270,32 +311,32 @@ export default {
 /*  z-index: -3;*/
 /*}*/
 
-.date-overlay4 h1 {
+.date-overlay4 h1{
   position: relative;
   top: 1.5vh;
   left: 0.5vw;
 }
 
-.date-overlay4 h1:nth-child(2) {
+.date-overlay4 h1:nth-child(2){
   position: relative;
   left: 2.5vw;
 }
 
-.date-overlay5 {
+.date-overlay5{
   position: relative;
   top: 4vh;
   grid-row: 7/11;
   grid-column: 1/7;
   background: #dc4b4b;
-  box-shadow: 0vh 0vh 0.1vh 0.7vh #2196f3, 0vh 0vh 0.1vh 1.6vh #1c3da8;
+  box-shadow: 0vh 0vh 0.1vh 0.7vh #2196f3,0vh 0vh 0.1vh 1.6vh #1c3da8;
   border-top-right-radius: 80%;
-  display: flex;
+  display:flex;
   flex-direction: column;
   justify-content: left;
   overflow: hidden;
 }
 
-.dad-joke-title {
+.dad-joke-title{
   height: 7vh;
   width: 8vw;
   position: relative;
@@ -303,11 +344,11 @@ export default {
   left: 0.5vw;
 }
 
-.dad-joke-title h1 {
+.dad-joke-title h1{
   padding-left: 0.5vw;
 }
 
-.dad-joke-container {
+.dad-joke-container{
   position: relative;
   top: 3vh;
   left: 0.5vw;
@@ -315,10 +356,12 @@ export default {
   height: 8vh;
 }
 
-.dad-joke-container p {
+.dad-joke-container p{
   padding-left: 0.5vw;
   font-weight: 400;
 }
+
+
 
 
 </style>

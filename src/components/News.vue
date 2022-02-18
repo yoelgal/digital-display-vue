@@ -12,7 +12,7 @@
         </div>
         <div  class="news-underline1"></div>
         <div class="newsDate">
-          <p>{{ day }} {{ date }} {{ month }}</p>
+          <p>MON 14 FEB</p>
         </div>
          <div class="topStories">Top Stories</div>
 
@@ -21,7 +21,7 @@
       <div class="news-data">
         <div class="news-data1">
           <div class="news-acc-data">
-            <p>{{ polledData[startNum].title }} - {{polledData[startNum].source}}</p>
+            <p>{{ polledData[0] }}</p>
           </div>
           <div class="news-ellipse3"></div>
           <div class="news-ellipse4"></div>
@@ -36,7 +36,18 @@
 
 
 
-
+      <!--      <div class='department-notices-title'>News Headlines-->
+<!--      </div>-->
+<!--      <div class='department-notices-data'>-->
+<!--        <ul class="department-notices-data-list"  :class="this.textLength>295?'smaller': 'regular'" >-->
+<!--          <hr/>-->
+<!--          <li>{{ polledData[0] }}</li>-->
+<!--          <hr/>-->
+<!--          <li>{{ polledData[1] }}</li>-->
+<!--          <hr/>-->
+<!--          <li>{{ polledData[2] }}</li>-->
+<!--        </ul>-->
+<!--      </div>-->
     </div>
   </div>
 </template>
@@ -44,40 +55,61 @@
 <script>
 import axios from "axios";
 
+// const isOverflown = ({ clientHeight, scrollHeight }) =>
+//     scrollHeight > clientHeight;
+//
+// const parent = document.querySelector('.text-container')
+// console.log(isOverflown(parent));
+//
+// const resizeText = ({ element, parent }) => {
+//   let i = 3;
+//   let overflow = false;
+//   const maxSize = 128;
+//
+//   while (!overflow && i < maxSize) {
+//     element.style.fontSize = `${i}px`;
+//     overflow = isOverflown(parent);
+//     if (!overflow) i++;
+//   }
+//
+//
+//   element.style.fontSize = `${i - 1}px`;
+// };
+//
+// resizeText({
+//   element: document.querySelector(".text"),
+//   parent: document.querySelector(".text-container"),
+// });
+
+
 export default {
   name: "Department-notices",
   data() {
     return {
-      days: ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"],
-      months: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
-      day: "day...",
-      date: "number...",
-      month: "month...",
       polling: null,
       startNum: 0,
       polledData: ['loading...', 'loading...', 'loading...'],
+      textLength: 400
     }
   },
   methods: {
     pollData() {
       this.polling = setInterval(async () => {
         const news = (await (await fetch('https://fathomless-crag-41517.herokuapp.com/news')).json());
-        this.polledData = news
-        this.startNum >= this.polledData.length ? this.startNum = 0 : this.startNum+=1
-      }, 5000)
+        this.startNum < 12 ? this.startNum += 3 : this.startNum = 0
+        this.polledData = [news[this.startNum+0].title, news[this.startNum+1].title, news[this.startNum+2].title]
+        this.textLength = this.polledData[0].length + this.polledData[1].length + this.polledData[2].length
+      }, 60000)
     },
     pullData() {
       axios
           .get('https://fathomless-crag-41517.herokuapp.com/news')
-          .then(response => (this.polledData = response.data))
+          .then(response => (this.polledData =  [response.data[this.startNum+0].title, response.data[this.startNum+1].title, response.data[this.startNum+2].title]))
+      this.textLength = this.polledData[0].length + this.polledData[1].length + this.polledData[2].length
     }
   },
   mounted() {
     this.pullData()
-    const date = new Date()
-    this.day = this.days[date.getDay()]
-    this.date = date.getDate()
-    this.month = this.months[date.getMonth()]
   },
   beforeDestroy() {
     clearInterval(this.polling)

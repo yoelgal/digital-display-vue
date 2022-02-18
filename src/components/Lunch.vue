@@ -1,14 +1,46 @@
 <template>
-<!--  title
+<!--
 list of options
 current week
 times for remove, fifth form,fourth form in main -->
   <div class="lunch">
-    <div class="lunch-overlay1">
-      <h1>Lunch Menu 🍽</h1>
-    </div>
-    <div class="lunch-overlay2"></div>
-    <div class="lunch-overlay3"></div>
+<!--    <div class="lunch-overlay1">-->
+<!--      <h1>Lunch Menu</h1>-->
+<!--      <img src=../assets/dish-plate.png>-->
+<!--    </div>-->
+<!--    <div class="lunch-overlay2">-->
+<!--       <div class="lunch-options-container">-->
+<!--          <div class="soup">-->
+<!--&lt;!&ndash;            <img width="40vw" height="40vh" src='../assets/cooking-pot.png'>&ndash;&gt;-->
+<!--            <h1>🥣</h1>-->
+<!--            <h4>Soup Of The Day</h4>-->
+<!--            <h5>x x x x x x x x x x </h5>-->
+<!--          </div>-->
+<!--          <div class="main-meal">-->
+<!--&lt;!&ndash;            <img width="40vw" height="40vh" src='../assets/hamburger.png'>&ndash;&gt;-->
+<!--            <h1>🍔</h1>-->
+<!--            <h4>Soup Of The Day</h4>-->
+<!--            <h5>x x x x x x x x x x </h5>-->
+<!--          </div>-->
+<!--          <div class="vegetarian">-->
+<!--&lt;!&ndash;            <img width="40vw" height="40vh" src='../assets/fish-simple.png'>&ndash;&gt;-->
+<!--            <h1>🐟</h1>-->
+<!--            <h4>Soup Of The Day</h4>-->
+<!--            <h5>x x x x x x x x x x </h5>-->
+<!--          </div>-->
+<!--          <div class="lighter">-->
+<!--            <h1>🥚</h1>-->
+<!--            <h4>Soup Of The Day</h4>-->
+<!--            <h5>x x x x x x x x x x </h5>-->
+<!--          </div>-->
+<!--          <div class="dessert">-->
+<!--            <h1>🍪</h1>-->
+<!--            <h4>Soup Of The Day</h4>-->
+<!--            <h5>x x x x x x x x x x </h5>-->
+<!--          </div>-->
+<!--       </div>-->
+<!--    </div>-->
+<!--    <div class="lunch-overlay3"></div>-->
 
 
 
@@ -95,7 +127,7 @@ export default {
           light: menu.lunchMenu.mainLunch[menu.week - 1][day].light,
           dessert: menu.lunchMenu.mainLunch[menu.week - 1][day].dessert
         }
-      }, 1000000000)
+      }, 10000)
     },
     pullData() {
       const day = new dayjs().day()
@@ -135,9 +167,9 @@ export default {
 }
 
 .lunch-overlay1{
-  box-shadow: 0vh 0vh 0.1vh 0.7vh #51e847,0vh 0vh 0.1vh 1.6vh #038519;
+  box-shadow:0vh 0vh 0.1vh 0.5vh #bb799a,0vh 0vh 0.1vh 0.7vh #950740,0vh 0vh 0.1vh 1.5vh #c3073f;
   grid-row: 1/7;
-  background: #0a251a;
+  background: #1a1a1d;
   grid-column: 1/6;
   position: relative;
   top: 1vh;
@@ -151,11 +183,20 @@ export default {
   left: 2vw;
   font-size: 5.5vh;
   color: white;
+  font-weight: 400;
+}
+
+.lunch-overlay1 img{
+  position: relative;
+  left: 11.5vw;
+  bottom: 8vh;
+  width: 3vw;
+  height: 6vh;
 }
 
 .lunch-overlay2{
-  background: #0a251a;
-  box-shadow: 0vh 0vh 0.1vh 0.7vh #51e847,0vh 0vh 0.1vh 1.6vh #038519;
+  background: #1a1a1d;
+  box-shadow:0vh 0vh 0.1vh 0.5vh #bb799a,0vh 0vh 0.1vh 0.7vh #950740,0vh 0vh 0.1vh 1.5vh #c3073f;
   grid-row: 1/11;
   grid-column: 5/11;
   position: relative;
@@ -166,172 +207,117 @@ export default {
   z-index: -1;
 }
 
+.lunch-overlay2 h1{
+  border: 2px solid white;
+  border-radius: 2vh;
+  position: relative;
+  right: 0.5vw;
+  padding-left: 0.6vw;
+  width: 3.5vw;
+  height: 4.7vh;
+}
+
+.lunch-options-container{
+  border-radius: 2vh;
+  width: 15vw;
+  height: 26vh;
+  position: relative;
+  left: 5vw;
+  top: 2vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.lunch-options-container div{
+  width: 90%;
+  height: 18%;
+  margin-top: 0.6vh;
+}
+
+.soup{
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  height: 100%;
+}
+
+.main-meal{
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  height: 100%;
+
+}
+.vegetarian{
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  height: 100%;
+
+}
+.lighter{
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  height: 100%;
+
+}
+.dessert{
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.lunch-options-container h4{
+  grid-row: 1/3;
+  grid-column: 2/5;
+  color: white;
+  font-weight: 200;
+}
+.lunch-options-container h5{
+  position: relative;
+  bottom: 2vh;
+  grid-column: 2/5;
+  color: white;
+  font-weight: 200;
+}
+
+
+/*.lunch-options-container h4{*/
+/*  border: 2px solid gold;*/
+/*  color: white;*/
+/*  font-weight: 200;*/
+/*  grid-row: 1/7;*/
+/*}*/
+
+/*.lunch-options-container h5{*/
+/*  color: white;*/
+/*  font-weight: 200;*/
+/*  position: relative;*/
+/*  top: 10vh;*/
+/*  border: 2px solid white;*/
+/*  width: 20vw;*/
+/*}*/
+
 .lunch-overlay3{
-  background: #0a251a;
-  box-shadow: 0vh 0vh 0.1vh 0.7vh #51e847,0vh 0vh 0.1vh 1.6vh #038519;
+  background: #1a1a1d;
+  box-shadow:0vh 0vh 0.1vh 0.5vh #bb799a,0vh 0vh 0.1vh 0.7vh #950740,0vh 0vh 0.1vh 1.5vh #c3073f;
   grid-column: 1/11;
-  grid-row: 5/11;
+  grid-row: 7/11;
   z-index:-2;
   position: relative;
+  left: 0.9vw;
 }
 
 
 
-.lunch-grid{
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr);
-  height: 100%;
-  width: 100%;
-}
-
-.overlay1{
-  background-color:white;
-  border-top-left-radius: 2vh;
-  grid-row: 8/11;
-  grid-column: 1/11;
-}
-
-.overlay3{
-  background-color: white;
-  grid-row: 7/10;
-  grid-column: 9/11;
-
-}
-
-.overlay2{
-  background: #2196f3;
-  background: linear-gradient(to bottom right, #1384dc, blue);
-  background: #2196f3;
-  grid-row: 1/11;
-  grid-column: 1/11;
-  z-index: -1;
-
-
-}
-
-.overlay4{
-  border-radius: 10vh;
-  background: #2196f3;
-  grid-row: 6/8;
-  grid-column: 8/11;
-  z-index: 10;
-
-}
-
-.lunch-title {
-
-  grid-row: 2/3;
-  grid-column: 2/6;
-  font-size: 2vh;
-
-}
-
-.lunch-underline1{
-  background-color: red;
-  position: absolute;
-  width: 20vw;
-  height: 1vh;
-
-}
-
-
-
-
-
-
-
-.icons-items {
-  display: flex;
-  flex-direction: column;
-
-  height: 100%;
-  max-width: 100%;
-
-
-
-}
-
-.icons-items div {
-  height: 20%;
-  display: flex;
-
-  margin-top: 1vh;
-
-
-}
-
-.icons-items h5 {
-  display: inline;
-}
-
-.lunchData {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  font-family: "Dongle", sans-serif;
-
-
-}
-
-
-.lunch img {
-  width: 3vw;
-  height: 5vh;
-  padding-left: 0.5vw;
-  margin-top:1.5vh;
-}
-
-.lunchData h4 {
-  padding-left: 1vw;
-  text-align: left;
-  font-size: 3vh;
-  text-decoration: underline
-
-}
-
-.lunchData h5 {
-  padding-top: 1vh;
-  text-align: left;
-  margin-left: 1vw;
-  padding-left: 0.5vw;
-  position: relative;
-  bottom: 1vh;
-  font-size: 3.5vh;
-  height: 6vh;
-
-  border-radius: 2vh;
-  line-height: 2.4vh;
-
-
-}
-
-.size-increase {
-  font-size: 4vh;
-}
-
-.soup {
-
-
-}
-
-.main {
-
-}
-
-.vegetarian {
-}
-
-.lighter {
-}
-
-.dessert {
-
-  position: relative;
-  bottom: 1vh;
-
-}
 
 </style>

@@ -14,6 +14,7 @@ export default {
 .fixtures {
   grid-column: 3/5;
   grid-row: 6/10;
+
 }
 
 
