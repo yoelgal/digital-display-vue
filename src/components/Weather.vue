@@ -4,137 +4,72 @@
       <div class="weather-location">Mill Hill Weather
       </div>
       <div class="w-temperature">
-        <p><span style="position: relative;top: 1vh">12</span><sup style='font-size: 2.5vh;position: relative;bottom: 1vh;color: #ff6c05;font-weight: 600'>°C</sup></p>
+        <p><span style="position: relative;top: 1vh">{{polledData.forecast.current.temp}}</span><sup
+            style='font-size: 2.5vh;position: relative;bottom: 1vh;color: #ff6c05;font-weight: 600'>°C</sup></p>
       </div>
-      <div  class="w-max">️↑ <span style="font-weight: 400"> 15</span></div>
-      <div  class="w-min">↓ <span style="font-weight: 400"> 9</span></div>
+      <div class="w-max">️↑ <span style="font-weight: bold">{{polledData.forecast.current.high}}</span></div>
+      <div class="w-min">↓ <span style="font-weight: bold">{{polledData.forecast.current.low}}</span></div>
       <div class="w-wind-icon">
-<!--        <img src='../assets/wind1.png'>-->
+        <!--        <img src='../assets/wind1.png'>-->
         <img src='../assets/wind2.png'>
       </div>
       <div class="w-wind-gust">
-        <p ><span  style="font-weight: 400;">7.33</span><span> m/s</span></p>
+        <p><span style="font-weight: 600;">{{ polledData.wind.ms }}</span><span> m/s</span></p>
       </div>
       <div class="wind-speed">
-        <p><span  style="font-weight: 400;">19</span><span> Km/Hr</span></p>
+        <p><span style="font-weight: 600;">{{ polledData.wind.kmh }}</span><span> Km/Hr</span></p>
       </div>
       <div class="weather-time">
-        <p>Current hour:</p>
-        <p style="font-weight: 400">• 16/24</p>
+        <p>⏰ Current hour:</p>
+        <p style="font-weight: 500">• {{ polledData.hour }}</p>
       </div>
 
     </div>
     <div class="weather-overlay2">
       <div class="sunrise">
         <img src='../assets/iconmonstr-weather-107-240.png'>
-        <h4>7:30</h4>
+        <h4>{{ polledData.sunrise }}</h4>
       </div>
       <div class="sunset">
         <img src='../assets/iconmonstr-weather-109-240.png'>
-        <h4>9:30</h4>
+        <h4>{{polledData.sunset}}</h4>
       </div>
     </div>
     <div class="weather-overlay3">
-<!--      <img src='../assets/wave-haikei.png'>-->
-        <div class="w-data1">
-          <p>{{ polledData.forecast[1].time }}</p>
-          <h1>{{ polledData.forecast[1].temp }}°C</h1>
-          <img :src="polledData.forecast[1].icon" class="weather-data-Icon">
-          <h5 class="weather-data-desc">{{ polledData.forecast[1].desc }}</h5>
+      <!--      <img src='../assets/wave-haikei.png'>-->
+      <div class="w-data1">
+        <p>{{ this.hourly ? polledData.forecast.hourly[0].time : polledData.forecast.daily[0].day }}</p>
+        <h1>{{ this.hourly ? polledData.forecast.hourly[0].temp : polledData.forecast.daily[0].temp }}°C</h1>
+        <img :src="this.hourly ? polledData.forecast.hourly[0].icon : polledData.forecast.daily[0].icon" class="weather-data-Icon">
+        <h5 class="weather-data-desc">{{ this.hourly ? polledData.forecast.hourly[0].desc : polledData.forecast.daily[0].desc }}</h5>
 
-        </div>
-        <div class="w-data2">
-          <p>{{ polledData.forecast[2].time }}</p>
-          <h1>{{ polledData.forecast[2].temp }}°C</h1>
-          <img :src="polledData.forecast[2].icon" class="weather-data-Icon">
-          <h5 class="weather-data-desc">{{ polledData.forecast[2].desc }}</h5>
-        </div>
-        <div class="w-data3">
-          <p>{{ polledData.forecast[3].time }}</p>
-          <h1>{{ polledData.forecast[3].temp }}°C</h1>
-          <img :src="polledData.forecast[3].icon" class="weather-data-Icon">
-          <h5 class="weather-data-desc">{{ polledData.forecast[3].desc }}</h5>
-        </div>
-        <div class="w-data4">
-          <p>{{ polledData.forecast[4].time }}</p>
-          <h1>{{ polledData.forecast[4].temp }}°C</h1>
-          <img :src="polledData.forecast[4].icon" class="weather-data-Icon">
+      </div>
+      <div class="w-data2">
+        <p>{{ this.hourly ? polledData.forecast.hourly[1].time : polledData.forecast.daily[1].day }}</p>
+        <h1>{{ this.hourly ? polledData.forecast.hourly[1].temp : polledData.forecast.daily[1].temp }}°C</h1>
+        <img :src="this.hourly ? polledData.forecast.hourly[1].icon : polledData.forecast.daily[1].icon" class="weather-data-Icon">
+        <h5 class="weather-data-desc">{{ this.hourly ? polledData.forecast.hourly[1].desc : polledData.forecast.daily[1].desc }}</h5>
+      </div>
+      <div class="w-data3">
+        <p>{{ this.hourly ? polledData.forecast.hourly[2].time : polledData.forecast.daily[2].day }}</p>
+        <h1>{{ this.hourly ? polledData.forecast.hourly[2].temp : polledData.forecast.daily[2].temp }}°C</h1>
+        <img :src="this.hourly ? polledData.forecast.hourly[2].icon : polledData.forecast.daily[2].icon" class="weather-data-Icon">
+        <h5 class="weather-data-desc">{{ this.hourly ? polledData.forecast.hourly[2].desc : polledData.forecast.daily[2].desc }}</h5>
+      </div>
+      <div class="w-data4">
+        <p>{{ this.hourly ? polledData.forecast.hourly[3].time : polledData.forecast.daily[3].day }}</p>
+        <h1>{{ this.hourly ? polledData.forecast.hourly[3].temp : polledData.forecast.daily[3].temp }}°C</h1>
+        <img :src="this.hourly ? polledData.forecast.hourly[3].icon : polledData.forecast.daily[3].icon" class="weather-data-Icon">
+        <h5 class="weather-data-desc">{{ this.hourly ? polledData.forecast.hourly[3].desc : polledData.forecast.daily[3].desc }}</h5>
+      </div>
+      <div class="w-data5">
+        <p>{{ this.hourly ? polledData.forecast.hourly[4].time : polledData.forecast.daily[4].day }}</p>
+        <h1>{{ this.hourly ? polledData.forecast.hourly[4].temp : polledData.forecast.daily[4].temp }}°C</h1>
+        <img :src="this.hourly ? polledData.forecast.hourly[4].icon : polledData.forecast.daily[4].icon" class="weather-data-Icon">
+        <h5 class="weather-data-desc">{{ this.hourly ? polledData.forecast.hourly[4].desc : polledData.forecast.daily[4].desc }}</h5>
 
-          <h5 class="weather-data-desc">{{ polledData.forecast[4].desc }}</h5>
-        </div>
-        <div class="w-data5">
-          <p>{{ polledData.forecast[5].time }}</p>
-          <h1>{{ polledData.forecast[5].temp }}°C</h1>
-          <img :src="polledData.forecast[5].icon" class="weather-data-Icon">
-          <h5 class="weather-data-desc">{{ polledData.forecast[5].desc }}</h5>
-
-        </div>
-
-
+      </div>
     </div>
-
-<!--    <div class="weather-grid">-->
-<!--      <div class="weather-wave">-->
-<!--        <img src="../assets/wave1.png">-->
-<!--      </div>-->
-<!--      <div class="temp">-->
-<!--        <div class="weather-date">SAT FEB 12</div>-->
-<!--        <div class="weather-desc"></div>-->
-<!--        <div class="temperature"></div>-->
-<!--      </div>-->
-<!--      <div class="restOfDay"></div>-->
-<!--      <div class="location">Mill Hill School</div>-->
-<!--      <div class="Mainicon"></div>-->
-
-
-      <!--        <div class="futureData">-->
-      <!--        <div   class="weather__time">-->
-      <!--          <div class="day__display">{{ polledData.forecast[1].time }}</div>-->
-      <!--          <img :src="polledData.forecast[1].icon" class="weatherIcon">-->
-      <!--          <div class="temp">{{ polledData.forecast[1].temp }}°C</div>-->
-      <!--          <div class="weatherDesc">{{ polledData.forecast[2].desc }}</div>-->
-      <!--        </div>-->
-      <!--        <div  class="weather__time">-->
-      <!--          <div class="day__display">{{ polledData.forecast[2].time }}</div>-->
-      <!--          <img :src="polledData.forecast[2].icon" class="weatherIcon">-->
-      <!--          <div class="temp">{{ polledData.forecast[2].temp }}°C</div>-->
-      <!--          <div class="weatherDesc">{{ polledData.forecast[2].desc }}</div>-->
-      <!--        </div>-->
-      <!--        <div class="weather__time">-->
-      <!--          <div class="day__display">{{ polledData.forecast[3].time }}</div>-->
-      <!--          <img :src="polledData.forecast[3].icon" class="weatherIcon">-->
-      <!--          <div class="temp">{{ polledData.forecast[3].temp }}°C</div>-->
-      <!--          <div class="weatherDesc">{{ polledData.forecast[3].desc }}</div>-->
-      <!--        </div>-->
-      <!--        <div class="weather__time">-->
-      <!--          <div class="day__display">{{ polledData.forecast[4].time }}</div>-->
-      <!--          <img :src="polledData.forecast[4].icon" class="weatherIcon">-->
-      <!--          <div class="temp">{{ polledData.forecast[4].temp }}°C</div>-->
-      <!--          <div class="weatherDesc">{{ polledData.forecast[4].desc }}</div>-->
-      <!--        </div>-->
-      <!--        </div>-->
-
-      <!--      <div class="weather-underline">-->
-      <!--        <div></div>-->
-      <!--      </div>-->
-      <!--      <div class="bottom_bar">-->
-
-      <!--        <div class="sunrise">-->
-      <!--          &lt;!&ndash;        <img src="https://img.icons8.com/ios/50/000000/sunrise&#45;&#45;v1.png" class="bottom_icon">&ndash;&gt;-->
-      <!--                  <img src="../assets/iconmonstr-weather-107-240.png" class="bottom_icon">-->
-      <!--          <div class="sun__time">{{ polledData.sunrise }}</div>-->
-      <!--        </div>-->
-      <!--        <div class="sunset">-->
-      <!--          &lt;!&ndash;        <img src="https://img.icons8.com/ios/100/000000/sunset&#45;&#45;v1.png" class="bottom_icon">&ndash;&gt;-->
-      <!--                  <img src="../assets/iconmonstr-weather-109-240.png" class="bottom_icon">-->
-      <!--          <div class="sun__time">{{ polledData.sunset }}</div>-->
-      <!--        </div>-->
-      <!--      </div>-->
-
-<!--    </div>-->
-
-
-
   </div>
 
 </template>
@@ -147,81 +82,102 @@ export default {
   name: "Weather",
   data() {
     return {
+      hourly: true,
       polling: null,
       polledData: {
+        "hour": "24/24",
+        "wind": {
+          "ms": 4.62,
+          "kmh": 17
+        },
         "sunrise": "null",
         "sunset": "null",
-        "dayLengthMins": 536,
-        "forecast": [
-          {
-            "time": "Now",
-            "temp": 8,
-            "desc": "overcast clouds",
-            "conditions": "Clouds",
-            "icon": "04n"
+        "dayLengthMins": 0,
+        "forecast": {
+          "current": {
+            "temp": 0,
+            "high": 0,
+            "low": 0
           },
-          {
-            "time": "00:00",
-            "temp": 8,
-            "desc": "overcast clouds",
-            "conditions": "Clouds",
-            "icon": "04n"
-          },
-          {
-            "time": "03:00",
-            "temp": 8,
-            "desc": "broken clouds",
-            "conditions": "Clouds",
-            "icon": "04n"
-          },
-          {
-            "time": "06:00",
-            "temp": 9,
-            "desc": "broken clouds",
-            "conditions": "Clouds",
-            "icon": "04n"
-          },
-          {
-            "time": "09:00",
-            "temp": 10,
-            "desc": "overcast clouds",
-            "conditions": "Clouds",
-            "icon": "04d"
-          },
-          {
-            "time": "12:00",
-            "temp": 11,
-            "desc": "overcast clouds",
-            "conditions": "Clouds",
-            "icon": "04d"
-          },
-          {
-            "time": "15:00",
-            "temp": 12,
-            "desc": "overcast clouds",
-            "conditions": "Clouds",
-            "icon": "04d"
-          },
-          {
-            "time": "18:00",
-            "temp": 8,
-            "desc": "broken clouds",
-            "conditions": "Clouds",
-            "icon": "04n"
-          }
-        ]
+          "hourly": [
+            {
+              "time": "01",
+              "temp": 7,
+              "desc": "overcast clouds",
+              "icon": "http://openweathermap.org/img/wn/04n@2x.png"
+            },
+            {
+              "time": "02",
+              "temp": 7,
+              "desc": "overcast clouds",
+              "icon": "http://openweathermap.org/img/wn/04n@2x.png"
+            },
+            {
+              "time": "03",
+              "temp": 8,
+              "desc": "overcast clouds",
+              "icon": "http://openweathermap.org/img/wn/04n@2x.png"
+            },
+            {
+              "time": "04",
+              "temp": 8,
+              "desc": "overcast clouds",
+              "icon": "http://openweathermap.org/img/wn/04n@2x.png"
+            },
+            {
+              "time": "05",
+              "temp": 10,
+              "desc": "overcast clouds",
+              "icon": "http://openweathermap.org/img/wn/04n@2x.png"
+            }
+          ],
+          "daily": [
+            {
+              "day": "Today",
+              "temp": 0,
+              "desc": "light rain",
+              "icon": "http://openweathermap.org/img/wn/10d@2x.png"
+            },
+            {
+              "day": "Sat",
+              "temp": 0,
+              "desc": "moderate rain",
+              "icon": "http://openweathermap.org/img/wn/10d@2x.png"
+            },
+            {
+              "day": "Sun",
+              "temp": 0,
+              "desc": "light rain",
+              "icon": "http://openweathermap.org/img/wn/10d@2x.png"
+            },
+            {
+              "day": "Mon",
+              "temp": 0,
+              "desc": "light rain",
+              "icon": "http://openweathermap.org/img/wn/10d@2x.png"
+            },
+            {
+              "day": "Tue",
+              "temp": 0,
+              "desc": "overcast clouds",
+              "icon": "http://openweathermap.org/img/wn/04d@2x.png"
+            }
+          ]
+        }
+
       },
     }
   },
   methods: {
     pollData() {
       this.polling = setInterval(async () => {
-        const weather = (await (await fetch('https://fathomless-crag-41517.herokuapp.com/weather')).json());
+        const weather = (await (await fetch('https://fathomless-crag-41517.herokuapp.com/weather2')).json());
         this.polledData = weather
-      }, 300000)
+        this.hourly = !this.hourly
+      }, 30000)
     }, pullData() {
       axios
-          .get('https://fathomless-crag-41517.herokuapp.com/weather')
+          .get('https://fathomless-crag-41517.herokuapp.com/weather2')
           .then(response => (this.polledData = response.data))
     }
   },

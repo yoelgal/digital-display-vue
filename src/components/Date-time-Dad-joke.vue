@@ -1,9 +1,9 @@
 <template>
   <div class="date-time">
     <div class="date-overlay1">
-      <h1>10:17:00</h1>
+      <h1>{{hours}}:{{mins}}:{{secs}}</h1>
       <div class="date-line1"></div>
-      <h2>📅 THU 17 FEB</h2>
+      <h2>📅 {{ day }} {{ date }} {{ month }}</h2>
       <div class="date-clock-icon">
 
       </div>
@@ -49,36 +49,6 @@
         <p>for some reason i can't get filler text on webstorm so I am writing this instead.</p>
       </div>
     </div>
-<!--    <div class="date-time-grid">-->
-<!--      <div class='date-time-line1-container'>-->
-<!--        <div class='date-time-line1'></div>-->
-<!--      </div>-->
-<!--      <div class="time">-->
-<!--        <p>{{ hours.local }}:{{ mins }}:{{ secs }}</p>-->
-<!--      </div>-->
-<!--      <dad-joke></dad-joke>-->
-<!--      <div class="date">-->
-<!--        <h1>{{ day }}</h1>-->
-<!--        <br/>-->
-<!--        <h1>{{ date }}</h1>-->
-<!--        <br/>-->
-<!--        <h1>{{ month }}</h1>-->
-<!--      </div>-->
-<!--      <div class="international-times">-->
-<!--        <div>-->
-<!--          <div style="font-size: 3vh; text-align: center;text-decoration: underline;">NYC</div>-->
-<!--          <div>{{ hours.NYC }}:{{ mins }}</div>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--          <div style="font-size: 3vh;text-align: center;text-decoration: underline;">SYD</div>-->
-<!--          <div>{{ hours.SYD }}:{{ mins }}</div>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--          <div style="font-size: 3vh;text-align: center;text-decoration: underline;">TKY</div>-->
-<!--          <div>{{ hours.TKY }}:{{ mins }}</div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
   </div>
 </template>
 
@@ -92,15 +62,10 @@ export default {
   },
   data() {
     return {
-      days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+      days: ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"],
+      months: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
       polling: null,
-      hours: {
-        local: "00",
-        NYC: "-5",
-        SYD: "+11",
-        TKY: "+9",
-      },
+      hours: "00",
       mins: "00",
       secs: "00",
       day: "day...",
@@ -115,9 +80,7 @@ export default {
           this.polling = setInterval(() => {
             const date = new Date()
             //hours
-            this.hours.local = date.getHours().toString().padStart(2, '0')
-            // this.hours.NYC = this.convertTZ(date, "EST").getHours().toString().padStart(2, '0')
-            // this.hours.SYD = this.convertTZ(date, "AEST").getHours().toString().padStart(2, '0')
+            this.hours = date.getHours().toString().padStart(2, '0')
 
             this.mins = date.getMinutes().toString().padStart(2, '0')
             this.secs = date.getSeconds().toString().padStart(2, '0')
@@ -126,10 +89,6 @@ export default {
             this.date = date.getDate()
             this.month = this.months[date.getMonth()]
           }, 1000)
-        }
-        ,
-        convertTZ(date, tzString) {
-          return new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tzString}));
         }
       }
   ,
