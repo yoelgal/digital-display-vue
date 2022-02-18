@@ -95,7 +95,7 @@ export default {
           light: menu.lunchMenu.mainLunch[menu.week - 1][day].light,
           dessert: menu.lunchMenu.mainLunch[menu.week - 1][day].dessert
         }
-      }, 10000)
+      }, 1000000000)
     },
     pullData() {
       const day = new dayjs().day()
