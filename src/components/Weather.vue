@@ -7,8 +7,8 @@
         <p><span style="position: relative;top: 1vh">{{polledData.forecast.current.temp}}</span><sup
             style='font-size: 2.5vh;position: relative;bottom: 1vh;color: #ff6c05;font-weight: 600'>°C</sup></p>
       </div>
-      <div class="w-max">️↑ <span style="font-weight: bold">{{polledData.forecast.current.max}}</span></div>
-      <div class="w-min">↓ <span style="font-weight: bold">{{polledData.forecast.current.max}}</span></div>
+      <div class="w-max">️↑ <span style="font-weight: bold">{{polledData.forecast.current.high}}</span></div>
+      <div class="w-min">↓ <span style="font-weight: bold">{{polledData.forecast.current.low}}</span></div>
       <div class="w-wind-icon">
         <!--        <img src='../assets/wind1.png'>-->
         <img src='../assets/wind2.png'>
@@ -42,32 +42,32 @@
     <div class="weather-overlay3">
       <!--      <img src='../assets/wave-haikei.png'>-->
       <div class="w-data1">
-        <p>{{ this.hourly ? polledData.forecast.hourly[0].time : polledData.forecast.daily[0].time }}</p>
+        <p>{{ this.hourly ? polledData.forecast.hourly[0].time : polledData.forecast.daily[0].day }}</p>
         <h1>{{ this.hourly ? polledData.forecast.hourly[0].temp : polledData.forecast.daily[0].temp }}°C</h1>
         <img :src="this.hourly ? polledData.forecast.hourly[0].icon : polledData.forecast.daily[0].icon" class="weather-data-Icon">
         <h5 class="weather-data-desc">{{ this.hourly ? polledData.forecast.hourly[0].desc : polledData.forecast.daily[0].desc }}</h5>
 
       </div>
       <div class="w-data2">
-        <p>{{ this.hourly ? polledData.forecast.hourly[1].time : polledData.forecast.daily[1].time }}</p>
+        <p>{{ this.hourly ? polledData.forecast.hourly[1].time : polledData.forecast.daily[1].day }}</p>
         <h1>{{ this.hourly ? polledData.forecast.hourly[1].temp : polledData.forecast.daily[1].temp }}°C</h1>
         <img :src="this.hourly ? polledData.forecast.hourly[1].icon : polledData.forecast.daily[1].icon" class="weather-data-Icon">
         <h5 class="weather-data-desc">{{ this.hourly ? polledData.forecast.hourly[1].desc : polledData.forecast.daily[1].desc }}</h5>
       </div>
       <div class="w-data3">
-        <p>{{ this.hourly ? polledData.forecast.hourly[2].time : polledData.forecast.daily[2].time }}</p>
+        <p>{{ this.hourly ? polledData.forecast.hourly[2].time : polledData.forecast.daily[2].day }}</p>
         <h1>{{ this.hourly ? polledData.forecast.hourly[2].temp : polledData.forecast.daily[2].temp }}°C</h1>
         <img :src="this.hourly ? polledData.forecast.hourly[2].icon : polledData.forecast.daily[2].icon" class="weather-data-Icon">
         <h5 class="weather-data-desc">{{ this.hourly ? polledData.forecast.hourly[2].desc : polledData.forecast.daily[2].desc }}</h5>
       </div>
       <div class="w-data4">
-        <p>{{ this.hourly ? polledData.forecast.hourly[3].time : polledData.forecast.daily[3].time }}</p>
+        <p>{{ this.hourly ? polledData.forecast.hourly[3].time : polledData.forecast.daily[3].day }}</p>
         <h1>{{ this.hourly ? polledData.forecast.hourly[3].temp : polledData.forecast.daily[3].temp }}°C</h1>
         <img :src="this.hourly ? polledData.forecast.hourly[3].icon : polledData.forecast.daily[3].icon" class="weather-data-Icon">
         <h5 class="weather-data-desc">{{ this.hourly ? polledData.forecast.hourly[3].desc : polledData.forecast.daily[3].desc }}</h5>
       </div>
       <div class="w-data5">
-        <p>{{ this.hourly ? polledData.forecast.hourly[4].time : polledData.forecast.daily[4].time }}</p>
+        <p>{{ this.hourly ? polledData.forecast.hourly[4].time : polledData.forecast.daily[4].day }}</p>
         <h1>{{ this.hourly ? polledData.forecast.hourly[4].temp : polledData.forecast.daily[4].temp }}°C</h1>
         <img :src="this.hourly ? polledData.forecast.hourly[4].icon : polledData.forecast.daily[4].icon" class="weather-data-Icon">
         <h5 class="weather-data-desc">{{ this.hourly ? polledData.forecast.hourly[4].desc : polledData.forecast.daily[4].desc }}</h5>
@@ -177,7 +177,7 @@ export default {
         const weather = (await (await fetch('https://fathomless-crag-41517.herokuapp.com/weather2')).json());
         this.polledData = weather
         this.hourly = !this.hourly
-      }, 300000)
+      }, 30000)
     }, pullData() {
       axios
           .get('https://fathomless-crag-41517.herokuapp.com/weather2')

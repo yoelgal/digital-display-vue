@@ -19,7 +19,6 @@ import SchoolNotices from "@/components/School-notices";
 import news from "@/components/News";
 import departmentNotices from "@/components/Department-notices";
 import weather from "@/components/Weather";
-// import roomUses from "@/components/Room-uses";
 import lunch from "@/components/Lunch";
 import dateTimeDadJoke from "@/components/Date-time-Dad-joke";
 import fixtures from "@/components/Fixtures";
