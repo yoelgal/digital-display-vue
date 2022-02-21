@@ -86,7 +86,7 @@ export default {
 
 <style scoped>
 .news-ellipse1{
-  background-color: #d51c57;
+  background-color: #e780a0;
   border-radius: 50%;
   width: 0.9vw;
   height: 1.4vh;
@@ -96,7 +96,7 @@ export default {
 }
 
 .news-ellipse2{
-  background-color: #d51c57;
+  background-color: #e780a0;
   border-radius: 50%;
   width: 0.6vw;
   height: 1vh;
@@ -110,6 +110,7 @@ export default {
   grid-column: 9/12;
   grid-row: 1/4;
   overflow: hidden;
+  color: white;
 }
 
 .news-grid {
@@ -121,13 +122,12 @@ export default {
 }
 
 .news-overlay{
-  background: white;
   grid-row: 1/11;
   grid-column: 1/6;
   border-bottom-right-radius: 3vh;
   border-top-right-radius: 3vh;
-  /*border-top: 0.2vh solid #2196f3;*/
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #2196f3;
+  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;
+  background: #2a2828;
 }
 
 .news-title{
@@ -176,12 +176,14 @@ export default {
   margin-left: 0.2vw;
   margin-top: 2vh;
   font-size: 4vh;
-  color: #d51c57;
+  color: #f67aa2;
   font-weight: 600;
+  -webkit-text-stroke-color: #9d9999;
+  -webkit-text-stroke-width: 0.05vh;
 }
 
 .topStories::first-line{
-  color: black;
+  color: white;
 }
 
 .news-data{
@@ -189,15 +191,14 @@ export default {
   grid-column: 4/13;
   position: relative;
   left: 1.6vw;
-  /*background-color: #2196f3;*/
-  background-color: white;
   border-top-right-radius: 1vh;
   display: grid;
   grid-template-rows: repeat(20, 1fr);
   grid-template-columns: repeat(20, 1fr);
   z-index:-1;
   border-bottom-right-radius: 2vh;
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #2196f3;
+  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;
+  background: #2a2828;
 
 
 }
@@ -227,14 +228,14 @@ export default {
 }
 
 .news-acc-data p {
-  color: black;
+  color: white;
   padding-left: 0.5vw;
   padding-right: 0.5vw;
   font-size: 1.6vh;
 }
 
 .news-ellipse3{
-  background-color: #d51c57;
+  background-color: #f67aa2;
   border-radius: 50%;
   width: 0.7vw;
   height: 1vh;
@@ -244,7 +245,7 @@ export default {
 }
 
 .news-ellipse4{
-  background-color: #d51c57;
+  background-color: #f67aa2;
   border-radius: 50%;
   width: 0.9vw;
   height: 1.4vh;
@@ -266,8 +267,8 @@ export default {
 }
 
 .news-overlay2{
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #2196f3;
-  background: white;
+  box-shadow: 0vh 0vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;
+  background: #2a2828;
   grid-row: 1/11;
   grid-column: 1/14;
   z-index: -2;
@@ -278,17 +279,17 @@ export default {
 }
 
 .news-ellipse5{
-  background-color: #d51c57;
+  background-color: #f67aa2;
   border-radius: 50%;
   width: 0.9vw;
   height: 1.4vh;
   position: relative;
-  left: 11vw;
+  left:11.5vw;
   top: 25vh;
 
 }
 .news-ellipse6{
-  background-color: #d51c57;
+  background-color: #f67aa2;
   border-radius: 50%;
   width: 0.9vw;
   height: 1.4vh;

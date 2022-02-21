@@ -159,7 +159,7 @@ export default {
 <style>
 .lunch {
   grid-row: 4/7;
-  grid-column: 5/9;
+  grid-column: 5/8;
   overflow: hidden;
   display: grid;
   grid-template-rows: repeat(10, 1fr);

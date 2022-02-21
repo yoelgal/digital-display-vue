@@ -107,7 +107,7 @@ export default {
 
 <style scoped>
 .department-notices {
-  grid-column: 5/9;
+  grid-column: 5/8;
   grid-row: 7/10;
   width: 100%;
   height: 100%;

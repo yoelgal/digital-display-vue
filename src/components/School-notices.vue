@@ -1,7 +1,7 @@
 <template>
   <div class="school-notices">
     <div class="school-overlay1">
-      <h2>🎓 School Notices</h2>
+      <h2>🎓 School<span style="position: relative;left:2.5vw;display: block;">Notices</span></h2>
     </div>
     <div class="school-overlay2">
       <ul>
@@ -59,66 +59,65 @@ export default {
   display:grid;
   grid-template-rows:repeat(10, 1fr);
   grid-template-columns:repeat(10, 1fr);
+  color: white;
 }
 
 .school-notices li {
-  font-size: 1.5vh;
+  font-size: 1rem;
 }
 
 .school-overlay1{
   grid-row: 1/4;
   grid-column:1/5;
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.2vh #fff;
-  background: linear-gradient( to bottom right, rgba(237, 252, 7), rgba(255, 107, 17));
-
+  background: #2a2828;
   border-bottom-right-radius: 2vh;
+  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;
 }
 
-.school-ellipse1{
-  background: linear-gradient(#e8e50e, #e95b1e);
-  border-radius: 50%;
-  width: 3vw;
-  height: 5vh;
-  position: relative;
-  left: 15vw;
-  top: 6.5vh;
-}
+/*.school-ellipse1{*/
+/*  background: linear-gradient(#e8e50e, #e95b1e);*/
+/*  border-radius: 50%;*/
+/*  width: 3vw;*/
+/*  height: 5vh;*/
+/*  position: relative;*/
+/*  left: 15vw;*/
+/*  top: 6.5vh;*/
+/*}*/
 
-.school-ellipse2{
-  background: linear-gradient(#e8e50e, #e95b1e);
-  border-radius: 50%;
-  width: 3vw;
-  height: 5vh;
-  left: 24vw;
-  top: 4vh;
-  position: relative;
+/*.school-ellipse2{*/
+/*  background: linear-gradient(#e8e50e, #e95b1e);*/
+/*  border-radius: 50%;*/
+/*  width: 3vw;*/
+/*  height: 5vh;*/
+/*  left: 24vw;*/
+/*  top: 6vh;*/
+/*  position: relative;*/
 
 
-}
+/*}*/
 
 .school-overlay1 h2{
-  text-align: center;
   padding-top: 0.5vh;
-  font-size: 1.6em;
+  font-size: 1.4em;
 
 }
 
 
 .school-overlay2{
-  background: linear-gradient(to bottom right, #4fd3e5, #1183c2);
+  background: #2a2828;
+  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;
   border-top-right-radius: 2vh;
   border-bottom-right-radius: 2vh;
   grid-row: 3/9;
   z-index:-1;
   grid-column: 1/6;
-  box-shadow: 0.2vh 0vh 0.1vh 0.3vh #fff;
+
   overflow: hidden;
 }
 
 .school-overlay2 ul{
-  color: black;
   position: relative;
-  top: 4vh;
+  top: 5vh;
   font-weight: 500;
   line-height: 2.5vh;
   left: 2vw;
@@ -127,20 +126,20 @@ export default {
 }
 
 .school-overlay3{
-  box-shadow: 0.1vh 0.1vh 0.1vh 0.4vh #fff;
-  background: white;
+  background: #2a2828;
+  box-shadow: 0vh 0vh 0.1vh 0.5vh #f18f3f, 0vh 0vh 0.1vh 1vh #d71f56;
   grid-row: 6/11;
   grid-column: 1/11;
   z-index:-2;
   border-top-right-radius: 2vh;
-  background: linear-gradient(to bottom left, #4fd3e5, #1183c2);
+
 }
 
 .school-overlay3 ul{
   position: relative;
-  left: 19vw;
+  left: 19.5vw;
   top: 1vh;
-  max-width:15vw;
+  max-width:14vw;
   max-height:10vh;
   font-size: 1.3vh;
   font-weight: 500;
@@ -148,11 +147,12 @@ export default {
 }
 
 .school-overlay4{
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.6vh #111111;
-  background: white;
+  background: #2a2828;
+  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;
+
   grid-row: 1/7;
   position: relative;
-  background: linear-gradient(to bottom right, #4fd3e5, #1183c2);
+
   left: 1vw;
   z-index: -3;
   border-top-left-radius: 2vh;
@@ -164,7 +164,7 @@ export default {
 
 .school-overlay4 ul{
   position: relative;
-  left: 11vw;
+  left: 11.5vw;
   top: 1vh;
   font-size: 1.3vh;
   max-width:12vw;

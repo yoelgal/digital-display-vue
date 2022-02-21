@@ -196,7 +196,7 @@ export default {
 
 <style scoped>
 .weather {
-  grid-column: 1/5 ;
+  grid-column: 1/5;
   grid-row: 1/6;
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
@@ -489,6 +489,7 @@ export default {
   font-weight: 400;
   position: relative;
   right: 0.5vw;
+  font-size: 1.4vh;
 }
 
 .weather-grid{

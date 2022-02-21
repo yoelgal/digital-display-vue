@@ -106,7 +106,7 @@ export default {
 
 <style scoped>
 .date-time {
-  grid-column: 9/12;
+  grid-column: 8/12;
   grid-row: 4/10;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
@@ -119,12 +119,14 @@ export default {
 .date-overlay1{
   grid-row: 1/4;
   grid-column: 1/9;
-  background: #dc4b4b;
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #2196f3,0vh 0vh 0.1vh 1.6vh #1c3da8;
+  /*background: #dc4b4b;*/
+  /*box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #2196f3,0vh 0vh 0.1vh 1.6vh #1c3da8;*/
   border-bottom-left-radius: 2vh;
   border-bottom-right-radius: 2vh;
   display: flex;
   flex-direction: column;
+  background: #2a2828;
+  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;
 
 }
 
@@ -175,9 +177,10 @@ export default {
   grid-column: 1/11;
   position: relative;
   right: 1vw;
-  background: #dc4b4b;
   border-radius: 2vh;
-  box-shadow: 0vh 0vh 0.1vh 0.7vh #2196f3,0vh 0vh 0.1vh 1.6vh #1c3da8;
+  background: #2a2828;
+  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;
+
 }
 
 .room-title h1{
@@ -189,7 +192,7 @@ export default {
 
 .room-container1 {
   width: 5vw;
-  height: 10vh;
+  height: 12vh;
   position: relative;
   top: 20vh;
   left: 1.5vw;
@@ -199,9 +202,9 @@ export default {
 }
 .room-container2 {
   width: 5vw;
-  height: 10vh;
+  height: 12vh;
   position: relative;
-  top: 10vh;
+  top: 8vh;
   left: 7.5vw;
   border: 0.2vh solid white;
   border-radius: 2vh;
@@ -209,9 +212,9 @@ export default {
 }
 .room-container3 {
    width: 5vw;
-   height: 10vh;
+   height: 12vh;
    position: relative;
-   top: 0vh;
+  bottom: 4vh;
    left: 13.5vw;
    border: 0.2vh solid white;
    border-radius: 2vh;
@@ -219,7 +222,7 @@ export default {
  }
 .room-container4 {
     width: 5vw;
-    height: 10vh;
+    height: 12vh;
     position: relative;
     bottom: 10vh;
     left: 19.5vw;
@@ -228,13 +231,13 @@ export default {
     text-align: center;
 }
 .date-line2{
-  border: 0.2vh solid black;
+  border: 0.2vh solid white;
   background-color: white;
-  width: 90%;
+  width: 67%;
   height: 0.1vh;
   position: relative;
   left: 1.5vw;
-  bottom: 9vh;
+  bottom: 6vh;
   border-radius: 2vh;
 }
 
@@ -251,7 +254,7 @@ export default {
   width: 7vw;
   height: 16vh;
   position: relative;
-  left: 17.5vw;
+  left: 23vw;
   bottom: 10vh;
   font-weight: 400;
 }
@@ -283,11 +286,11 @@ export default {
 
 .date-overlay5{
   position: relative;
-  top: 4vh;
+  top: 6vh;
   grid-row: 7/11;
-  grid-column: 1/7;
-  background: #dc4b4b;
-  box-shadow: 0vh 0vh 0.1vh 0.7vh #2196f3,0vh 0vh 0.1vh 1.6vh #1c3da8;
+  grid-column: 1/9;
+  background: #2a2828;
+  box-shadow: 0vh 0vh 0.1vh 0.5vh #f18f3f, 0vh 0vh 0.1vh 1vh #d71f56;
   border-top-right-radius: 80%;
   display:flex;
   flex-direction: column;
