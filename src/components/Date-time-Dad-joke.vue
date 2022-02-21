@@ -3,7 +3,7 @@
     <div class="date-overlay1">
       <h1>{{hours}}:{{mins}}:{{secs}}</h1>
       <div class="date-line1"></div>
-      <h2>📅 {{ day }} {{ date }} {{ month }}</h2>
+      <h2>{{ day }} {{ date }} {{ month }}</h2>
       <div class="date-clock-icon">
 
       </div>
