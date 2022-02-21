@@ -86,7 +86,7 @@ export default {
 
 <style scoped>
 .news-ellipse1{
-  background-color: #e780a0;
+  background-color: #abc4f0;
   border-radius: 50%;
   width: 0.9vw;
   height: 1.4vh;
@@ -96,7 +96,7 @@ export default {
 }
 
 .news-ellipse2{
-  background-color: #e780a0;
+  background-color: #abc4f0;
   border-radius: 50%;
   width: 0.6vw;
   height: 1vh;
@@ -107,8 +107,8 @@ export default {
 
 
 .news {
-  grid-column: 9/12;
-  grid-row: 1/4;
+  grid-column: 22/31;
+  grid-row: 1/10;
   overflow: hidden;
   color: white;
 }
@@ -126,7 +126,7 @@ export default {
   grid-column: 1/6;
   border-bottom-right-radius: 3vh;
   border-top-right-radius: 3vh;
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;
+  box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
   background: #2a2828;
 }
 
@@ -140,7 +140,7 @@ export default {
 
 .news-icon{
   grid-row: 7/8;
-  margin-top: 1.5vh;
+  margin-top: 5vh;
   grid-column: 4/11;
   z-index: 1;
 }
@@ -174,12 +174,12 @@ export default {
 
 .topStories{
   margin-left: 0.2vw;
-  margin-top: 2vh;
+  margin-top: 1vh;
   font-size: 4vh;
-  color: #f67aa2;
+  color: #abc4f0;
   font-weight: 600;
-  -webkit-text-stroke-color: #9d9999;
-  -webkit-text-stroke-width: 0.05vh;
+  /*-webkit-text-stroke-color: white;*/
+  /*-webkit-text-stroke-width: 0.1vh;*/
 }
 
 .topStories::first-line{
@@ -197,7 +197,7 @@ export default {
   grid-template-columns: repeat(20, 1fr);
   z-index:-1;
   border-bottom-right-radius: 2vh;
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;
+  box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
   background: #2a2828;
 
 
@@ -235,22 +235,22 @@ export default {
 }
 
 .news-ellipse3{
-  background-color: #f67aa2;
+  background-color: #abc4f0;
   border-radius: 50%;
   width: 0.7vw;
   height: 1vh;
   position: absolute;
-  left:15vw;
+  left:17vw;
   top: 19.5vh;
 }
 
 .news-ellipse4{
-  background-color: #f67aa2;
+  background-color: #abc4f0;
   border-radius: 50%;
   width: 0.9vw;
   height: 1.4vh;
   position: absolute;
-  left: 16vw;
+  left: 18vw;
   top: 18vh;
 
 }
@@ -267,7 +267,7 @@ export default {
 }
 
 .news-overlay2{
-  box-shadow: 0vh 0vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;
+  box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
   background: #2a2828;
   grid-row: 1/11;
   grid-column: 1/14;
@@ -279,23 +279,23 @@ export default {
 }
 
 .news-ellipse5{
-  background-color: #f67aa2;
+  background-color: #abc4f0;
   border-radius: 50%;
   width: 0.9vw;
   height: 1.4vh;
   position: relative;
-  left:11.5vw;
-  top: 25vh;
+  left:12vw;
+  top: 24vh;
 
 }
 .news-ellipse6{
-  background-color: #f67aa2;
+  background-color: #abc4f0;
   border-radius: 50%;
   width: 0.9vw;
   height: 1.4vh;
   position: relative;
-  left: 24vw;
-  top: 26.1vh;
+  left: 26vw;
+  top: 22.5vh;
 }
 
 

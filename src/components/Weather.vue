@@ -5,7 +5,7 @@
       </div>
       <div class="w-temperature">
         <p><span style="position: relative;top: 1vh">{{polledData.forecast.current.temp}}</span><sup
-            style='font-size: 2.5vh;position: relative;bottom: 1vh;color: #ff6c05;font-weight: 600'>°C</sup></p>
+            style='font-size: 2.5vh;position: relative;bottom: 1vh;color: #2196f3;font-weight: 600'>°C</sup></p>
       </div>
       <div class="w-max">️↑ <span style="font-weight: bold">{{polledData.forecast.current.high}}</span></div>
       <div class="w-min">↓ <span style="font-weight: bold">{{polledData.forecast.current.low}}</span></div>
@@ -196,8 +196,8 @@ export default {
 
 <style scoped>
 .weather {
-  grid-column: 1/5;
-  grid-row: 1/6;
+  grid-column: 1/12 ;
+  grid-row: 1/17;
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
   color: white;
@@ -209,7 +209,9 @@ export default {
   width: 70%;
   height: 30%;
   background: #2a2828;
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;
+  /*box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;*/
+  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;
+
   border-bottom-left-radius: 2vh;
   border-bottom-right-radius: 2vh;
   z-index: 1;
@@ -225,7 +227,7 @@ export default {
   position: relative;
   bottom: 16vh;
   left: 23vw;
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;
+  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;
   z-index:-1;
   border-bottom-right-radius: 2vh;
   display: grid;
@@ -322,7 +324,7 @@ export default {
   border-bottom-left-radius: 2vh;
   border-bottom-right-radius: 2vh;
   border-top-right-radius: 2vh;
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;
+  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;
 
 
 
@@ -347,7 +349,7 @@ export default {
 
 .weather-overlay3 p {
   text-align: center;
-  color: #f17109;
+  color: white;
   font-weight: bold;
 
 }
@@ -489,7 +491,6 @@ export default {
   font-weight: 400;
   position: relative;
   right: 0.5vw;
-  font-size: 1.4vh;
 }
 
 .weather-grid{
@@ -501,7 +502,6 @@ export default {
 }
 
 .temp{
-  border: 2px solid red;
   grid-row: 1/9;
   grid-column: 1/11;
   display: grid;

@@ -7,7 +7,7 @@
       <news class="bg"></news>
       <weather class="bg"></weather>
       <bus class="bg"></bus>
-<!--      <room-uses class="bg"></room-uses>-->
+      <room-uses class="bg"></room-uses>
       <lunch class="bg"></lunch>
       <date-time-dad-joke class="bg"></date-time-dad-joke>
     </div>
@@ -19,7 +19,7 @@ import SchoolNotices from "@/components/School-notices";
 import news from "@/components/News";
 import departmentNotices from "@/components/Department-notices";
 import weather from "@/components/Weather";
-// import roomUses from "@/components/Room-uses";
+import roomUses from "@/components/Room-uses";
 import lunch from "@/components/Lunch";
 import dateTimeDadJoke from "@/components/Date-time-Dad-joke";
 import fixtures from "@/components/Fixtures";
@@ -33,7 +33,7 @@ export default {
     SchoolNotices,
     departmentNotices,
     weather,
-    // roomUses,
+    roomUses,
     lunch,
     dateTimeDadJoke,
 
@@ -72,7 +72,7 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width:100%;
   height: 100%;
   background: linear-gradient( to bottom,#af0808, #9a609a);
   opacity: 0.5;
@@ -95,9 +95,11 @@ export default {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 2vh;
+  /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;*/
+  /*grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;*/
+  grid-template-columns: repeat(30, 1fr);
+  grid-template-rows: repeat(30, 1fr);
+  gap: 2.5vh;
   padding: 3vh;
   height: 100vh;
   background-color: #272748;

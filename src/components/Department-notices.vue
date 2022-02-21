@@ -1,30 +1,30 @@
 <template>
   <div class='department-notices'>
-    <div class="department-overlay1">
-      <h2>💻 Department Notices</h2>
-    </div>
-    <div class="department-overlay2">
-      <ul>
-        <li>There are Currently no Computer Science Department Notices. Come back Later!</li>
-      </ul>
+<!--    <div class="department-overlay1">-->
+<!--      <h2>💻 Department Notices</h2>-->
+<!--    </div>-->
+<!--    <div class="department-overlay2">-->
+<!--      <ul>-->
+<!--        <li>There are Currently no Computer Science Department Notices. Come back Later!</li>-->
+<!--      </ul>-->
 
-    </div>
-    <div class="department-overlay3">
-      <ul>
-        <li>There are Currently no Computer Science Department Notices. Come back Later!</li>
-      </ul>
-      <div class="department-ellipse2"></div>
-    </div>
-    <div class="department-overlay4">
-      <div class="department-name">
-        <h2>Computer Science</h2>
-      </div>
+<!--    </div>-->
+<!--    <div class="department-overlay3">-->
+<!--      <ul>-->
+<!--        <li>There are Currently no Computer Science Department Notices. Come back Later!</li>-->
+<!--      </ul>-->
+<!--      <div class="department-ellipse2"></div>-->
+<!--    </div>-->
+<!--    <div class="department-overlay4">-->
+<!--      <div class="department-name">-->
+<!--        <h2>Computer Science</h2>-->
+<!--      </div>-->
 
-      <ul>
-        <li>There are Currently no Computer Science Department Notices. Come back Later!</li>
-      </ul>
-      <div class="department-ellipse1"></div>
-    </div>
+<!--      <ul>-->
+<!--        <li>There are Currently no Computer Science Department Notices. Come back Later!</li>-->
+<!--      </ul>-->
+<!--      <div class="department-ellipse1"></div>-->
+<!--    </div>-->
 
 
 <!--    <div id='title' class='period-title'>-->
@@ -107,8 +107,8 @@ export default {
 
 <style scoped>
 .department-notices {
-  grid-column: 5/8;
-  grid-row: 7/10;
+  grid-column: 1/6;
+  grid-row: 17/31;
   width: 100%;
   height: 100%;
   display:grid;
@@ -175,8 +175,8 @@ export default {
   grid-row: 5/21;
   grid-column: 1/11;
   border-top-right-radius: 2vh;
-  background: linear-gradient(to bottom right, #b37fe8, #d86ce5);
-  box-shadow: 0vh 0vh 0.1vh 0.5vh #fff;
+  background: #2a2828;
+  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;
 }
 
 .department-ellipse1{
@@ -208,8 +208,7 @@ export default {
 .department-overlay3{
   grid-row: 1/21;
   grid-column: 5/21;
-  background: linear-gradient(to bottom right, #bb8fe8, #d86ce5);
-  box-shadow: 0vh 0vh 0.1vh 0.5vh #fafafa;
+  background: #2a2828;
   border-top-right-radius: 2vh;
   z-index: -1;
 

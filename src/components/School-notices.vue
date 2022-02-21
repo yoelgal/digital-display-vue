@@ -54,8 +54,8 @@ export default {
 <style scoped>
 .school-notices {
   overflow: hidden;
-  grid-column: 5/9;
-  grid-row: 1/4;
+  grid-column: 12/22;
+  grid-row: 1/9;
   display:grid;
   grid-template-rows:repeat(10, 1fr);
   grid-template-columns:repeat(10, 1fr);
@@ -71,7 +71,7 @@ export default {
   grid-column:1/5;
   background: #2a2828;
   border-bottom-right-radius: 2vh;
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;
+  box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
 }
 
 /*.school-ellipse1{*/
@@ -105,7 +105,7 @@ export default {
 
 .school-overlay2{
   background: #2a2828;
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;
+  box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
   border-top-right-radius: 2vh;
   border-bottom-right-radius: 2vh;
   grid-row: 3/9;
@@ -127,7 +127,7 @@ export default {
 
 .school-overlay3{
   background: #2a2828;
-  box-shadow: 0vh 0vh 0.1vh 0.5vh #f18f3f, 0vh 0vh 0.1vh 1vh #d71f56;
+  box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
   grid-row: 6/11;
   grid-column: 1/11;
   z-index:-2;
@@ -148,7 +148,7 @@ export default {
 
 .school-overlay4{
   background: #2a2828;
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;
+  box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
 
   grid-row: 1/7;
   position: relative;

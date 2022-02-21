@@ -30,12 +30,12 @@
         <h1>10C</h1>
       </div>
       <div class="date-line2"></div>
-      <div class="quote-title-container">
-        <h1>📖 Daily Quote</h1>
-      </div>
-      <div class="quote-container">
-        <p>here is some more filler text. I am starting to like webstorm a bit more.</p>
-      </div>
+<!--      <div class="quote-title-container">-->
+<!--        <h1>📖 Daily Quote</h1>-->
+<!--      </div>-->
+<!--        <div class="quote-container">-->
+<!--          <p>here is some more filler text. I am starting to like webstorm a bit more.</p>-->
+<!--      </div>-->
     </div>
     <div class="date-overlay3"></div>
     <div class="date-overlay4">
@@ -106,8 +106,8 @@ export default {
 
 <style scoped>
 .date-time {
-  grid-column: 8/12;
-  grid-row: 4/10;
+  grid-column: 22/31;
+  grid-row: 10/31;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 1fr);
@@ -126,7 +126,7 @@ export default {
   display: flex;
   flex-direction: column;
   background: #2a2828;
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;
+  box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
 
 }
 
@@ -174,12 +174,12 @@ export default {
 .date-overlay2{
   z-index:-2;
   grid-row: 1/11;
-  grid-column: 1/11;
+  grid-column: 1/12;
   position: relative;
   right: 1vw;
   border-radius: 2vh;
   background: #2a2828;
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;
+  box-shadow: 0 0 0.1vh 0.75vh #1d94d9, 0 0 0.1vh 1.6vh #4c2bed;
 
 }
 
@@ -224,7 +224,7 @@ export default {
     width: 5vw;
     height: 12vh;
     position: relative;
-    bottom: 10vh;
+    bottom: 16vh;
     left: 19.5vw;
     border: 0.2vh solid white;
     border-radius: 2vh;
@@ -233,11 +233,11 @@ export default {
 .date-line2{
   border: 0.2vh solid white;
   background-color: white;
-  width: 67%;
+  width: 82%;
   height: 0.1vh;
   position: relative;
   left: 1.5vw;
-  bottom: 6vh;
+  bottom: 14vh;
   border-radius: 2vh;
 }
 
@@ -245,9 +245,9 @@ export default {
   width: 13vw;
   height: 7vh;
   position: relative;
-  left: 11.5vw;
-  bottom: 8vh;
-  font-size: 1.5vh;
+  left: 1.2vw;
+  bottom: 10vh;
+  font-size: 1.2vh;
 }
 
 .quote-container{
@@ -286,12 +286,12 @@ export default {
 
 .date-overlay5{
   position: relative;
-  top: 6vh;
-  grid-row: 7/11;
-  grid-column: 1/9;
+  top: 10vh;
+  grid-row: 6/11;
+  grid-column: 5/11;
   background: #2a2828;
-  box-shadow: 0vh 0vh 0.1vh 0.5vh #f18f3f, 0vh 0vh 0.1vh 1vh #d71f56;
-  border-top-right-radius: 80%;
+  box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
+  border-top-left-radius: 2vh;
   display:flex;
   flex-direction: column;
   justify-content: left;
@@ -300,7 +300,7 @@ export default {
 
 .dad-joke-title{
   height: 7vh;
-  width: 8vw;
+  width: 12vw;
   position: relative;
   top: 0.5vh;
   left: 0.5vw;
@@ -312,9 +312,9 @@ export default {
 
 .dad-joke-container{
   position: relative;
-  top: 3vh;
+  top: 0vh;
   left: 0.5vw;
-  max-width: 12vw;
+  max-width: 15vw;
   height: 8vh;
 }
 

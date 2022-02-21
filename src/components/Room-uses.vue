@@ -116,15 +116,18 @@ export default {
 </script>
 
 <style scoped>
-/*.room-uses {*/
-/*  grid-column: 9/12;*/
-/*  grid-row: 7/10;*/
-/*  display:grid;*/
-/*  grid-template-rows:repeat(20, 1fr);*/
-/*  grid-template-columns:repeat(20, 1fr);*/
-/*  overflow: hidden;*/
-/*  z-index: 10;*/
-/*}*/
+.room-uses {
+  position: absolute;
+  top: 30vh;
+  left: 50vw;
+  display:grid;
+  grid-template-rows:repeat(20, 1fr);
+  grid-template-columns:repeat(20, 1fr);
+  background: red;
+  z-index: 10;
+
+
+}
 
 .room-uses > div {
 
