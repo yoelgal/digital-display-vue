@@ -133,7 +133,7 @@ export default {
 .date-overlay1 h1{
   font-size: 8.2vh;
   position: relative;
-  left: 1vw;
+  left: 1.01vw;
 }
 
 .date-line1{
