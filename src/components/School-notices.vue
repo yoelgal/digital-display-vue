@@ -1,7 +1,7 @@
 <template>
   <div class="school-notices">
     <div class="school-overlay1">
-      <h2>🎓 School<span style="position: relative;left:2.5vw;display: block;">Notices</span></h2>
+      <div>🎓 School Notices</div>
     </div>
     <div class="school-overlay2">
       <ul>
@@ -63,7 +63,7 @@ export default {
 }
 
 .school-notices li {
-  font-size: 1rem;
+  font-size: 1.2vh;
 }
 
 .school-overlay1{
@@ -74,31 +74,32 @@ export default {
   box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
 }
 
-/*.school-ellipse1{*/
-/*  background: linear-gradient(#e8e50e, #e95b1e);*/
-/*  border-radius: 50%;*/
-/*  width: 3vw;*/
-/*  height: 5vh;*/
-/*  position: relative;*/
-/*  left: 15vw;*/
-/*  top: 6.5vh;*/
-/*}*/
+.school-ellipse1{
+  background: linear-gradient(#1ccece, #2072d0);
+  border-radius: 50%;
+  width: 3vw;
+  height: 5vh;
+  position: relative;
+  left: 14vw;
+  top: 9vh;
+}
 
-/*.school-ellipse2{*/
-/*  background: linear-gradient(#e8e50e, #e95b1e);*/
-/*  border-radius: 50%;*/
-/*  width: 3vw;*/
-/*  height: 5vh;*/
-/*  left: 24vw;*/
-/*  top: 6vh;*/
-/*  position: relative;*/
+.school-ellipse2{
+  background: linear-gradient(#1ccece, #2072d0);
+  border-radius: 50%;
+  width: 3vw;
+  height: 5vh;
+  left: 22vw;
+  top: 3vh;
+  position: relative;
 
 
-/*}*/
+}
 
-.school-overlay1 h2{
-  padding-top: 0.5vh;
-  font-size: 1.4em;
+.school-overlay1 div{
+  padding-top: 1vh;
+  font-weight: bold;
+  font-size: 2.3vh;
 
 }
 
@@ -108,19 +109,20 @@ export default {
   box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
   border-top-right-radius: 2vh;
   border-bottom-right-radius: 2vh;
-  grid-row: 3/9;
+  grid-row: 2/10;
   z-index:-1;
+  position: relative;
+  bottom: 0.5vh;
   grid-column: 1/6;
-
   overflow: hidden;
 }
 
 .school-overlay2 ul{
   position: relative;
-  top: 5vh;
+  top: 6.5vh;
   font-weight: 500;
   line-height: 2.5vh;
-  left: 2vw;
+  left: 1vw;
   font-size: 1.3vh;
   max-width: 14vw;
 }
@@ -137,12 +139,10 @@ export default {
 
 .school-overlay3 ul{
   position: relative;
-  left: 19.5vw;
+  left: 17.5vw;
   top: 1vh;
-  max-width:14vw;
+  max-width:13vw;
   max-height:10vh;
-  font-size: 1.3vh;
-  font-weight: 500;
   line-height: 2.5vh;
 }
 
@@ -164,12 +164,13 @@ export default {
 
 .school-overlay4 ul{
   position: relative;
-  left: 11.5vw;
+  left: 10.5vw;
   top: 1vh;
   font-size: 1.3vh;
   max-width:12vw;
   font-weight: 500;
   line-height: 2.5vh;
+
 }
 
 

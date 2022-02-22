@@ -187,7 +187,7 @@ export default {
   font-size: 4vh;
   position: relative;
   top: 20vh;
-  left: 2vw;
+  left: 1.5vw;
 }
 
 .room-container1 {
@@ -286,12 +286,13 @@ export default {
 
 .date-overlay5{
   position: relative;
-  top: 10vh;
+  top: 12vh;
   grid-row: 6/11;
-  grid-column: 5/11;
+  grid-column: 2/10;
   background: #2a2828;
   box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
   border-top-left-radius: 2vh;
+  border-top-right-radius: 2vh;
   display:flex;
   flex-direction: column;
   justify-content: left;
@@ -300,7 +301,7 @@ export default {
 
 .dad-joke-title{
   height: 7vh;
-  width: 12vw;
+  width: 17vw;
   position: relative;
   top: 0.5vh;
   left: 0.5vw;
@@ -312,15 +313,15 @@ export default {
 
 .dad-joke-container{
   position: relative;
-  top: 0vh;
   left: 0.5vw;
-  max-width: 15vw;
+  max-width: 21vw;
   height: 8vh;
 }
 
 .dad-joke-container p{
   padding-left: 0.5vw;
   font-weight: 400;
+  font-size: 1.5vh;
 }
 
 
