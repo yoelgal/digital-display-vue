@@ -7,8 +7,8 @@
         <p><span style="position: relative;top: 1vh">{{polledData.forecast.current.temp}}</span><sup
             style='font-size: 2.5vh;position: relative;bottom: 1vh;color: #2196f3;font-weight: 600'>°C</sup></p>
       </div>
-      <div class="feels-like-text"><div>Feels Like:</div></div>
-      <div class="feels-like-value">12°C</div>
+      <div class="w-max">️↑ <span style="font-weight: bold">{{polledData.forecast.current.high}}</span></div>
+      <div class="w-min">↓ <span style="font-weight: bold">{{polledData.forecast.current.low}}</span></div>
       <div class="w-wind-icon">
         <!--        <img src='../assets/wind1.png'>-->
         <img src='../assets/wind2.png'>
@@ -21,7 +21,7 @@
       </div>
       <div class="weather-time">
         <p>⏰ Current hour:</p>
-        <p style="font-weight: 400">• {{ polledData.hour }}</p>
+        <p style="font-weight: 500">• {{ polledData.hour }}</p>
       </div>
 
     </div>
@@ -35,7 +35,7 @@
         <h4>{{polledData.sunset}}</h4>
       </div>
     </div>
-    <div  class="weather-overlay3">
+    <div class="weather-overlay3">
       <!--      <img src='../assets/wave-haikei.png'>-->
       <div class="w-data1">
         <p>{{ this.hourly ? polledData.forecast.hourly[0].time : polledData.forecast.daily[0].day }}</p>
@@ -334,11 +334,10 @@ export default {
   background-color: #2a2828;
   width: 10vw;
   height: 23vh;
+  margin-top: 1.5vh;
   margin-left: 1vw;
   margin-right: 1vw;
   border-radius: 3vh;
-  position: relative;
-  bottom: 1vh;
 
 }
 
@@ -417,29 +416,22 @@ export default {
 
 }
 
-.feels-like-text{
+.w-max{
   grid-row: 9/14;
-  grid-column: 7/9;
+  grid-column: 8/10;
   position: relative;
   left: 0.5vw;
   border-bottom: 0.1vh solid white;
-  font-size: 1.5vh;
-  font-weight: 500;
-}
-
-.feels-like-text div{
-  position: relative;
-  top: 1vh;
-  width: 10vw;
-  font-size: 1.5vh;
+  font-size: 2vh;
+  font-weight: 200;
 }
 
 
-.feels-like-value{
+.w-min{
   grid-row: 14/19;
-  grid-column:7/9;
+  grid-column:8/10;
   position: relative;
-  left: 0.5vw;
+  left: 0.65vw;
   font-size: 2vh;
 
 }
@@ -499,7 +491,6 @@ export default {
   font-weight: 400;
   position: relative;
   right: 0.5vw;
-  font-size: 1.6vh;
 }
 
 .weather-grid{
