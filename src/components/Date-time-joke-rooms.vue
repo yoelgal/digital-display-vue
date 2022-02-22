@@ -42,6 +42,7 @@
 
     </div>
     <div class="date-overlay5">
+      <div class="date-ellipse1"></div>
       <div class="dad-joke-title">
         <h1>Dad Joke 😆</h1>
       </div>
@@ -115,6 +116,13 @@ export default {
 }
 
 
+.date-ellipse1{
+  background: linear-gradient(#1ccece, #2072d0);
+  border-radius: 50%;
+  width: 10vw;
+}
+
+
 .date-overlay1{
   grid-row: 1/4;
   grid-column: 1/9;
@@ -126,6 +134,7 @@ export default {
   flex-direction: column;
   background: #2a2828;
   box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
+  overflow: hidden;
 
 }
 
@@ -141,7 +150,7 @@ export default {
   bottom: 1vh;
   border: 0.2vh solid #ece3e3;
   background-color: white;
-  width: 70%;
+  width: 87%;
   height: 0.1vh;
   border-radius: 2vh;
 }

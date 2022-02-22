@@ -86,7 +86,7 @@ export default {
 
 <style scoped>
 .news-ellipse1{
-  background-color: #abc4f0;
+  background: linear-gradient(#1ccece, #2072d0);
   border-radius: 50%;
   width: 0.9vw;
   height: 1.4vh;
@@ -96,7 +96,7 @@ export default {
 }
 
 .news-ellipse2{
-  background-color: #abc4f0;
+  background: linear-gradient(#1ccece, #2072d0);
   border-radius: 50%;
   width: 0.6vw;
   height: 1vh;
@@ -176,8 +176,13 @@ export default {
   margin-left: 0.2vw;
   margin-top: 1vh;
   font-size: 4vh;
-  color: #abc4f0;
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0.40, #73a7e3), color-stop(0.10, #1fc9c9), color-stop(0.80, #0992dc));
+  /*background-image: gradient( linear, left top, right top, color-stop(0.20, #1ccece), color-stop(0.15, #2072d0), color-stop(0.3, #22f));*/
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
   font-weight: 600;
+  /*background: linear-gradient(#1ccece, #2072d0);*/
   /*-webkit-text-stroke-color: white;*/
   /*-webkit-text-stroke-width: 0.1vh;*/
 }
@@ -235,7 +240,7 @@ export default {
 }
 
 .news-ellipse3{
-  background-color: #abc4f0;
+  background: linear-gradient(#1ccece, #2072d0);
   border-radius: 50%;
   width: 0.7vw;
   height: 1vh;
@@ -245,7 +250,7 @@ export default {
 }
 
 .news-ellipse4{
-  background-color: #abc4f0;
+  background: linear-gradient(#1ccece, #2072d0);
   border-radius: 50%;
   width: 0.9vw;
   height: 1.4vh;
@@ -279,7 +284,7 @@ export default {
 }
 
 .news-ellipse5{
-  background-color: #abc4f0;
+  background: linear-gradient(#1ccece, #2072d0);
   border-radius: 50%;
   width: 0.9vw;
   height: 1.4vh;
@@ -289,7 +294,7 @@ export default {
 
 }
 .news-ellipse6{
-  background-color: #abc4f0;
+  background: linear-gradient(#1ccece, #2072d0);
   border-radius: 50%;
   width: 0.9vw;
   height: 1.4vh;
