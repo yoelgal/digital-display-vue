@@ -72,7 +72,6 @@ export default {
       day: "day...",
       date: "number...",
       month: "month..."
-
     }
   },
   methods:
