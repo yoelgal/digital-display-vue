@@ -4,11 +4,13 @@
       <div class="weather-location">Mill Hill Weather
       </div>
       <div class="w-temperature">
-        <p><span style="position: relative;top: 1vh">{{polledData.forecast.current.temp}}</span><sup
+        <p><span style="position: relative;top: 1vh">{{ polledData.current.temp }}</span><sup
             style='font-size: 2.5vh;position: relative;bottom: 1vh;color: #2196f3;font-weight: 600'>°C</sup></p>
       </div>
-      <div class="feels-like-text"><div>Feels Like:</div></div>
-      <div class="feels-like-value">12°C</div>
+      <div class="feels-like-text">
+        <div>Feels Like:</div>
+      </div>
+      <div class="feels-like-value">{{ polledData.current.feelsLike }}°C</div>
       <div class="w-wind-icon">
         <!--        <img src='../assets/wind1.png'>-->
         <img src='../assets/wind2.png'>
@@ -32,41 +34,41 @@
       </div>
       <div class="sunset">
         <img src='../assets/iconmonstr-weather-109-240.png'>
-        <h4>{{polledData.sunset}}</h4>
+        <h4>{{ polledData.sunset }}</h4>
       </div>
     </div>
-    <div  class="weather-overlay3">
+    <div class="weather-overlay3">
       <!--      <img src='../assets/wave-haikei.png'>-->
       <div class="w-data1">
-        <p>{{ this.hourly ? polledData.forecast.hourly[0].time : polledData.forecast.daily[0].day }}</p>
-        <h1>{{ this.hourly ? polledData.forecast.hourly[0].temp : polledData.forecast.daily[0].temp }}°C</h1>
-        <img :src="this.hourly ? polledData.forecast.hourly[0].icon : polledData.forecast.daily[0].icon" class="weather-data-Icon">
-        <h5 class="weather-data-desc">{{ this.hourly ? polledData.forecast.hourly[0].desc : polledData.forecast.daily[0].desc }}</h5>
+        <p>{{ polledData.forecast[0].time }}</p>
+        <h1>{{ polledData.forecast[0].temp }}°C</h1>
+        <img :src="polledData.forecast[0].icon" class="weather-data-Icon">
+        <h5 class="weather-data-desc">{{ polledData.forecast[0].desc }}</h5>
 
       </div>
       <div class="w-data2">
-        <p>{{ this.hourly ? polledData.forecast.hourly[1].time : polledData.forecast.daily[1].day }}</p>
-        <h1>{{ this.hourly ? polledData.forecast.hourly[1].temp : polledData.forecast.daily[1].temp }}°C</h1>
-        <img :src="this.hourly ? polledData.forecast.hourly[1].icon : polledData.forecast.daily[1].icon" class="weather-data-Icon">
-        <h5 class="weather-data-desc">{{ this.hourly ? polledData.forecast.hourly[1].desc : polledData.forecast.daily[1].desc }}</h5>
+        <p>{{ polledData.forecast[1].time }}</p>
+        <h1>{{ polledData.forecast[1].temp }}°C</h1>
+        <img :src="polledData.forecast[1].icon" class="weather-data-Icon">
+        <h5 class="weather-data-desc">{{ polledData.forecast[1].desc }}</h5>
       </div>
       <div class="w-data3">
-        <p>{{ this.hourly ? polledData.forecast.hourly[2].time : polledData.forecast.daily[2].day }}</p>
-        <h1>{{ this.hourly ? polledData.forecast.hourly[2].temp : polledData.forecast.daily[2].temp }}°C</h1>
-        <img :src="this.hourly ? polledData.forecast.hourly[2].icon : polledData.forecast.daily[2].icon" class="weather-data-Icon">
-        <h5 class="weather-data-desc">{{ this.hourly ? polledData.forecast.hourly[2].desc : polledData.forecast.daily[2].desc }}</h5>
+        <p>{{ polledData.forecast[2].time }}</p>
+        <h1>{{ polledData.forecast[2].temp }}°C</h1>
+        <img :src="polledData.forecast[2].icon" class="weather-data-Icon">
+        <h5 class="weather-data-desc">{{ polledData.forecast[2].desc }}</h5>
       </div>
       <div class="w-data4">
-        <p>{{ this.hourly ? polledData.forecast.hourly[3].time : polledData.forecast.daily[3].day }}</p>
-        <h1>{{ this.hourly ? polledData.forecast.hourly[3].temp : polledData.forecast.daily[3].temp }}°C</h1>
-        <img :src="this.hourly ? polledData.forecast.hourly[3].icon : polledData.forecast.daily[3].icon" class="weather-data-Icon">
-        <h5 class="weather-data-desc">{{ this.hourly ? polledData.forecast.hourly[3].desc : polledData.forecast.daily[3].desc }}</h5>
+        <p>{{ polledData.forecast[3].time }}</p>
+        <h1>{{ polledData.forecast[3].temp }}°C</h1>
+        <img :src="polledData.forecast[3].icon" class="weather-data-Icon">
+        <h5 class="weather-data-desc">{{ polledData.forecast[3].desc }}</h5>
       </div>
       <div class="w-data5">
-        <p>{{ this.hourly ? polledData.forecast.hourly[4].time : polledData.forecast.daily[4].day }}</p>
-        <h1>{{ this.hourly ? polledData.forecast.hourly[4].temp : polledData.forecast.daily[4].temp }}°C</h1>
-        <img :src="this.hourly ? polledData.forecast.hourly[4].icon : polledData.forecast.daily[4].icon" class="weather-data-Icon">
-        <h5 class="weather-data-desc">{{ this.hourly ? polledData.forecast.hourly[4].desc : polledData.forecast.daily[4].desc }}</h5>
+        <p>{{ polledData.forecast[4].time }}</p>
+        <h1>{{ polledData.forecast[4].temp }}°C</h1>
+        <img :src="polledData.forecast[4].icon" class="weather-data-Icon">
+        <h5 class="weather-data-desc">{{ polledData.forecast[4].desc }}</h5>
 
       </div>
     </div>
@@ -82,102 +84,20 @@ export default {
   name: "Weather",
   data() {
     return {
-      hourly: true,
       polling: null,
-      polledData: {
-        "hour": "24/24",
-        "wind": {
-          "ms": 4.62,
-          "kmh": 17
-        },
-        "sunrise": "null",
-        "sunset": "null",
-        "dayLengthMins": 0,
-        "forecast": {
-          "current": {
-            "temp": 0,
-            "high": 0,
-            "low": 0
-          },
-          "hourly": [
-            {
-              "time": "01",
-              "temp": 7,
-              "desc": "overcast clouds",
-              "icon": "http://openweathermap.org/img/wn/04n@2x.png"
-            },
-            {
-              "time": "02",
-              "temp": 7,
-              "desc": "overcast clouds",
-              "icon": "http://openweathermap.org/img/wn/04n@2x.png"
-            },
-            {
-              "time": "03",
-              "temp": 8,
-              "desc": "overcast clouds",
-              "icon": "http://openweathermap.org/img/wn/04n@2x.png"
-            },
-            {
-              "time": "04",
-              "temp": 8,
-              "desc": "overcast clouds",
-              "icon": "http://openweathermap.org/img/wn/04n@2x.png"
-            },
-            {
-              "time": "05",
-              "temp": 10,
-              "desc": "overcast clouds",
-              "icon": "http://openweathermap.org/img/wn/04n@2x.png"
-            }
-          ],
-          "daily": [
-            {
-              "day": "Today",
-              "temp": 0,
-              "desc": "light rain",
-              "icon": "http://openweathermap.org/img/wn/10d@2x.png"
-            },
-            {
-              "day": "Sat",
-              "temp": 0,
-              "desc": "moderate rain",
-              "icon": "http://openweathermap.org/img/wn/10d@2x.png"
-            },
-            {
-              "day": "Sun",
-              "temp": 0,
-              "desc": "light rain",
-              "icon": "http://openweathermap.org/img/wn/10d@2x.png"
-            },
-            {
-              "day": "Mon",
-              "temp": 0,
-              "desc": "light rain",
-              "icon": "http://openweathermap.org/img/wn/10d@2x.png"
-            },
-            {
-              "day": "Tue",
-              "temp": 0,
-              "desc": "overcast clouds",
-              "icon": "http://openweathermap.org/img/wn/04d@2x.png"
-            }
-          ]
-        }
-
-      },
+      polledData: null
     }
   },
   methods: {
     pollData() {
       this.polling = setInterval(async () => {
-        const weather = (await (await fetch('https://fathomless-crag-41517.herokuapp.com/weather2')).json());
+        const weather = (await (await fetch('https://fathomless-crag-41517.herokuapp.com/weather3')).json());
         this.polledData = weather
-        this.hourly = !this.hourly
-      }, 30000)
+
+      }, 60000)
     }, pullData() {
       axios
-          .get('https://fathomless-crag-41517.herokuapp.com/weather2')
+          .get('https://fathomless-crag-41517.herokuapp.com/weather3')
           .then(response => (this.polledData = response.data))
     }
   },
@@ -196,7 +116,7 @@ export default {
 
 <style scoped>
 .weather {
-  grid-column: 1/12 ;
+  grid-column: 1/12;
   grid-row: 1/17;
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
@@ -205,7 +125,7 @@ export default {
 
 }
 
-.weather-overlay1{
+.weather-overlay1 {
   width: 70%;
   height: 30%;
   background: #2a2828;
@@ -220,7 +140,7 @@ export default {
   grid-template-rows: repeat(20, 1fr);
 }
 
-.weather-overlay2{
+.weather-overlay2 {
   width: 11vw;
   background: #2a2828;
   height: 10vh;
@@ -228,14 +148,14 @@ export default {
   bottom: 16vh;
   left: 23vw;
   box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;
-  z-index:-1;
+  z-index: -1;
   border-bottom-right-radius: 2vh;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
 }
 
-.sunrise{
+.sunrise {
   border-top-left-radius: 2vh;
   border-bottom-left-radius: 2vh;
   border-right: none;
@@ -251,23 +171,24 @@ export default {
 
 }
 
-.sunrise img{
+.sunrise img {
   width: 3vw;
   height: 5vh;
   float: left;
 }
-.sunrise h4{
+
+.sunrise h4 {
   font-weight: 200;
 }
 
-.sunset{
+.sunset {
   border-left: none;
   border-top-right-radius: 2vh;
   border-bottom-right-radius: 2vh;
   position: relative;
   top: 1.5vh;
   right: -2vw;
-  width:4.5vw ;
+  width: 4.5vw;
   height: 8vh;
   display: flex;
   justify-content: center;
@@ -275,17 +196,17 @@ export default {
   align-items: center;
 }
 
-.sunset img{
+.sunset img {
   width: 3vw;
   height: 5vh;
 
 }
 
-.sunset h4{
+.sunset h4 {
   font-weight: 200;
 }
 
-.rain-chance{
+.rain-chance {
   width: 8.5vw;
   height: 8vh;
   position: relative;
@@ -293,7 +214,7 @@ export default {
   top: 1vh;
 }
 
-.rain-chance img{
+.rain-chance img {
   position: relative;
   top: 1vh;
   float: left;
@@ -301,7 +222,7 @@ export default {
   height: 5vh;
 }
 
-.rain-chance h1{
+.rain-chance h1 {
   padding-top: 1vh;
   position: relative;
   left: 0.5vw;
@@ -309,7 +230,7 @@ export default {
 }
 
 
-.weather-overlay3{
+.weather-overlay3 {
   width: 100%;
   height: 80%;
   position: relative;
@@ -327,7 +248,6 @@ export default {
   box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;
 
 
-
 }
 
 .weather-overlay3 div {
@@ -342,7 +262,7 @@ export default {
 
 }
 
-.weather-overlay4{
+.weather-overlay4 {
   background: white;
   width: 100%;
   height: 100%;
@@ -355,7 +275,7 @@ export default {
 
 }
 
-.weather-overlay3 h1{
+.weather-overlay3 h1 {
   text-align: center;
   color: white;
   margin-top: 1vh;
@@ -364,51 +284,51 @@ export default {
 
 }
 
-.weather-data-Icon{
+.weather-data-Icon {
   width: 5vw;
   height: 8vh;
-  margin-top:1vh;
+  margin-top: 1vh;
   border-bottom: 0.1vh solid white;
 
 }
 
-.weather-overlay3 h5{
+.weather-overlay3 h5 {
   text-align: center;
   color: white;
   padding-top: 0.5vh;
 }
 
 
-.weather-icon{
+.weather-icon {
   grid-row: 2/5;
   grid-column: 2/5;
 }
 
-.weather-icon img{
+.weather-icon img {
   width: 5vw;
   height: 6vh;
 }
 
 
-.weather-location{
+.weather-location {
   grid-row: 3/8;
   grid-column: 2/11;
   font-size: 2.2vh;
   /*border: 2px solid red;*/
 }
 
-.w-temperature{
+.w-temperature {
   grid-row: 7/16;
   grid-column: 2/6;
   font-size: 8vh;
 }
 
-.w-temperature p{
+.w-temperature p {
   position: relative;
   bottom: 2vh;
 }
 
-.w-degrees{
+.w-degrees {
   grid-row: 9/11;
   grid-column: 6/7;
   position: relative;
@@ -417,7 +337,7 @@ export default {
 
 }
 
-.feels-like-text{
+.feels-like-text {
   grid-row: 9/14;
   grid-column: 7/9;
   position: relative;
@@ -427,7 +347,7 @@ export default {
   font-weight: 500;
 }
 
-.feels-like-text div{
+.feels-like-text div {
   position: relative;
   top: 1vh;
   width: 10vw;
@@ -435,9 +355,9 @@ export default {
 }
 
 
-.feels-like-value{
+.feels-like-value {
   grid-row: 14/19;
-  grid-column:7/9;
+  grid-column: 7/9;
   position: relative;
   left: 0.5vw;
   font-size: 2vh;
@@ -445,26 +365,25 @@ export default {
 }
 
 
-
-.w-degrees img{
+.w-degrees img {
   width: 1.5vw;
   height: 2vh;
 }
 
 
-.w-wind-icon{
+.w-wind-icon {
   grid-row: 3/11;
   grid-column: 13/16;
   position: relative;
   right: 1vh;
 }
 
-.w-wind-icon img{
+.w-wind-icon img {
   width: 3vw;
   height: 5vh;
 }
 
-.w-wind-gust{
+.w-wind-gust {
   grid-column: 16/19;
   border-bottom: 0.1vh solid white;
   position: relative;
@@ -476,7 +395,7 @@ export default {
 
 }
 
-.w-wind-gust p{
+.w-wind-gust p {
   position: relative;
   bottom: 0.5vh;
   font-weight: 400;
@@ -484,7 +403,7 @@ export default {
 
 }
 
-.wind-speed{
+.wind-speed {
   position: relative;
   top: 0.8vh;
   right: 0.7vh;
@@ -493,16 +412,16 @@ export default {
   font-size: 1.4vh;
 }
 
-.weather-time{
+.weather-time {
   grid-row: 12/21;
-  grid-column:13/20;
+  grid-column: 13/20;
   font-weight: 400;
   position: relative;
   right: 0.5vw;
   font-size: 1.6vh;
 }
 
-.weather-grid{
+.weather-grid {
   display: grid;
   grid-template-rows: repeat(20, 1fr);
   grid-template-columns: repeat(20, 1fr);
@@ -510,7 +429,7 @@ export default {
   width: 100%;
 }
 
-.temp{
+.temp {
   grid-row: 1/9;
   grid-column: 1/11;
   display: grid;
@@ -520,74 +439,57 @@ export default {
   width: 100%;
 }
 
-.weather-date{
+.weather-date {
   border: 2px solid blue;
-  grid-row:1/3;
+  grid-row: 1/3;
   grid-column: 1/11;
   text-align: center;
   font-size: 3vh;
 }
 
-.weather-desc{
+.weather-desc {
   border: 2px solid blue;
-  grid-row:3/6;
+  grid-row: 3/6;
   grid-column: 1/11;
 }
 
-.temperature{
+.temperature {
   border: 2px solid blue;
   grid-row: 6/11;
   grid-column: 1/11;
 }
 
 
-.restOfDay{
+.restOfDay {
   border: 2px solid red;
   grid-column: 1/21;
   grid-row: 9/14;
 }
-.location{
+
+.location {
   border: 2px solid red;
   grid-row: 14/17;
   grid-column: 1/21;
   text-align: center;
   font-size: 6vh;
 }
-.Mainicon{
+
+.Mainicon {
   border: 2px solid red;
   grid-row: 1/9;
   grid-column: 11/21;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.weather-wave{
-  grid-row:10/21;
+.weather-wave {
+  grid-row: 10/21;
   grid-column: 1/21;
 }
 
-.weather-wave img{
+.weather-wave img {
   height: 100%;
   width: 100%;
 }
-
-
-
-
 
 
 </style>
