@@ -85,7 +85,261 @@ export default {
   data() {
     return {
       polling: null,
-      polledData: null
+      polledData: {
+        "hour": "12/24",
+        "wind": {
+          "ms": 9.77,
+          "kmh": 35
+        },
+        "sunrise": "07:01",
+        "sunset": "17:27",
+        "current": {
+          "temp": 12,
+          "feelsLike": 12
+        },
+        "forecast": [
+          {
+            "time": "15",
+            "temp": 11,
+            "desc": "light rain",
+            "icon": "http://openweathermap.org/img/wn/10d@2x.png"
+          },
+          {
+            "time": "18",
+            "temp": 9,
+            "desc": "broken clouds",
+            "icon": "http://openweathermap.org/img/wn/04n@2x.png"
+          },
+          {
+            "time": "21",
+            "temp": 6,
+            "desc": "clear sky",
+            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
+          },
+          {
+            "time": "00",
+            "temp": 5,
+            "desc": "clear sky",
+            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
+          },
+          {
+            "time": "03",
+            "temp": 4,
+            "desc": "clear sky",
+            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
+          },
+          {
+            "time": "06",
+            "temp": 3,
+            "desc": "clear sky",
+            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
+          },
+          {
+            "time": "09",
+            "temp": 5,
+            "desc": "few clouds",
+            "icon": "http://openweathermap.org/img/wn/02d@2x.png"
+          },
+          {
+            "time": "12",
+            "temp": 9,
+            "desc": "scattered clouds",
+            "icon": "http://openweathermap.org/img/wn/03d@2x.png"
+          },
+          {
+            "time": "15",
+            "temp": 9,
+            "desc": "overcast clouds",
+            "icon": "http://openweathermap.org/img/wn/04d@2x.png"
+          },
+          {
+            "time": "18",
+            "temp": 7,
+            "desc": "overcast clouds",
+            "icon": "http://openweathermap.org/img/wn/04n@2x.png"
+          },
+          {
+            "time": "21",
+            "temp": 7,
+            "desc": "overcast clouds",
+            "icon": "http://openweathermap.org/img/wn/04n@2x.png"
+          },
+          {
+            "time": "00",
+            "temp": 7,
+            "desc": "overcast clouds",
+            "icon": "http://openweathermap.org/img/wn/04n@2x.png"
+          },
+          {
+            "time": "03",
+            "temp": 7,
+            "desc": "overcast clouds",
+            "icon": "http://openweathermap.org/img/wn/04n@2x.png"
+          },
+          {
+            "time": "06",
+            "temp": 7,
+            "desc": "light rain",
+            "icon": "http://openweathermap.org/img/wn/10n@2x.png"
+          },
+          {
+            "time": "09",
+            "temp": 5,
+            "desc": "light rain",
+            "icon": "http://openweathermap.org/img/wn/10d@2x.png"
+          },
+          {
+            "time": "12",
+            "temp": 5,
+            "desc": "light rain",
+            "icon": "http://openweathermap.org/img/wn/10d@2x.png"
+          },
+          {
+            "time": "15",
+            "temp": 5,
+            "desc": "scattered clouds",
+            "icon": "http://openweathermap.org/img/wn/03d@2x.png"
+          },
+          {
+            "time": "18",
+            "temp": 4,
+            "desc": "few clouds",
+            "icon": "http://openweathermap.org/img/wn/02n@2x.png"
+          },
+          {
+            "time": "21",
+            "temp": 3,
+            "desc": "clear sky",
+            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
+          },
+          {
+            "time": "00",
+            "temp": 3,
+            "desc": "few clouds",
+            "icon": "http://openweathermap.org/img/wn/02n@2x.png"
+          },
+          {
+            "time": "03",
+            "temp": 3,
+            "desc": "few clouds",
+            "icon": "http://openweathermap.org/img/wn/02n@2x.png"
+          },
+          {
+            "time": "06",
+            "temp": 3,
+            "desc": "few clouds",
+            "icon": "http://openweathermap.org/img/wn/02n@2x.png"
+          },
+          {
+            "time": "09",
+            "temp": 4,
+            "desc": "scattered clouds",
+            "icon": "http://openweathermap.org/img/wn/03d@2x.png"
+          },
+          {
+            "time": "12",
+            "temp": 7,
+            "desc": "scattered clouds",
+            "icon": "http://openweathermap.org/img/wn/03d@2x.png"
+          },
+          {
+            "time": "15",
+            "temp": 8,
+            "desc": "clear sky",
+            "icon": "http://openweathermap.org/img/wn/01d@2x.png"
+          },
+          {
+            "time": "18",
+            "temp": 5,
+            "desc": "clear sky",
+            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
+          },
+          {
+            "time": "21",
+            "temp": 4,
+            "desc": "clear sky",
+            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
+          },
+          {
+            "time": "00",
+            "temp": 3,
+            "desc": "clear sky",
+            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
+          },
+          {
+            "time": "03",
+            "temp": 2,
+            "desc": "clear sky",
+            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
+          },
+          {
+            "time": "06",
+            "temp": 2,
+            "desc": "scattered clouds",
+            "icon": "http://openweathermap.org/img/wn/03n@2x.png"
+          },
+          {
+            "time": "09",
+            "temp": 5,
+            "desc": "broken clouds",
+            "icon": "http://openweathermap.org/img/wn/04d@2x.png"
+          },
+          {
+            "time": "12",
+            "temp": 8,
+            "desc": "scattered clouds",
+            "icon": "http://openweathermap.org/img/wn/03d@2x.png"
+          },
+          {
+            "time": "15",
+            "temp": 8,
+            "desc": "few clouds",
+            "icon": "http://openweathermap.org/img/wn/02d@2x.png"
+          },
+          {
+            "time": "18",
+            "temp": 5,
+            "desc": "clear sky",
+            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
+          },
+          {
+            "time": "21",
+            "temp": 4,
+            "desc": "clear sky",
+            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
+          },
+          {
+            "time": "00",
+            "temp": 4,
+            "desc": "clear sky",
+            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
+          },
+          {
+            "time": "03",
+            "temp": 4,
+            "desc": "clear sky",
+            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
+          },
+          {
+            "time": "06",
+            "temp": 3,
+            "desc": "scattered clouds",
+            "icon": "http://openweathermap.org/img/wn/03n@2x.png"
+          },
+          {
+            "time": "09",
+            "temp": 5,
+            "desc": "overcast clouds",
+            "icon": "http://openweathermap.org/img/wn/04d@2x.png"
+          },
+          {
+            "time": "12",
+            "temp": 7,
+            "desc": "overcast clouds",
+            "icon": "http://openweathermap.org/img/wn/04d@2x.png"
+          }
+        ]
+      }
     }
   },
   methods: {
