@@ -11,8 +11,8 @@
            </div>
          <div class="bus-time">
            <div class="mins"><i>(Minutes)</i></div>
-           <div class="time1">12</div>
-           <div class="time2">8</div>
+           <div class="time1">{{polledData.edgware[0]}}</div>
+           <div class="time2">{{polledData.edgware[1]}}</div>
          </div>
          <div class="bus-times"></div>
          <div class="destination">
@@ -37,8 +37,8 @@
         </div>
         <div class="bus-time">
           <div class="mins"><i>(Minutes)</i></div>
-          <div class="time1">12</div>
-          <div class="time2">8</div>
+          <div class="time1">{{polledData.golders[0]}}</div>
+          <div class="time2">{{polledData.golders[1]}}</div>
         </div>
         <div class="bus-times"></div>
         <div class="destination">
@@ -80,11 +80,11 @@ export default {
         this.polledData = {
           edgware: [
               bus.edgware[0] || "N/A",
-              bus.edgware[1] || "N/A"
+              bus.edgware[1] || ""
           ],
           golders: [
             bus.golders[0] || "N/A",
-            bus.golders[1] || "N/A"
+            bus.golders[1] || ""
           ]
         }
       }, 40000)
@@ -95,11 +95,11 @@ export default {
           .then(response => (this.polledData = {
             edgware: [
               response.data.edgware[0] || "N/A",
-              response.data.edgware[1] || "N/A"
+              response.data.edgware[1] || ""
             ],
             golders: [
               response.data.golders[0] || "N/A",
-              response.data.golders[1] || "N/A"
+              response.data.golders[1] || ""
             ]
           }))
     }

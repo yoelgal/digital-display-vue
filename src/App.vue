@@ -7,9 +7,8 @@
       <news class="bg"></news>
       <weather class="bg"></weather>
       <bus class="bg"></bus>
-      <room-uses class="bg"></room-uses>
       <lunch class="bg"></lunch>
-      <date-time-dad-joke class="bg"></date-time-dad-joke>
+      <date-time-joke-rooms class="bg"></date-time-joke-rooms>
     </div>
   </div>
 </template>
@@ -19,9 +18,8 @@ import SchoolNotices from "@/components/School-notices";
 import news from "@/components/News";
 import departmentNotices from "@/components/Department-notices";
 import weather from "@/components/Weather";
-import roomUses from "@/components/Room-uses";
 import lunch from "@/components/Lunch";
-import dateTimeDadJoke from "@/components/Date-time-Dad-joke";
+import dateTimeJokeRooms from "@/components/Date-time-joke-rooms";
 import fixtures from "@/components/Fixtures";
 
 export default {
@@ -33,9 +31,8 @@ export default {
     SchoolNotices,
     departmentNotices,
     weather,
-    roomUses,
     lunch,
-    dateTimeDadJoke,
+    dateTimeJokeRooms,
 
   }
 }
