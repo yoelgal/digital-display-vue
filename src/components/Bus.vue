@@ -32,7 +32,7 @@
       <div  style="position:relative;left: 2vw"  class="top-layer">
         <div class="location">
           <div class="location1">Location:</div>
-          <div class="location2">Mill Hill School</div>
+          <div class="location2">Belmont Farm</div>
           <span style="font-size: 3vh;position: absolute;top: -0.8vh;left: 4.5vw;">˃</span>
         </div>
         <div class="bus-time">
