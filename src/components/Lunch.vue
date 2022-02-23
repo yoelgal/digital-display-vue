@@ -158,7 +158,7 @@ export default {
 
 <style>
 .lunch {
-  grid-row: 9/21;
+  grid-row: 9/25;
   grid-column: 12/22;
   overflow: hidden;
   display: grid;
@@ -307,15 +307,6 @@ export default {
 /*  width: 20vw;*/
 /*}*/
 
-.lunch-overlay3{
-  background: #1a1a1d;
-  box-shadow:0vh 0vh 0.1vh 0.5vh #bb799a,0vh 0vh 0.1vh 0.7vh #950740,0vh 0vh 0.1vh 1.5vh #c3073f;
-  grid-column: 1/11;
-  grid-row: 7/11;
-  z-index:-2;
-  position: relative;
-  left: 0.9vw;
-}
 
 
 

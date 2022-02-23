@@ -12,8 +12,8 @@ export default {
 
 <style scoped>
 .fixtures {
-  grid-column: 6/12;
-  grid-row:17/31;
+  grid-column: 12/22;
+  grid-row:25/31;
 
 }
 

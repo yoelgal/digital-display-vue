@@ -3,6 +3,7 @@
     <div class="bus-overlay"><div>Bus Times 🚌</div>
     </div>
     <div class="bus-overlay2">
+      <img style="width: 12vw;height: 23vh;position: absolute;left: 4.8vw;z-index:0;opacity: 0.2;filter:blur(0.5vh);" src=../assets/bus-icon2.png>
        <div style="position: relative;left: 0.5vw" class="top-layer">
          <div class="location">
            <div class="location1">Location:</div>
@@ -10,7 +11,7 @@
            <span style="font-size: 3vh;position: absolute;top: -0.9vh;left: 7vw;">˃</span>
            </div>
          <div class="bus-time">
-           <div class="mins"><i>(Minutes)</i></div>
+           <div class="mins"><i>(Mins)</i></div>
            <div class="time1">{{polledData.edgware[0]}}</div>
            <div class="time2">{{polledData.edgware[1]}}</div>
          </div>
@@ -18,7 +19,7 @@
          <div class="destination">
            <div style="position: relative;right: 5.5vw;bottom: 8.5vh;" class="destination1">Destination:</div>
            <div style="position: relative;right: 5.5vw;bottom: 8.5vh" class="destination2">Edgware</div>
-           <span style="font-size: 3vh;position: absolute;bottom: 6vh;left: 7vw;">˃</span></div>
+           <span style="font-size: 3vh;position: absolute;bottom: 2.5vh;left: 8vw;">˃</span></div>
        </div>
 
        <div style="position: relative;left: 5vw" class="bus-arrow">
@@ -36,7 +37,7 @@
           <span style="font-size: 3vh;position: absolute;top: -0.8vh;left: 4.5vw;">˃</span>
         </div>
         <div class="bus-time">
-          <div class="mins"><i>(Minutes)</i></div>
+          <div class="mins"><i>(Mins)</i></div>
           <div class="time1">{{polledData.golders[0]}}</div>
           <div class="time2">{{polledData.golders[1]}}</div>
         </div>
@@ -44,7 +45,7 @@
         <div class="destination">
           <div style="position: relative;bottom: 8.5vh;" class="destination1">Destination:</div>
           <div style="position: relative;bottom: 8.5vh;width: 9vw" class="destination2">Golders Green</div>
-          <span style="font-size: 3vh;position: absolute;bottom: 5.7vh;left: 4.5vw;">˃</span></div>
+          <span style="font-size: 3vh;position: absolute;bottom: 2.5vh;left: 5.8vw;">˃</span></div>
       </div>
       <div style="position: relative;top: -20vh" class="bus-arrow">
         <div class="start-point"></div>
@@ -53,7 +54,7 @@
         <div class="end-point"></div>
       </div>
     </div>
-
+    <div class="bus-overlay4"></div>
   </div>
 </template>
 
@@ -119,8 +120,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .bus {
-  grid-column: 12/22;
-  grid-row:21/31;
+  grid-column: 1/12;
+  grid-row:17/31;
   background: #2a2828;
   color: white;
   display: grid;
@@ -166,28 +167,29 @@ export default {
 
 .location1{
   position: relative;
-  right: 5.5vw;
-  opacity: 0.5;
+  right: 6.5vw;
+  opacity: 0.8;
   font-size: 1.5vh;
   font-weight: 600;
 }
 
 .location2{
   position: relative;
-  right: 5.5vw;
-  font-size: 2vh;
+  right: 6.5vw;
+  font-size: 2.3vh;
   font-weight: 500;
-  width: 12vw
+  width: 14vw;
 }
 .destination{
   position: relative;
   top: 8vh;
   padding-left: 0.3vw;
+  right: 1.3vw;
 }
 
 .destination1{
   position: relative;
-  bottom: 1vh;
+  top: -4vh;
   right: 5.5vw;
   opacity: 0.5;
   font-size: 1.5vh;
@@ -197,7 +199,7 @@ export default {
 
 .destination2{
   position: relative;
-  bottom: 1vh;
+  top: -3.5vh;
   right: 5.5vw;
   font-size: 1.8vh;
   font-weight: 500;
@@ -229,7 +231,7 @@ export default {
 .arrow{
   background: white;
   width: 0.5vw;
-  height: 17vh;
+  height: 21vh;
   border-radius: 2vh;
   /*position: relative;*/
 
@@ -252,14 +254,15 @@ export default {
 }
 .mins{
   position: relative;
-  left: 1vw;
-  top: 2vh;
-  font-weight: 100;
+  left: 2.5vw;
+  top: 1vh;
+  font-weight: 700;
+  opacity: 0.5;
 
 }
 
 .time1{
-  font-size: 6vh;
+  font-size: 8vh;
   position: relative;
   bottom: 1.7vh;
   right: 3vw;
@@ -283,13 +286,15 @@ export default {
 .bus-overlay4{
   background: #2a2828;
   box-shadow: 0 0 0.2vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
-  grid-row: 1/18;
-  grid-column: 12/19;
+  grid-row: 15/19;
+  grid-column: 1/19;
   border-radius: 5vh;
-  position: relative;
-  left: 5vw;
+  z-index: 2;
   display: flex;
   flex-direction: column;
+  position: relative;
+  top: 2vh;
+
 }
 
 .bus-overlay4 img{
@@ -297,17 +302,6 @@ export default {
   height: 10vh;
 }
 
-.img1{
-  margin-top: 4vh;
-  height: 50%;
-
-}
-.img2{
-  position: relative;
-  top: 4vh;
-  height: 50%;
-
-}
 
 
 
