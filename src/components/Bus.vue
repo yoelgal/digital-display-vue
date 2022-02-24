@@ -140,7 +140,7 @@ export default {
   right: 5vw;
   border-bottom-right-radius: 2vh;
   border-bottom-left-radius: 2vh;
-  box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
+  box-shadow: 0.2vh 0.2vh 1vh 0.5vh #1d94d9, 0.5vh 0.3vh 1vh 1vh #4c2bed;
   font-size: 3.5vh;
   padding-left: 2vw;
   font-weight: 500;
@@ -285,7 +285,7 @@ export default {
 }
 .bus-overlay4{
   background: #2a2828;
-  box-shadow: 0 0 0.2vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
+  box-shadow: 0.2vh 0.2vh 1vh 0.5vh #1d94d9, 0.5vh 0.3vh 1vh 1vh #4c2bed;
   grid-row: 15/19;
   grid-column: 1/19;
   border-radius: 5vh;

@@ -71,7 +71,8 @@ export default {
   grid-column:1/5;
   background: #2a2828;
   border-bottom-right-radius: 2vh;
-  box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
+  box-shadow: 0.2vh 0.2vh 1vh 0.5vh #1d94d9, 0.5vh 0.3vh 1vh 1vh #4c2bed;
+
 }
 
 .school-ellipse1{
@@ -106,7 +107,7 @@ export default {
 
 .school-overlay2{
   background: #2a2828;
-  box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
+  box-shadow: 0.2vh 0.2vh 1vh 0.5vh #1d94d9, 0.5vh 0.3vh 1vh 1vh #4c2bed;
   border-top-right-radius: 2vh;
   border-bottom-right-radius: 2vh;
   grid-row: 2/10;
@@ -129,7 +130,7 @@ export default {
 
 .school-overlay3{
   background: #2a2828;
-  box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
+  box-shadow: 0.2vh 0.2vh 1vh 0.5vh #1d94d9, 0.5vh 0.3vh 1vh 1vh #4c2bed;
   grid-row: 6/11;
   grid-column: 1/11;
   z-index:-2;

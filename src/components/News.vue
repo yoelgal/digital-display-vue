@@ -126,7 +126,7 @@ export default {
   grid-column: 1/6;
   border-bottom-right-radius: 3vh;
   border-top-right-radius: 3vh;
-  box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
+  box-shadow: 0.2vh 0.2vh 1vh 0.5vh #1d94d9, 0.5vh 0.3vh 1vh 1vh #4c2bed;
   background: #2a2828;
 }
 
@@ -202,7 +202,7 @@ export default {
   grid-template-columns: repeat(20, 1fr);
   z-index:-1;
   border-bottom-right-radius: 2vh;
-  box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
+  box-shadow: 0.2vh 0.2vh 1vh 0.5vh #1d94d9, 0.5vh 0.3vh 1vh 1vh #4c2bed;
   background: #2a2828;
 
 
@@ -272,7 +272,7 @@ export default {
 }
 
 .news-overlay2{
-  box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
+  box-shadow: 0.2vh 0.2vh 1vh 0.5vh #1d94d9, 0.5vh 0.3vh 1vh 1vh #4c2bed;
   background: #2a2828;
   grid-row: 1/11;
   grid-column: 1/14;

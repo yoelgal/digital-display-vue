@@ -127,7 +127,7 @@ export default {
   display: flex;
   flex-direction: column;
   background: #2a2828;
-  box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
+  box-shadow: 0.2vh 0.2vh 1vh 0.5vh #1d94d9, 0.5vh 0.3vh 1vh 1vh #4c2bed;
   overflow: hidden;
 
 }
@@ -181,7 +181,8 @@ export default {
   right: 1vw;
   border-radius: 2vh;
   background: #2a2828;
-  box-shadow: 0 0 0.1vh 0.75vh #1d94d9, 0 0 0.1vh 1.6vh #4c2bed;
+  box-shadow: 0.2vh 0.2vh 1vh 0.5vh #1d94d9, 0.5vh 0.3vh 1vh 1vh #4c2bed;
+
 
 }
 
@@ -297,7 +298,8 @@ export default {
   grid-row: 6/11;
   grid-column: 2/10;
   background: #2a2828;
-  box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
+  box-shadow: 0.2vh 0.2vh 1vh 0.5vh #1d94d9, 0.5vh 0.3vh 1vh 1vh #4c2bed;
+
   border-top-left-radius: 2vh;
   border-top-right-radius: 2vh;
   display: flex;
