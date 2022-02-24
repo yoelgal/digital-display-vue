@@ -168,7 +168,7 @@ export default {
 }
 
 .temp-red {
-  color: #ff7420;
+  /*color: #ff7420;*/
 }
 
 .border-blue{
