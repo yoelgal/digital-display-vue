@@ -9,6 +9,7 @@
       <bus class="bg"></bus>
       <lunch class="bg"></lunch>
       <date-time-joke-rooms class="bg"></date-time-joke-rooms>
+<!--      <p>&copy; J.Olsen & Y.Gal 2021-Present</p>-->
     </div>
   </div>
 </template>
@@ -19,7 +20,7 @@ import news from "@/components/News";
 import departmentNotices from "@/components/Department-notices";
 import weather from "@/components/Weather";
 import lunch from "@/components/Lunch";
-import dateTimeJokeRooms from "@/components/Date-time-joke-rooms";
+import dateTimeJokeRooms from "@/components/Date,time,quote,room-uses";
 import fixtures from "@/components/Fixtures";
 
 export default {
