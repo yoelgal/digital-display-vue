@@ -1,11 +1,11 @@
 <template>
   <div class="weather">
-    <div class="weather-overlay1">
+    <div class="weather-overlay1 border-blue">
       <div class="weather-location">Mill Hill Weather
       </div>
       <div class="w-temperature">
         <p><span style="position: relative;top: 1vh">{{ polledData.current.temp }}</span><sup
-            style='font-size: 2.5vh;position: relative;bottom: 1vh;color: #2196f3;font-weight: 600'>°C</sup></p>
+            class="temp-blue" style='font-size: 2.5vh;position: relative;bottom: 1vh;font-weight: 600'>°C</sup></p>
       </div>
       <div class="feels-like-text">
         <div>Feels Like:</div>
@@ -27,7 +27,7 @@
       </div>
 
     </div>
-    <div class="weather-overlay2">
+    <div class="weather-overlay2 border-blue">
       <div class="sunrise">
         <img src='../assets/iconmonstr-weather-107-240.png'>
         <h4>{{ polledData.sunrise }}</h4>
@@ -37,7 +37,7 @@
         <h4>{{ polledData.sunset }}</h4>
       </div>
     </div>
-    <div class="weather-overlay3">
+    <div class="weather-overlay3 border-blue">
       <!--      <img src='../assets/wave-haikei.png'>-->
       <div class="w-data1">
         <p>{{ polledData.forecast[0].time }}</p>
@@ -69,7 +69,6 @@
         <h1>{{ polledData.forecast[4].temp }}°C</h1>
         <img :src="polledData.forecast[4].icon" class="weather-data-Icon">
         <h5 class="weather-data-desc">{{ polledData.forecast[4].desc }}</h5>
-
       </div>
     </div>
   </div>
@@ -84,6 +83,7 @@ export default {
   name: "Weather",
   data() {
     return {
+      tempThresh: 3,
       polling: null,
       polledData: {
         "hour": "12/24",
@@ -128,216 +128,7 @@ export default {
             "desc": "clear sky",
             "icon": "http://openweathermap.org/img/wn/01n@2x.png"
           },
-          {
-            "time": "06",
-            "temp": 3,
-            "desc": "clear sky",
-            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
-          },
-          {
-            "time": "09",
-            "temp": 5,
-            "desc": "few clouds",
-            "icon": "http://openweathermap.org/img/wn/02d@2x.png"
-          },
-          {
-            "time": "12",
-            "temp": 9,
-            "desc": "scattered clouds",
-            "icon": "http://openweathermap.org/img/wn/03d@2x.png"
-          },
-          {
-            "time": "15",
-            "temp": 9,
-            "desc": "overcast clouds",
-            "icon": "http://openweathermap.org/img/wn/04d@2x.png"
-          },
-          {
-            "time": "18",
-            "temp": 7,
-            "desc": "overcast clouds",
-            "icon": "http://openweathermap.org/img/wn/04n@2x.png"
-          },
-          {
-            "time": "21",
-            "temp": 7,
-            "desc": "overcast clouds",
-            "icon": "http://openweathermap.org/img/wn/04n@2x.png"
-          },
-          {
-            "time": "00",
-            "temp": 7,
-            "desc": "overcast clouds",
-            "icon": "http://openweathermap.org/img/wn/04n@2x.png"
-          },
-          {
-            "time": "03",
-            "temp": 7,
-            "desc": "overcast clouds",
-            "icon": "http://openweathermap.org/img/wn/04n@2x.png"
-          },
-          {
-            "time": "06",
-            "temp": 7,
-            "desc": "light rain",
-            "icon": "http://openweathermap.org/img/wn/10n@2x.png"
-          },
-          {
-            "time": "09",
-            "temp": 5,
-            "desc": "light rain",
-            "icon": "http://openweathermap.org/img/wn/10d@2x.png"
-          },
-          {
-            "time": "12",
-            "temp": 5,
-            "desc": "light rain",
-            "icon": "http://openweathermap.org/img/wn/10d@2x.png"
-          },
-          {
-            "time": "15",
-            "temp": 5,
-            "desc": "scattered clouds",
-            "icon": "http://openweathermap.org/img/wn/03d@2x.png"
-          },
-          {
-            "time": "18",
-            "temp": 4,
-            "desc": "few clouds",
-            "icon": "http://openweathermap.org/img/wn/02n@2x.png"
-          },
-          {
-            "time": "21",
-            "temp": 3,
-            "desc": "clear sky",
-            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
-          },
-          {
-            "time": "00",
-            "temp": 3,
-            "desc": "few clouds",
-            "icon": "http://openweathermap.org/img/wn/02n@2x.png"
-          },
-          {
-            "time": "03",
-            "temp": 3,
-            "desc": "few clouds",
-            "icon": "http://openweathermap.org/img/wn/02n@2x.png"
-          },
-          {
-            "time": "06",
-            "temp": 3,
-            "desc": "few clouds",
-            "icon": "http://openweathermap.org/img/wn/02n@2x.png"
-          },
-          {
-            "time": "09",
-            "temp": 4,
-            "desc": "scattered clouds",
-            "icon": "http://openweathermap.org/img/wn/03d@2x.png"
-          },
-          {
-            "time": "12",
-            "temp": 7,
-            "desc": "scattered clouds",
-            "icon": "http://openweathermap.org/img/wn/03d@2x.png"
-          },
-          {
-            "time": "15",
-            "temp": 8,
-            "desc": "clear sky",
-            "icon": "http://openweathermap.org/img/wn/01d@2x.png"
-          },
-          {
-            "time": "18",
-            "temp": 5,
-            "desc": "clear sky",
-            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
-          },
-          {
-            "time": "21",
-            "temp": 4,
-            "desc": "clear sky",
-            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
-          },
-          {
-            "time": "00",
-            "temp": 3,
-            "desc": "clear sky",
-            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
-          },
-          {
-            "time": "03",
-            "temp": 2,
-            "desc": "clear sky",
-            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
-          },
-          {
-            "time": "06",
-            "temp": 2,
-            "desc": "scattered clouds",
-            "icon": "http://openweathermap.org/img/wn/03n@2x.png"
-          },
-          {
-            "time": "09",
-            "temp": 5,
-            "desc": "broken clouds",
-            "icon": "http://openweathermap.org/img/wn/04d@2x.png"
-          },
-          {
-            "time": "12",
-            "temp": 8,
-            "desc": "scattered clouds",
-            "icon": "http://openweathermap.org/img/wn/03d@2x.png"
-          },
-          {
-            "time": "15",
-            "temp": 8,
-            "desc": "few clouds",
-            "icon": "http://openweathermap.org/img/wn/02d@2x.png"
-          },
-          {
-            "time": "18",
-            "temp": 5,
-            "desc": "clear sky",
-            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
-          },
-          {
-            "time": "21",
-            "temp": 4,
-            "desc": "clear sky",
-            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
-          },
-          {
-            "time": "00",
-            "temp": 4,
-            "desc": "clear sky",
-            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
-          },
-          {
-            "time": "03",
-            "temp": 4,
-            "desc": "clear sky",
-            "icon": "http://openweathermap.org/img/wn/01n@2x.png"
-          },
-          {
-            "time": "06",
-            "temp": 3,
-            "desc": "scattered clouds",
-            "icon": "http://openweathermap.org/img/wn/03n@2x.png"
-          },
-          {
-            "time": "09",
-            "temp": 5,
-            "desc": "overcast clouds",
-            "icon": "http://openweathermap.org/img/wn/04d@2x.png"
-          },
-          {
-            "time": "12",
-            "temp": 7,
-            "desc": "overcast clouds",
-            "icon": "http://openweathermap.org/img/wn/04d@2x.png"
-          }
+
         ]
       }
     }
@@ -347,6 +138,7 @@ export default {
       this.polling = setInterval(async () => {
         const weather = (await (await fetch('https://fathomless-crag-41517.herokuapp.com/weather3')).json());
         this.polledData = weather
+
 
       }, 60000)
     }, pullData() {
@@ -366,9 +158,27 @@ export default {
     this.pollData()
   }
 }
+
+
 </script>
 
 <style scoped>
+.temp-blue{
+  color: #2196f3
+}
+
+.temp-red {
+  color: #ff7420;
+}
+
+.border-blue{
+  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;
+}
+
+.border-red{
+  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #ff7420, 0.5vh 0.3vh 0.1vh 1vh #ed2b2b;
+}
+
 .weather {
   grid-column: 1/12;
   grid-row: 1/17;
@@ -384,7 +194,7 @@ export default {
   height: 30%;
   background: #2a2828;
   /*box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;*/
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;
+
 
   border-bottom-left-radius: 2vh;
   border-bottom-right-radius: 2vh;
@@ -401,7 +211,7 @@ export default {
   position: relative;
   bottom: 16vh;
   left: 23vw;
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;
+  /*box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;*/
   z-index: -1;
   border-bottom-right-radius: 2vh;
   display: grid;
@@ -499,7 +309,7 @@ export default {
   border-bottom-left-radius: 2vh;
   border-bottom-right-radius: 2vh;
   border-top-right-radius: 2vh;
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;
+  /*box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;*/
 
 
 }
