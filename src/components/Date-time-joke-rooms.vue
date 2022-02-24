@@ -194,8 +194,8 @@ export default {
 .room-title h1{
   font-size: 4vh;
   position: relative;
-  top: 20vh;
-  left: 1.5vw;
+  top: 21vh;
+  left: 2vw;
 }
 
 .room-container1 {

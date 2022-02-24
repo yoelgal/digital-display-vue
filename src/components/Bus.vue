@@ -3,7 +3,7 @@
     <div class="bus-overlay"><div>Bus Times 🚌</div>
     </div>
     <div class="bus-overlay2">
-      <img style="width: 12vw;height: 23vh;position: absolute;left: 4.8vw;z-index:0;opacity: 0.2;filter:blur(0.5vh);" src=../assets/bus-icon2.png>
+      <img style="width: 12vw;height: 23vh;position: absolute;left: 4.8vw;z-index:0;opacity: 0.2;filter:blur(0.5vh);" src=../assets/bus-logo.png>
        <div style="position: relative;left: 0.5vw" class="top-layer">
          <div class="location">
            <div class="location1">Location:</div>
