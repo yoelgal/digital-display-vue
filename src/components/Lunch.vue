@@ -4,97 +4,7 @@ list of options
 current week
 times for remove, fifth form,fourth form in main -->
   <div class="lunch">
-<!--    <div class="lunch-overlay1">-->
-<!--      <h1>Lunch Menu</h1>-->
-<!--      <img src=../assets/dish-plate.png>-->
-<!--    </div>-->
-<!--    <div class="lunch-overlay2">-->
-<!--       <div class="lunch-options-container">-->
-<!--          <div class="soup">-->
-<!--&lt;!&ndash;            <img width="40vw" height="40vh" src='../assets/cooking-pot.png'>&ndash;&gt;-->
-<!--            <h1>🥣</h1>-->
-<!--            <h4>Soup Of The Day</h4>-->
-<!--            <h5>x x x x x x x x x x </h5>-->
-<!--          </div>-->
-<!--          <div class="main-meal">-->
-<!--&lt;!&ndash;            <img width="40vw" height="40vh" src='../assets/hamburger.png'>&ndash;&gt;-->
-<!--            <h1>🍔</h1>-->
-<!--            <h4>Soup Of The Day</h4>-->
-<!--            <h5>x x x x x x x x x x </h5>-->
-<!--          </div>-->
-<!--          <div class="vegetarian">-->
-<!--&lt;!&ndash;            <img width="40vw" height="40vh" src='../assets/fish-simple.png'>&ndash;&gt;-->
-<!--            <h1>🐟</h1>-->
-<!--            <h4>Soup Of The Day</h4>-->
-<!--            <h5>x x x x x x x x x x </h5>-->
-<!--          </div>-->
-<!--          <div class="lighter">-->
-<!--            <h1>🥚</h1>-->
-<!--            <h4>Soup Of The Day</h4>-->
-<!--            <h5>x x x x x x x x x x </h5>-->
-<!--          </div>-->
-<!--          <div class="dessert">-->
-<!--            <h1>🍪</h1>-->
-<!--            <h4>Soup Of The Day</h4>-->
-<!--            <h5>x x x x x x x x x x </h5>-->
-<!--          </div>-->
-<!--       </div>-->
-<!--    </div>-->
-<!--    <div class="lunch-overlay3"></div>-->
 
-
-
-<!--   </div>-->
-
-
-<!--    <div  class="lunch-title"><h1>LUNCH</h1></div>-->
-<!--    <div class="icons-items">-->
-<!--      <div class='soup'>-->
-<!--        <img src="../assets/cooking-pot.png" width=512 height=512 alt="">-->
-<!--        <div class='lunchData'>-->
-<!--          <h4>Soup Of The Day:</h4>-->
-<!--          <h5 class='size-increase'>{{ polledData.soup }}</h5>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <hr>-->
-
-<!--      <div class='main'>-->
-<!--        <img src="../assets/hamburger.png" width="512" height="512" alt="">-->
-<!--        <div class='lunchData'>-->
-<!--          <h4>Main Meal:</h4>-->
-
-<!--          <h5 class='size-increase'>{{ polledData.main }}</h5>-->
-
-<!--        </div>-->
-<!--      </div>-->
-<!--      <hr>-->
-<!--      <div class='vegetarian'>-->
-<!--        <img src="../assets/fish-simple.png" width="512" height="512" alt="">-->
-<!--        <div class='lunchData'>-->
-<!--          <h4>Vegetarian:</h4>-->
-<!--          <h5 class='size-increase'>{{ polledData.veg }}</h5>-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--      <hr>-->
-<!--      <div class='lighter'>-->
-<!--        <img src="../assets/fork-knife.png" width="512" height="512" alt="">-->
-<!--        <div class='lunchData'>-->
-<!--          <h4>Lighter Option:</h4>-->
-<!--          <h5 class='size-increase'>{{ polledData.light }}</h5>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <hr>-->
-<!--      <div class='dessert'>-->
-<!--        <img src="../assets/cookie.png" width="512" height="512" alt="">-->
-<!--        <div class='lunchData'>-->
-<!--          <h4>Dessert:</h4>-->
-<!--          <h5 class='size-increase'>{{ polledData.dessert }}</h5>-->
-<!--        </div>-->
-<!--      </div>-->
-
-
-<!--    </div>-->
   </div>
 </template>
 
@@ -164,6 +74,7 @@ export default {
   display: grid;
   grid-template-rows: repeat(10, 1fr);
   grid-template-columns: repeat(10, 1fr);
+
 }
 
 .lunch-overlay1{

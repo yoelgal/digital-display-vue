@@ -47,7 +47,7 @@
         <h1>Dad Joke 😆</h1>
       </div>
       <div class="dad-joke-container">
-        <p>for some reason i can't get filler text on webstorm so I am writing this instead.</p>
+        <p>So i walk into a pizza place and i see a sign that says "Wood fired pizza", and I say, "Wood fired pizza????. How is pizza gonna get a job now !</p>
       </div>
     </div>
   </div>
