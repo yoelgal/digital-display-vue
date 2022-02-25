@@ -1,6 +1,6 @@
 <template>
   <div class="bus">
-    <div class="bus-overlay"><div>Bus Times 🚌</div>
+    <div class="bus-overlay border-blue"><div>Bus Times 🚌</div>
     </div>
     <div class="bus-overlay2">
       <img style="width: 12vw;height: 23vh;position: absolute;left: 4.8vw;z-index:0;opacity: 0.2;filter:blur(0.5vh);" src=../assets/bus-logo.png>
@@ -54,7 +54,7 @@
         <div class="end-point"></div>
       </div>
     </div>
-    <div class="bus-overlay4"></div>
+    <div class="bus-overlay4 border-blue"></div>
   </div>
 </template>
 
@@ -119,6 +119,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.border-blue{
+  /*box-shadow: 0.2vh 0.2vh 2.5vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;*/
+  /*box-shadow: 0.2vh 0.2vh 1vh 0.5vh #1d94d9, 0.5vh 0.3vh 1vh 1vh #4c2bed;*/
+  box-shadow: 0.2vh 0.2vh 1vh 0.6vh #4ac0ff
+
+}
+
 .bus {
   grid-column: 1/12;
   grid-row:17/31;
@@ -140,7 +147,6 @@ export default {
   right: 5vw;
   border-bottom-right-radius: 2vh;
   border-bottom-left-radius: 2vh;
-  box-shadow: 0.2vh 0.2vh 1vh 0.5vh #1d94d9, 0.5vh 0.3vh 1vh 1vh #4c2bed;
   font-size: 3.5vh;
   padding-left: 2vw;
   font-weight: 500;
@@ -285,7 +291,6 @@ export default {
 }
 .bus-overlay4{
   background: #2a2828;
-  box-shadow: 0.2vh 0.2vh 1vh 0.5vh #1d94d9, 0.5vh 0.3vh 1vh 1vh #4c2bed;
   grid-row: 15/19;
   grid-column: 1/19;
   border-radius: 5vh;

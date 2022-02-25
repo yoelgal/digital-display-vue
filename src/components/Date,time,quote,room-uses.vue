@@ -1,6 +1,6 @@
 <template>
   <div class="date-time">
-    <div class="date-overlay1">
+    <div class="date-overlay1 border-blue">
       <h1>{{ hours }}:{{ mins }}:{{ secs }}</h1>
       <div class="date-line1"></div>
       <h2>{{ day }} {{ date }} {{ month }}</h2>
@@ -9,7 +9,7 @@
       </div>
 
     </div>
-    <div class="date-overlay2">
+    <div class="date-overlay2 border-blue">
       <div class="room-title">
         <h1>Room Uses 🗓</h1>
       </div>
@@ -41,7 +41,7 @@
     <div class="date-overlay4">
 
     </div>
-    <div class="date-overlay5">
+    <div class="date-overlay5 border-blue">
       <div class="date-ellipse1"></div>
       <quote></quote>
     </div>
@@ -99,6 +99,13 @@ export default {
 
 
 <style scoped>
+.border-blue{
+  /*box-shadow: 0.2vh 0.2vh 2.5vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;*/
+  /*box-shadow: 0.2vh 0.2vh 1vh 0.5vh #1d94d9, 0.5vh 0.3vh 1vh 1vh #4c2bed;*/
+  box-shadow: 0.2vh 0.2vh 1vh 0.6vh #4ac0ff
+
+}
+
 .date-time {
   grid-column: 22/31;
   grid-row: 10/31;
@@ -127,7 +134,6 @@ export default {
   display: flex;
   flex-direction: column;
   background: #2a2828;
-  box-shadow: 0.2vh 0.2vh 1vh 0.5vh #1d94d9, 0.5vh 0.3vh 1vh 1vh #4c2bed;
   overflow: hidden;
 
 }
@@ -181,7 +187,6 @@ export default {
   right: 1vw;
   border-radius: 2vh;
   background: #2a2828;
-  box-shadow: 0.2vh 0.2vh 1vh 0.5vh #1d94d9, 0.5vh 0.3vh 1vh 1vh #4c2bed;
 
 
 }
@@ -298,7 +303,6 @@ export default {
   grid-row: 6/11;
   grid-column: 2/10;
   background: #2a2828;
-  box-shadow: 0.2vh 0.2vh 1vh 0.5vh #1d94d9, 0.5vh 0.3vh 1vh 1vh #4c2bed;
 
   border-top-left-radius: 2vh;
   border-top-right-radius: 2vh;
