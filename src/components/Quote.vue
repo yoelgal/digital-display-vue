@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="dad-joke-title">
-      <h1>Daily Quote 📖</h1>
-    </div>
-    <div class="dad-joke-container">
-      <p>{{polledData.text}} - {{polledData.author}}</p>
-    </div>
+<!--    <div class="dad-joke-title">-->
+<!--      <h1>Daily Quote 📖</h1>-->
+<!--    </div>-->
+<!--    <div class="dad-joke-container">-->
+<!--      <p>{{polledData.text}} - {{polledData.author}}</p>-->
+<!--    </div>-->
   </div>
 </template>
 

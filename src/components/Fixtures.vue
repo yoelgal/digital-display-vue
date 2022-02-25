@@ -1,6 +1,6 @@
 <template>
   <div class="fixtures">
-    <div class="fixtures-overlay1"></div>
+<!--    <div class="fixtures-overlay1"></div>-->
 
   </div>
 </template>
