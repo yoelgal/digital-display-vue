@@ -1,7 +1,7 @@
 <template>
   <div class="school-notices">
     <div class="school-overlay1 border-blue">
-      <div>🎓 School Notices</div>
+      <div>🏫 School Notices</div>
     </div>
     <div class="school-overlay2 border-blue">
       <ul>
@@ -54,15 +54,15 @@ export default {
 <style scoped>
 .border-blue{
   /*box-shadow: 0.2vh 0.2vh 2.5vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;*/
-  /*box-shadow: 0.2vh 0.2vh 1vh 0.5vh #1d94d9, 0.5vh 0.3vh 1vh 1vh #4c2bed;*/
-  box-shadow: 0.2vh 0.2vh 1vh 0.6vh #4ac0ff
+  box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
+
 
 }
 
 .school-notices {
   overflow: hidden;
   grid-column: 12/22;
-  grid-row: 1/9;
+  grid-row: 1/10;
   display:grid;
   grid-template-rows:repeat(10, 1fr);
   grid-template-columns:repeat(10, 1fr);
@@ -87,8 +87,9 @@ export default {
   width: 3vw;
   height: 5vh;
   position: relative;
-  left: 14vw;
-  top: 9vh;
+  left: 13.5vw;
+  top: 10vh;
+
 }
 
 .school-ellipse2{
@@ -97,7 +98,7 @@ export default {
   width: 3vw;
   height: 5vh;
   left: 22vw;
-  top: 3vh;
+  top: 4.5vh;
   position: relative;
 
 
