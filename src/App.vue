@@ -52,6 +52,7 @@ export default {
   font-family: "Poppins", sans-serif;
 
 
+
 }
 
 #app {
@@ -122,6 +123,7 @@ export default {
   border-top: 0.2vh solid rgba(255, 255, 255, 0.5);
   border-left: 0.2vh solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(0.5vh);
+
 
 }
 </style>

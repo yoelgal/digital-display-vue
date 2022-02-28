@@ -1,20 +1,20 @@
 <template>
   <div class="school-notices">
-    <div class="school-overlay1">
-      <div>🎓 School Notices</div>
+    <div class="school-overlay1 border-blue">
+      <div>🏫 School Notices</div>
     </div>
-    <div class="school-overlay2">
+    <div class="school-overlay2 border-blue">
       <ul>
         <li>2nd XI football team enjoy another big win and continue their unbeaten streak!</li>
       </ul>
       <div class="school-ellipse1"></div>
     </div>
-    <div class="school-overlay3">
+    <div class="school-overlay3 border-blue">
       <ul>
         <li>New groundbreaking dashboard system being trialled in the CS department - Dubbed as a 'work of art'</li>
       </ul>
     </div>
-    <div class="school-overlay4">
+    <div class="school-overlay4 border-blue">
       <ul>
         <li>Chicken Katsu Curry: Contender for Meal of the Year?</li>
       </ul>
@@ -52,10 +52,17 @@ export default {
 </script>
 
 <style scoped>
+.border-blue{
+  /*box-shadow: 0.2vh 0.2vh 2.5vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;*/
+  box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
+
+
+}
+
 .school-notices {
   overflow: hidden;
   grid-column: 12/22;
-  grid-row: 1/9;
+  grid-row: 1/10;
   display:grid;
   grid-template-rows:repeat(10, 1fr);
   grid-template-columns:repeat(10, 1fr);
@@ -71,7 +78,6 @@ export default {
   grid-column:1/5;
   background: #2a2828;
   border-bottom-right-radius: 2vh;
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;
 
 }
 
@@ -81,8 +87,9 @@ export default {
   width: 3vw;
   height: 5vh;
   position: relative;
-  left: 14vw;
-  top: 9vh;
+  left: 13.5vw;
+  top: 10vh;
+
 }
 
 .school-ellipse2{
@@ -91,7 +98,7 @@ export default {
   width: 3vw;
   height: 5vh;
   left: 22vw;
-  top: 3vh;
+  top: 4.5vh;
   position: relative;
 
 
@@ -107,7 +114,6 @@ export default {
 
 .school-overlay2{
   background: #2a2828;
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;
   border-top-right-radius: 2vh;
   border-bottom-right-radius: 2vh;
   grid-row: 2/10;
@@ -130,7 +136,6 @@ export default {
 
 .school-overlay3{
   background: #2a2828;
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;
   grid-row: 6/11;
   grid-column: 1/11;
   z-index:-2;
@@ -149,7 +154,6 @@ export default {
 
 .school-overlay4{
   background: #2a2828;
-  box-shadow: 0vh 0vh 0.1vh 0.5vh #1d94d9, 0vh 0vh 0.1vh 1vh #4c2bed;
 
   grid-row: 1/7;
   position: relative;

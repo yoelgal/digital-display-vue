@@ -39,37 +39,39 @@
     </div>
     <div class="weather-overlay3 border-blue">
       <!--      <img src='../assets/wave-haikei.png'>-->
-      <div class="w-data1">
-        <p>{{ polledData.forecast[0].time }}</p>
-        <h1>{{ polledData.forecast[0].temp }}°C</h1>
-        <img :src="polledData.forecast[0].icon" class="weather-data-Icon">
-        <h5 class="weather-data-desc">{{ polledData.forecast[0].desc }}</h5>
+       <div class="weather-data-container">
+          <div class="w-data1">
+            <p>{{ polledData.forecast[0].time }}</p>
+            <h1>{{ polledData.forecast[0].temp }}°C</h1>
+            <img :src="polledData.forecast[0].icon" class="weather-data-Icon">
+            <h5 class="weather-data-desc">{{ polledData.forecast[0].desc }}</h5>
 
-      </div>
-      <div class="w-data2">
-        <p>{{ polledData.forecast[1].time }}</p>
-        <h1>{{ polledData.forecast[1].temp }}°C</h1>
-        <img :src="polledData.forecast[1].icon" class="weather-data-Icon">
-        <h5 class="weather-data-desc">{{ polledData.forecast[1].desc }}</h5>
-      </div>
-      <div class="w-data3">
-        <p>{{ polledData.forecast[2].time }}</p>
-        <h1>{{ polledData.forecast[2].temp }}°C</h1>
-        <img :src="polledData.forecast[2].icon" class="weather-data-Icon">
-        <h5 class="weather-data-desc">{{ polledData.forecast[2].desc }}</h5>
-      </div>
-      <div class="w-data4">
-        <p>{{ polledData.forecast[3].time }}</p>
-        <h1>{{ polledData.forecast[3].temp }}°C</h1>
-        <img :src="polledData.forecast[3].icon" class="weather-data-Icon">
-        <h5 class="weather-data-desc">{{ polledData.forecast[3].desc }}</h5>
-      </div>
-      <div class="w-data5">
-        <p>{{ polledData.forecast[4].time }}</p>
-        <h1>{{ polledData.forecast[4].temp }}°C</h1>
-        <img :src="polledData.forecast[4].icon" class="weather-data-Icon">
-        <h5 class="weather-data-desc">{{ polledData.forecast[4].desc }}</h5>
-      </div>
+          </div>
+          <div class="w-data2">
+            <p>{{ polledData.forecast[1].time }}</p>
+            <h1>{{ polledData.forecast[1].temp }}°C</h1>
+            <img :src="polledData.forecast[1].icon" class="weather-data-Icon">
+            <h5 class="weather-data-desc">{{ polledData.forecast[1].desc }}</h5>
+          </div>
+          <div class="w-data3">
+            <p>{{ polledData.forecast[2].time }}</p>
+            <h1>{{ polledData.forecast[2].temp }}°C</h1>
+            <img :src="polledData.forecast[2].icon" class="weather-data-Icon">
+            <h5 class="weather-data-desc">{{ polledData.forecast[2].desc }}</h5>
+          </div>
+          <div class="w-data4">
+            <p>{{ polledData.forecast[3].time }}</p>
+            <h1>{{ polledData.forecast[3].temp }}°C</h1>
+            <img :src="polledData.forecast[3].icon" class="weather-data-Icon">
+            <h5 class="weather-data-desc">{{ polledData.forecast[3].desc }}</h5>
+          </div>
+          <div class="w-data5">
+            <p>{{ polledData.forecast[4].time }}</p>
+            <h1>{{ polledData.forecast[4].temp }}°C</h1>
+            <img :src="polledData.forecast[4].icon" class="weather-data-Icon">
+            <h5 class="weather-data-desc">{{ polledData.forecast[4].desc }}</h5>
+          </div>
+       </div>
     </div>
   </div>
 
@@ -174,6 +176,7 @@ export default {
 .border-blue{
   /*box-shadow: 0.2vh 0.2vh 2.5vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;*/
   box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;
+  /*box-shadow: 0.2vh 0.2vh 0.3vh 0.6vh #7dc5ef,  0.2vh 0.2vh 0.7vh 0.6vh #4587e4,  0.2vh 0.2vh 1vh 0.6vh #0861ef*/
 
 }
 
@@ -328,25 +331,35 @@ export default {
 
 }
 
-.weather-overlay4 {
-  background: white;
-  width: 100%;
-  height: 100%;
+.weather-data-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  right: 12.5vw;
+  top: 0.5vh;
 }
+
+.weather-data-container div {
+
+}
+
 
 .weather-overlay3 p {
   text-align: center;
   color: white;
   font-weight: bold;
+  font-size: 2.5vh;
 
 }
 
 .weather-overlay3 h1 {
   text-align: center;
   color: white;
-  margin-top: 1vh;
   border: 0.2vh solid white;
   border-radius: 2vh;
+  margin-top: 1vh;
+  font-size: 3.5vh;
 
 }
 
@@ -362,6 +375,7 @@ export default {
   text-align: center;
   color: white;
   padding-top: 0.5vh;
+  font-size: 1.5vh;
 }
 
 
@@ -441,7 +455,7 @@ export default {
   grid-row: 3/11;
   grid-column: 13/16;
   position: relative;
-  right: 1vh;
+  right: 2vh;
 }
 
 .w-wind-icon img {
@@ -450,33 +464,38 @@ export default {
 }
 
 .w-wind-gust {
-  grid-column: 16/19;
-  border-bottom: 0.1vh solid white;
+  grid-column: 16/21;
   position: relative;
   top: 0.5vh;
   bottom: 0.2vh;
-  right: 0.5vw;
+  right: 1.3vw;
   grid-row: 3/6;
   font-weight: 100;
+
+
 
 }
 
 .w-wind-gust p {
-  position: relative;
-  bottom: 0.5vh;
   font-weight: 400;
   font-size: 1.4vh;
+
 
 }
 
 .wind-speed {
   position: relative;
   top: 0.8vh;
-  right: 0.7vh;
+  right: 2.2vh;
   grid-row: 6/9;
   grid-column: 16/20;
   font-size: 1.4vh;
+  border-top: 0.2vh solid white;
 }
+.wind-speed p {
+  padding-top: 0.5vh;
+}
+
 
 .weather-time {
   grid-row: 12/21;
@@ -487,75 +506,7 @@ export default {
   font-size: 1.6vh;
 }
 
-.weather-grid {
-  display: grid;
-  grid-template-rows: repeat(20, 1fr);
-  grid-template-columns: repeat(20, 1fr);
-  height: 100%;
-  width: 100%;
-}
 
-.temp {
-  grid-row: 1/9;
-  grid-column: 1/11;
-  display: grid;
-  grid-template-rows: repeat(10, 1fr);
-  grid-template-columns: repeat(10, 1fr);
-  height: 100%;
-  width: 100%;
-}
-
-.weather-date {
-  border: 2px solid blue;
-  grid-row: 1/3;
-  grid-column: 1/11;
-  text-align: center;
-  font-size: 3vh;
-}
-
-.weather-desc {
-  border: 2px solid blue;
-  grid-row: 3/6;
-  grid-column: 1/11;
-}
-
-.temperature {
-  border: 2px solid blue;
-  grid-row: 6/11;
-  grid-column: 1/11;
-}
-
-
-.restOfDay {
-  border: 2px solid red;
-  grid-column: 1/21;
-  grid-row: 9/14;
-}
-
-.location {
-  border: 2px solid red;
-  grid-row: 14/17;
-  grid-column: 1/21;
-  text-align: center;
-  font-size: 6vh;
-}
-
-.Mainicon {
-  border: 2px solid red;
-  grid-row: 1/9;
-  grid-column: 11/21;
-}
-
-
-.weather-wave {
-  grid-row: 10/21;
-  grid-column: 1/21;
-}
-
-.weather-wave img {
-  height: 100%;
-  width: 100%;
-}
 
 
 </style>

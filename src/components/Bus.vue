@@ -1,8 +1,9 @@
 <template>
   <div class="bus">
-    <div class="bus-overlay"><div>Bus Times 🚌</div>
+    <div class="bus-overlay border-blue"><div>Bus Times 🚌</div>
     </div>
     <div class="bus-overlay2">
+      <img style="width: 12vw;height: 23vh;position: absolute;left: 4.8vw;z-index:0;opacity: 0.2;filter:blur(0.5vh);" src=../assets/bus-logo.png>
        <div style="position: relative;left: 0.5vw" class="top-layer">
          <div class="location">
            <div class="location1">Location:</div>
@@ -53,7 +54,7 @@
         <div class="end-point"></div>
       </div>
     </div>
-    <div class="bus-overlay4"></div>
+<!--    <div class="bus-overlay4 border-blue"></div>-->
   </div>
 </template>
 
@@ -118,6 +119,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.border-blue{
+  /*box-shadow: 0.2vh 0.2vh 2.5vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;*/
+  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;
+  /*box-shadow: 0.2vh 0.2vh 0.3vh 0.6vh #7dc5ef,  0.2vh 0.2vh 0.7vh 0.6vh #4587e4,  0.2vh 0.2vh 1vh 0.6vh #0861ef*/
+
+}
+
 .bus {
   grid-column: 1/12;
   grid-row:17/31;
@@ -139,11 +147,11 @@ export default {
   right: 5vw;
   border-bottom-right-radius: 2vh;
   border-bottom-left-radius: 2vh;
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;
-  font-size: 3.5vh;
-  padding-left: 2vw;
+  font-size: 4vh;
+  padding-left: 3vw;
+  padding-top: 0.5vh;
   font-weight: 500;
-  letter-spacing: 0.4vh;
+
 }
 
 .bus-overlay div{
@@ -220,7 +228,7 @@ export default {
   width: 1vw;
   height: 1.8vh;
   background-color: white;
-  box-shadow:inset  0vh 0vh 0.1vh 0.3vh #1590f1;
+  box-shadow:inset  0vh 0vh 0.1vh 0.3vh #1590f1, 0vh 0vh 0.1vh 0.2vh #4c2bed;
   /*position: relative;*/
   /*left: 1vw;*/
   /*top: 1.8vh;*/
@@ -232,7 +240,7 @@ export default {
   width: 0.5vw;
   height: 21vh;
   border-radius: 2vh;
-  /*position: relative;*/
+  box-shadow: inset 0.1vh 0.1vh 0.3vh 0.1vh #626365;
 
 
 }
@@ -241,7 +249,7 @@ export default {
   width: 1vw;
   height: 1.8vh;
   background-color: white;
-  box-shadow:inset  0 0 0.1vh 0.3vh #1590f1;
+  box-shadow:inset  0vh 0vh 0.1vh 0.3vh #1590f1, 0vh 0vh 0.1vh 0.2vh #4c2bed;
   /*position: relative;*/
   /*left: 15vw;*/
 }
@@ -263,13 +271,14 @@ export default {
 .time1{
   font-size: 8vh;
   position: relative;
-  bottom: 1.7vh;
-  right: 3vw;
+  bottom: 1vh;
+  right: 4vw;
+
 }
 .time2{
   font-size: 3vh;
   position: relative;
-  left: 1vw;
+  left: 3vw;
   bottom: 7.5vh;
   opacity: 0.5;
 }
@@ -284,7 +293,6 @@ export default {
 }
 .bus-overlay4{
   background: #2a2828;
-  box-shadow: 0vh 0vh 0.1vh 0.5vh #1d94d9, 0vh 0vh 0.1vh 1vh #4c2bed;
   grid-row: 15/19;
   grid-column: 1/19;
   border-radius: 5vh;

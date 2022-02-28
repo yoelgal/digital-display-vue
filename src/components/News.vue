@@ -6,7 +6,7 @@
       <div class="news-icon">
         <img src='../assets/perspective__matte.png'>
       </div>
-      <div class="news-overlay">
+      <div class="news-overlay border-blue">
         <div class="news-title">
           Daily News
         </div>
@@ -18,7 +18,7 @@
 
 
       </div>
-      <div class="news-data">
+      <div class="news-data border-blue">
         <div class="news-data1">
           <div class="news-acc-data">
             <p>{{ polledData[startNum].title }} - {{polledData[startNum].source}}</p>
@@ -28,7 +28,7 @@
 
         </div>
       </div>
-      <div class="news-overlay2">
+      <div class="news-overlay2 border-blue">
         <div class="news-ellipse5"></div>
         <div class="news-ellipse6"></div>
       </div>
@@ -85,6 +85,13 @@ export default {
 </script>
 
 <style scoped>
+.border-blue{
+  /*box-shadow: 0.2vh 0.2vh 2.5vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;*/
+  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;
+  /*box-shadow: 0.2vh 0.2vh 0.3vh 0.6vh #7dc5ef,  0.2vh 0.2vh 0.7vh 0.6vh #4587e4,  0.2vh 0.2vh 1vh 0.6vh #0861ef*/
+
+}
+
 .news-ellipse1{
   background: linear-gradient(#1ccece, #2072d0);
   border-radius: 50%;
@@ -126,7 +133,6 @@ export default {
   grid-column: 1/6;
   border-bottom-right-radius: 3vh;
   border-top-right-radius: 3vh;
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;
   background: #2a2828;
 }
 
@@ -194,23 +200,18 @@ export default {
   grid-row: 1/8;
   grid-column: 4/13;
   position: relative;
-  left: 1.6vw;
+  left: 1.3vw;
   border-top-right-radius: 1vh;
   display: grid;
   grid-template-rows: repeat(20, 1fr);
   grid-template-columns: repeat(20, 1fr);
   z-index:-1;
   border-bottom-right-radius: 2vh;
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;
   background: #2a2828;
 
 
 }
 
-.news-data > div{
-  /*background: white;*/
-
-}
 
 .news-data1{
   grid-row: 2/17;
@@ -271,36 +272,35 @@ export default {
 }
 
 .news-overlay2{
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;
   background: #2a2828;
   grid-row: 1/11;
   grid-column: 1/14;
   z-index: -2;
   position: relative;
-  bottom: 0.9vh;
-  right: 0.4vw;
+  top: 2vh;
+  left: 2vw;
   border-bottom-right-radius: 2vh;
 }
 
-.news-ellipse5{
-  background: linear-gradient(#1ccece, #2072d0);
-  border-radius: 50%;
-  width: 0.9vw;
-  height: 1.4vh;
-  position: relative;
-  left:12vw;
-  top: 24vh;
+/*.news-ellipse5{*/
+/*  background: linear-gradient(#1ccece, #2072d0);*/
+/*  border-radius: 50%;*/
+/*  width: 0.9vw;*/
+/*  height: 1.4vh;*/
+/*  position: relative;*/
+/*  left:10vw;*/
+/*  top: 21vh;*/
 
-}
-.news-ellipse6{
-  background: linear-gradient(#1ccece, #2072d0);
-  border-radius: 50%;
-  width: 0.9vw;
-  height: 1.4vh;
-  position: relative;
-  left: 26vw;
-  top: 22.5vh;
-}
+/*}*/
+/*.news-ellipse6{*/
+/*  background: linear-gradient(#1ccece, #2072d0);*/
+/*  border-radius: 50%;*/
+/*  width: 0.9vw;*/
+/*  height: 1.4vh;*/
+/*  position: relative;*/
+/*  left: 24vw;*/
+/*  top: 20.5vh;*/
+/*}*/
 
 
 /*.news-underline2{*/
