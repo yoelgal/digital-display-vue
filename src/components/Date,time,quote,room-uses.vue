@@ -30,19 +30,19 @@
         <h1>...</h1>
       </div>
       <div class="date-line2"></div>
-     <div class="quote">
-       <div>Daily Quote </div>
-       <i>filler text filler text here is some more filler text</i>
-     </div>
+<!--     <div class="quote">-->
+<!--       <div>Daily Quote </div>-->
+<!--       <i>filler text filler text here is some more filler text</i>-->
+<!--     </div>-->
 
-    </div>
-    <div class="date-overlay3"></div>
-    <div class="date-overlay4">
-      <div class="int-times">
-        <div>NYC: 00:00:00 🇺🇸</div>
-        <div>SYD: 00:00:00 🇦🇺</div>
-        <div>JPN: 00:00:00 🇯🇵</div>
-      </div>
+<!--    </div>-->
+<!--    <div class="date-overlay3"></div>-->
+<!--    <div class="date-overlay4">-->
+<!--      <div class="int-times">-->
+<!--        <div>NYC: 00:00:00 🇺🇸</div>-->
+<!--        <div>SYD: 00:00:00 🇦🇺</div>-->
+<!--        <div>JPN: 00:00:00 🇯🇵</div>-->
+<!--      </div>-->
 
     </div>
 <!--    <div class="date-overlay5 border-blue">-->
