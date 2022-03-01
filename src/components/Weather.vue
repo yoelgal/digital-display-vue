@@ -39,39 +39,39 @@
     </div>
     <div class="weather-overlay3 border-blue">
       <!--      <img src='../assets/wave-haikei.png'>-->
-       <div class="weather-data-container">
-          <div class="w-data1">
-            <p>{{ polledData.forecast[0].time }}</p>
-            <h1>{{ polledData.forecast[0].temp }}°C</h1>
-            <img :src="polledData.forecast[0].icon" class="weather-data-Icon">
-            <h5 class="weather-data-desc">{{ polledData.forecast[0].desc }}</h5>
+      <div class="weather-data-container">
+        <div class="w-data1">
+          <p>{{ polledData.forecast[0].time }}</p>
+          <h1>{{ polledData.forecast[0].temp }}°C</h1>
+          <img :src="polledData.forecast[0].icon" class="weather-data-Icon">
+          <h5 class="weather-data-desc">{{ polledData.forecast[0].desc }}</h5>
 
-          </div>
-          <div class="w-data2">
-            <p>{{ polledData.forecast[1].time }}</p>
-            <h1>{{ polledData.forecast[1].temp }}°C</h1>
-            <img :src="polledData.forecast[1].icon" class="weather-data-Icon">
-            <h5 class="weather-data-desc">{{ polledData.forecast[1].desc }}</h5>
-          </div>
-          <div class="w-data3">
-            <p>{{ polledData.forecast[2].time }}</p>
-            <h1>{{ polledData.forecast[2].temp }}°C</h1>
-            <img :src="polledData.forecast[2].icon" class="weather-data-Icon">
-            <h5 class="weather-data-desc">{{ polledData.forecast[2].desc }}</h5>
-          </div>
-          <div class="w-data4">
-            <p>{{ polledData.forecast[3].time }}</p>
-            <h1>{{ polledData.forecast[3].temp }}°C</h1>
-            <img :src="polledData.forecast[3].icon" class="weather-data-Icon">
-            <h5 class="weather-data-desc">{{ polledData.forecast[3].desc }}</h5>
-          </div>
-          <div class="w-data5">
-            <p>{{ polledData.forecast[4].time }}</p>
-            <h1>{{ polledData.forecast[4].temp }}°C</h1>
-            <img :src="polledData.forecast[4].icon" class="weather-data-Icon">
-            <h5 class="weather-data-desc">{{ polledData.forecast[4].desc }}</h5>
-          </div>
-       </div>
+        </div>
+        <div class="w-data2">
+          <p>{{ polledData.forecast[1].time }}</p>
+          <h1>{{ polledData.forecast[1].temp }}°C</h1>
+          <img :src="polledData.forecast[1].icon" class="weather-data-Icon">
+          <h5 class="weather-data-desc">{{ polledData.forecast[1].desc }}</h5>
+        </div>
+        <div class="w-data3">
+          <p>{{ polledData.forecast[2].time }}</p>
+          <h1>{{ polledData.forecast[2].temp }}°C</h1>
+          <img :src="polledData.forecast[2].icon" class="weather-data-Icon">
+          <h5 class="weather-data-desc">{{ polledData.forecast[2].desc }}</h5>
+        </div>
+        <div class="w-data4">
+          <p>{{ polledData.forecast[3].time }}</p>
+          <h1>{{ polledData.forecast[3].temp }}°C</h1>
+          <img :src="polledData.forecast[3].icon" class="weather-data-Icon">
+          <h5 class="weather-data-desc">{{ polledData.forecast[3].desc }}</h5>
+        </div>
+        <div class="w-data5">
+          <p>{{ polledData.forecast[4].time }}</p>
+          <h1>{{ polledData.forecast[4].temp }}°C</h1>
+          <img :src="polledData.forecast[4].icon" class="weather-data-Icon">
+          <h5 class="weather-data-desc">{{ polledData.forecast[4].desc }}</h5>
+        </div>
+      </div>
     </div>
   </div>
 
