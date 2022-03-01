@@ -63,8 +63,8 @@ export default {
 /*}*/
 
 .fixtures {
+  grid-row:22/31;
   grid-column: 12/24;
-  grid-row:10/17;
   background-color: #2a2828;
   display: grid;
   grid-template-columns: repeat(12, 1fr);

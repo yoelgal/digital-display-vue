@@ -16,6 +16,9 @@
       </div>
     </div>
     <div class="date-overlay3 border-blue">
+      <div style="position: absolute;top: 1vh; opacity: 0.2;filter: blur(0.3vh); left: 3vw;width: 4vw;height: 6vh" class="ellipse"></div>
+      <div style="position: absolute;top: 20vh; opacity: 0.2;filter: blur(0.3vh); left: 12vw;width: 6vw;height: 9vh" class="ellipse"></div>
+      <div class="ellipse"></div>
       <div class="int-times">
         <div><span class="nyc">NYC</span>  00:00:00 </div>
         <div><span class="syd">SYD</span>  00:00:00 </div>
@@ -131,9 +134,18 @@ export default {
 
 }
 
+.ellipse{
+  background: linear-gradient(#1ccece, #2072d0);
+  border-radius: 50%;
+  width: 3vw;
+  height: 5vh;
+
+
+}
+
 .date-time {
   grid-column: 12/24;
-  grid-row: 10/23;
+  grid-row: 10/22;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 1fr);
@@ -225,8 +237,8 @@ export default {
 
 .int-times{
   position: relative;
-  left: 1.5vw;
-  top: 0vh;
+  left: 3vw;
+  top: -2vh;
   display: flex;
   flex-direction: column;
 }
