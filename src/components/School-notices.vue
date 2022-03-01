@@ -88,7 +88,8 @@ export default {
   height: 5vh;
   position: relative;
   left: 13.5vw;
-  top: 10vh;
+  top: 12.5vh;
+
 
 }
 
