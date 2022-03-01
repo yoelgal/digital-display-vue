@@ -13,8 +13,8 @@ export default {
 
 <style scoped>
 .fixtures {
-  grid-column: 12/22;
-  grid-row:25/31;
+  grid-column: 12/24;
+  grid-row:23/31;
   background-color: #2a2828;
   display: grid;
   grid-template-columns: repeat(10, 1fr);

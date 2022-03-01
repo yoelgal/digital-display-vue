@@ -1,7 +1,7 @@
 <template>
   <div class="date-time">
     <div class="date-overlay1 border-blue">
-      <h1>{{ hours}}:{{ mins }}:{{ secs }}</h1>
+      <h1>{{ hours}}:{{ mins }}</h1>
       <div class="date-line1"></div>
       <h2>{{ day }} {{ date }} {{ month }}</h2>
       <div class="date-clock-icon">
@@ -9,27 +9,49 @@
       </div>
 
     </div>
-    <div class="date-overlay2 border-blue">
-      <div class="room-title">
-        <h1>Room Uses 🗓</h1>
+    <div class="date-overlay2">
+      <div class="quote-container">
+        <div>Daily Quote 📔</div>
+        <div class="quote-text">“I have always known what I wanted, and that was beauty… in every form.”. – Joan Crawford.</div>
       </div>
-      <div class="room-container1">
-        <h1>IT 1:</h1>
-        <h1>...</h1>
+    </div>
+    <div class="date-overlay3 border-blue">
+      <div class="int-times">
+        <div><span class="nyc">NYC</span>  00:00:00 </div>
+        <div><span class="syd">SYD</span>  00:00:00 </div>
+        <div><span class="tky">TKY</span>  00:00:00 </div>
       </div>
-      <div class="room-container2">
-        <h1>IT 2:</h1>
-        <h1>...</h1>
-      </div>
-      <div class="room-container3">
-        <h1>IT 3:</h1>
-        <h1>...</h1>
-      </div>
-      <div class="room-container4">
-        <h1>IT 4:</h1>
-        <h1>...</h1>
-      </div>
-      <div class="date-line2"></div>
+    </div>
+  </div>
+
+<!--      <div class="int-times">-->
+<!--          <div><span class="nyc">NYC</span>  00:00:00 🗽</div>-->
+<!--          <div><span class="syd">SYD</span>  00:00:00 🦘</div>-->
+<!--          <div><span class="jpn">JPN</span>  00:00:00 🗾</div>-->
+<!--      </div>-->
+<!--     <div class="room-title">-->
+<!--        <h1>Room Uses 🗓</h1>-->
+<!--      </div>-->
+<!--        <div class="room-box">-->
+<!--          <div class="room-container1">-->
+<!--            <h1>IT 1:</h1>-->
+<!--            <h1>...</h1>-->
+<!--          </div>-->
+<!--          <div class="room-container2">-->
+<!--            <h1>IT 2:</h1>-->
+<!--            <h1>...</h1>-->
+<!--          </div>-->
+<!--          <div class="room-container3">-->
+<!--            <h1>IT 3:</h1>-->
+<!--            <h1>...</h1>-->
+<!--          </div>-->
+<!--          <div class="room-container4">-->
+<!--            <h1>IT 4:</h1>-->
+<!--            <h1>...</h1>-->
+<!--          </div>-->
+<!--        </div>-->
+
+
 <!--     <div class="quote">-->
 <!--       <div>Daily Quote </div>-->
 <!--       <i>filler text filler text here is some more filler text</i>-->
@@ -44,12 +66,12 @@
 <!--        <div>JPN: 00:00:00 🇯🇵</div>-->
 <!--      </div>-->
 
-    </div>
+
 <!--    <div class="date-overlay5 border-blue">-->
 <!--      <div class="date-ellipse1"></div>-->
 <!--&lt;!&ndash;      <quote></quote>&ndash;&gt;-->
 <!--    </div>-->
-  </div>
+
 </template>
 
 <script>
@@ -104,14 +126,14 @@ export default {
 <style scoped>
 .border-blue{
   /*box-shadow: 0.2vh 0.2vh 2.5vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;*/
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;
+  box-shadow: 0vh 0vh 0.1vh 0.7vh #1d94d9, 0vh 0vh 0.1vh 1.5vh #4c2bed;
   /*box-shadow: 0.2vh 0.2vh 0.3vh 0.6vh #7dc5ef,  0.2vh 0.2vh 0.7vh 0.6vh #4587e4,  0.2vh 0.2vh 1vh 0.6vh #0861ef*/
 
 }
 
 .date-time {
   grid-column: 12/24;
-  grid-row: 17/31;
+  grid-row: 10/23;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 1fr);
@@ -130,7 +152,7 @@ export default {
 .date-overlay1 {
   grid-row: 1/5;
   height: 18vh;
-  grid-column: 1/8;
+  grid-column: 1/6;
   /*box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #2196f3,0vh 0vh 0.1vh 1.6vh #1c3da8;*/
   border-bottom-left-radius: 2vh;
   border-bottom-right-radius: 2vh;
@@ -154,7 +176,7 @@ export default {
   left: 4.5vw;
   bottom: 1vh;
   background-color: white;
-  width: 80%;
+  width: 70%;
   height: 0.3vh;
   border-radius: 2vh;
 }
@@ -172,68 +194,111 @@ export default {
   z-index: -2;
   grid-row: 1/11;
   grid-column: 1/12;
-  position: relative;
-  right: 0.9vw;
   border-radius: 2vh;
   background: #2a2828;
+}
 
+.quote-container{
+  position: relative;
+  top: 20vh;
+  left: 1vw;
+  width: 20vw;
+}
+
+.quote-container div:nth-child(1){
 
 }
 
-.room-title h1 {
-  font-size: 3vh;
-  font-weight: 500;
+.date-overlay3{
+  background: #2a2828;
+  grid-row: 2/10;
+  grid-column: 7/11;
   position: relative;
-  top: 21vh;
+  /*box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #2196f3,0vh 0vh 0.1vh 1.6vh #1c3da8;*/
+  border-bottom-left-radius: 10vh;
+  border-top-left-radius: 10vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+
+.int-times{
+  position: relative;
   left: 1.5vw;
+  top: 0vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.room-container1 {
-  width: 5vw;
-  height: 11vh;
-  position: relative;
-  top: 22vh;
-  left: 1.5vw;
-  border: 0.2vh solid white;
-  border-radius: 2vh;
-  text-align: center;
+.int-times div{
+  font-size: 3.5vh;
+  margin-top: 4vh;
+}
+
+.int-times span{
+  font-size: 1.5vh;
 }
 
 
 
+/*.room-title h1 {*/
+/*  font-size: 3vh;*/
+/*  font-weight: 500;*/
+/*  position: relative;*/
+/*  top: 19vh;*/
+/*  left: 1.5vw;*/
+/*}*/
 
-.room-container2 {
-  width: 5vw;
-  height: 11vh;
-  position: relative;
-  top: 11vh;
-  left: 7.5vw;
-  border: 0.2vh solid white;
-  border-radius: 2vh;
-  text-align: center;
-}
+/*.room-box{*/
+/*  position: relative;*/
+/*  top: 20vh;*/
+/*  left: 0.5vw;*/
+/*  width: 26vw;*/
+/*  height: 20vh;*/
+/*  display: flex;*/
+/*  flex-direction: row;*/
+/*  justify-content: space-evenly;*/
+/*}*/
 
-.room-container3 {
-  width: 5vw;
-  height: 11vh;
-  position: relative;
-  bottom: 0vh;
-  left: 13.5vw;
-  border: 0.2vh solid white;
-  border-radius: 2vh;
-  text-align: center;
-}
+/*.room-box h1{*/
+/*  font-size: 3vh;*/
+/*}*/
 
-.room-container4 {
-  width: 5vw;
-  height: 11vh;
-  position: relative;
-  bottom: 11vh;
-  left: 19.5vw;
-  border: 0.2vh solid white;
-  border-radius: 2vh;
-  text-align: center;
-}
+/*.room-container1 {*/
+/*  width: 5vw;*/
+/*  height: 13vh;*/
+/*  border: 0.2vh solid white;*/
+/*  border-radius: 2vh;*/
+/*  text-align: center;*/
+/*}*/
+
+
+
+
+/*.room-container2 {*/
+/*  width: 5vw;*/
+/*  height: 13vh;*/
+/*  border: 0.2vh solid white;*/
+/*  border-radius: 2vh;*/
+/*  text-align: center;*/
+/*}*/
+
+/*.room-container3 {*/
+/*  width: 5vw;*/
+/*  height: 13vh;*/
+/*  border: 0.2vh solid white;*/
+/*  border-radius: 2vh;*/
+/*  text-align: center;*/
+/*}*/
+
+/*.room-container4 {*/
+/*  width: 5vw;*/
+/*  height: 13vh;*/
+/*  border: 0.2vh solid white;*/
+/*  border-radius: 2vh;*/
+/*  text-align: center;*/
+/*}*/
 
 .quote{
   position: relative;
@@ -255,21 +320,7 @@ export default {
   font-size: 1.4vh;
   font-weight: 300;
 }
-.int-times{
-  text-align: center;
-  width: 10vw;
-  height: 20vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  font-size: 2vh;
 
-}
-
-.int-times div{
-  position: relative;
-  left: 0.5vw;
-}
 
 
 .date-overlay4{

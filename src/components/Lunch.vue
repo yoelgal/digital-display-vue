@@ -5,40 +5,33 @@ current week
 times for remove, fifth form,fourth form in main -->
   <div class="Lunch">
     <div class="lunch-bg">
-<!--      <div class="lunch-box1 ">-->
-<!--        <div class="lunch-item">-->
-<!--          <p>Soup Of The Day <span style="font-size: 2vh">🥣</span></p>-->
-<!--          <div>Tomato & Roasted Garlic</div>-->
-<!--        </div>-->
-<!--        <div style="margin-top: 3vh"  class="lunch-item">-->
-<!--          <p>Main Meal<span style="font-size: 2vh"> 🍔</span></p>-->
-<!--          <div>Tomato & Roasted Garlic</div>-->
-<!--        </div>-->
-<!--      </div>-->
-
-
-<!--      <div class="lunch-box2 ">-->
-<!--        <div class="lunch-item">-->
-<!--        <p>Vegetarian<span style="font-size: 2vh"> 🐠</span></p>-->
-<!--        <div>Tomato & Roasted Garlic</div>-->
-<!--      </div>-->
-<!--        <div style="margin-top: 3vh" class="lunch-item">-->
-<!--          <p>Lighter Option <span style="font-size: 2vh">🥚</span></p>-->
-<!--          <div>Tomato & Roasted Garlic</div>-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--      <div class="soup">-->
-<!--        <p>Soup Of The Day <span style="font-size: 2vh">🥣</span></p>-->
-<!--        <div>Tomato & Roasted Garlic</div>-->
-<!--      </div>-->
+      <div class="lunch-overlay1 border-blue">
+        <div>Lunch Menu 🍽</div>
+      </div>
+      <div class="lunch-box">
+        <div class="lunch-item">
+          <p>Soup Of The Day <span style="font-size: 2vh">🥣</span></p>
+          <div>Carrot & Coriander</div>
+        </div>
+<!--Only use first description for main meal.-->
+        <div  class="lunch-item">
+          <p>Main Meal<span style="font-size: 2vh"> 🍔</span></p>
+          <div>Thai Green Marinated Chicken Breast</div>
+        </div>
+        <div class="lunch-item">
+          <p>Vegetarian<span style="font-size: 2vh"> 🐠</span></p>
+          <div>Thai Red Veg Curry</div>
+        </div>
+        <div class="lunch-item">
+          <p>Lighter Option <span style="font-size: 2vh">🥚</span></p>
+          <div>Welsh Rarebit Toasts Topped with Chilli Jam & Crispy Onions</div>
+        </div>
+        <div  class="lunch-item">
+          <p>Dessert<span style="font-size: 2vh">🍪</span></p>
+          <div>Jam & Coconut Sponge</div>
+        </div>
+      </div>
     </div>
-    <div class="lunch-overlay1 border-blue">
-      <div>Lunch Menu 🍽</div>
-    </div>
-<!--    <div class="lunch-overlay2 border-blue">-->
-<!--     -->
-<!--    </div>-->
   </div>
 </template>
 
@@ -128,62 +121,6 @@ export default {
   grid-template-columns: repeat(10, 1fr);
 }
 
-
-.lunch-box1{
-
-  grid-row: 3/6;
-  position: relative;
-  top: 6vh;
-  left: 0vw;
-  grid-column: 1/6;
-  width: 13vw;
-  border-top-right-radius: 2vh;
-  border-bottom-right-radius: 2vh;
-  /*box-shadow: 0 0 0.1vh 0.3vh #1d94d9, 0 0 0.1vh 0.6vh #4c2bed;*/
-}
-
-.lunch-box2{
-  position: relative;
-  top: 6vh;
-  left: 3vw;
-  grid-row: 3/6;
-  height: 18vh;
-  grid-column: 6/11;
-  border-top-left-radius: 2vh;
-  border-bottom-left-radius: 2vh;
-  /*box-shadow: 0 0 0.1vh 0.3vh #1d94d9, 0 0 0.1vh 0.6vh #4c2bed;*/
-}
-
-
-.lunch-item{
-  position: relative;
-  left: 1vw;
-  display: flex;
-  flex-direction: column;
-
-}
-.lunch-item p{
-  opacity: 0.5;
-  font-weight: 500;
-  text-decoration: underline;
-}
-
-.lunch-item div{
-  position: relative;
-  font-size: 1.5vh;
-  font-weight: 600;
-  max-width: 11vw;
-
-
-
-}
-
-
-
-
-
-
-
 .lunch-overlay1{
   grid-row: 1/3;
   grid-column: 2/10;
@@ -192,18 +129,54 @@ export default {
 }
 
 .lunch-overlay1 div {
-  font-size: 4vh;
+  font-size: 4.5vh;
   color: white;
   text-align: center;
   font-weight: 500;
 }
 
-.lunch-overlay2{
-  grid-row: 6/12;
-  grid-column: 1/12;
-  border-top-left-radius: 2vh;
-  border-top-right-radius:2vh ;
+
+.lunch-box{
+  grid-row: 4/12;
+  grid-column: 1/11;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-around;
+  box-shadow: 0 0 0.1vh 0.7vh #1d94d9, 0 0 0.1vh 1.4vh #4c2bed;
+  border-top-right-radius: 6vh;
+  border-top-left-radius: 6vh;
 }
+
+.lunch-item{
+  padding-left: 1vw;
+}
+
+.lunch-item p{
+  font-weight: 300;
+  font-size: 1.3vh;
+}
+
+.lunch-item div{
+  position: relative;
+  font-size: 1.6vh;
+  font-weight: 600;
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
 
 
 
