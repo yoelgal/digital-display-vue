@@ -1,79 +1,81 @@
 <template>
   <div class="date-time">
     <div class="date-overlay1 border-blue">
-      <h1>{{ hours}}:{{ mins }}</h1>
+      <h1>{{ hours }}:{{ mins }}</h1>
       <div class="date-line1"></div>
       <h2>{{ day }} {{ date }} {{ month }}</h2>
-      <div class="date-clock-icon">
-
-      </div>
+      <div class="date-clock-icon"></div>
 
     </div>
     <div class="date-overlay2">
       <div class="quote-container">
         <div>Daily Quote 📔</div>
-        <div class="quote-text">“I have always known what I wanted, and that was beauty… in every form.”. – Joan Crawford.</div>
+        <div class="quote-text">“I have always known what I wanted, and that was beauty… in every form.”. – Joan
+          Crawford.
+        </div>
       </div>
     </div>
     <div class="date-overlay3 border-blue">
-      <div style="position: absolute;top: 1vh; opacity: 0.2;filter: blur(0.3vh); left: 3vw;width: 4vw;height: 6vh" class="ellipse"></div>
-      <div style="position: absolute;top: 20vh; opacity: 0.2;filter: blur(0.3vh); left: 12vw;width: 6vw;height: 9vh" class="ellipse"></div>
+      <div style="position: absolute;top: 1vh; opacity: 0.2;filter: blur(0.3vh); left: 3vw;width: 4vw;height: 6vh"
+           class="ellipse"></div>
+      <div style="position: absolute;top: 20vh; opacity: 0.2;filter: blur(0.3vh); left: 12vw;width: 6vw;height: 9vh"
+           class="ellipse"></div>
       <div class="ellipse"></div>
       <div class="int-times">
-        <div><span class="nyc">NYC</span>  00:00:00 </div>
-        <div><span class="syd">SYD</span>  00:00:00 </div>
-        <div><span class="tky">TKY</span>  00:00:00 </div>
+        <div><span class="nyc">NYC</span> 00:00:00</div>
+        <div><span class="syd">SYD</span> 00:00:00</div>
+        <div><span class="tky">TKY</span> 00:00:00</div>
       </div>
     </div>
   </div>
 
-<!--      <div class="int-times">-->
-<!--          <div><span class="nyc">NYC</span>  00:00:00 🗽</div>-->
-<!--          <div><span class="syd">SYD</span>  00:00:00 🦘</div>-->
-<!--          <div><span class="jpn">JPN</span>  00:00:00 🗾</div>-->
-<!--      </div>-->
-<!--     <div class="room-title">-->
-<!--        <h1>Room Uses 🗓</h1>-->
-<!--      </div>-->
-<!--        <div class="room-box">-->
-<!--          <div class="room-container1">-->
-<!--            <h1>IT 1:</h1>-->
-<!--            <h1>...</h1>-->
-<!--          </div>-->
-<!--          <div class="room-container2">-->
-<!--            <h1>IT 2:</h1>-->
-<!--            <h1>...</h1>-->
-<!--          </div>-->
-<!--          <div class="room-container3">-->
-<!--            <h1>IT 3:</h1>-->
-<!--            <h1>...</h1>-->
-<!--          </div>-->
-<!--          <div class="room-container4">-->
-<!--            <h1>IT 4:</h1>-->
-<!--            <h1>...</h1>-->
-<!--          </div>-->
-<!--        </div>-->
+  <!--      <div class="int-times">-->
+  <!--          <div><span class="nyc">NYC</span>  00:00:00 🗽</div>-->
+  <!--          <div><span class="syd">SYD</span>  00:00:00 🦘</div>-->
+  <!--          <div><span class="jpn">JPN</span>  00:00:00 🗾</div>-->
+  <!--      </div>-->
+  <!--     <div class="room-title">-->
+  <!--        <h1>Room Uses 🗓</h1>-->
+  <!--      </div>-->
+  <!--        <div class="room-box">-->
+  <!--          <div class="room-container1">-->
+  <!--            <h1>IT 1:</h1>-->
+  <!--            <h1>...</h1>-->
+  <!--          </div>-->
+  <!--          <div class="room-container2">-->
+  <!--            <h1>IT 2:</h1>-->
+  <!--            <h1>...</h1>-->
+  <!--          </div>-->
+  <!--          <div class="room-container3">-->
+  <!--            <h1>IT 3:</h1>-->
+  <!--            <h1>...</h1>-->
+  <!--          </div>-->
+  <!--          <div class="room-container4">-->
+  <!--            <h1>IT 4:</h1>-->
+  <!--            <h1>...</h1>-->
+  <!--          </div>-->
+  <!--        </div>-->
 
 
-<!--     <div class="quote">-->
-<!--       <div>Daily Quote </div>-->
-<!--       <i>filler text filler text here is some more filler text</i>-->
-<!--     </div>-->
+  <!--     <div class="quote">-->
+  <!--       <div>Daily Quote </div>-->
+  <!--       <i>filler text filler text here is some more filler text</i>-->
+  <!--     </div>-->
 
-<!--    </div>-->
-<!--    <div class="date-overlay3"></div>-->
-<!--    <div class="date-overlay4">-->
-<!--      <div class="int-times">-->
-<!--        <div>NYC: 00:00:00 🇺🇸</div>-->
-<!--        <div>SYD: 00:00:00 🇦🇺</div>-->
-<!--        <div>JPN: 00:00:00 🇯🇵</div>-->
-<!--      </div>-->
+  <!--    </div>-->
+  <!--    <div class="date-overlay3"></div>-->
+  <!--    <div class="date-overlay4">-->
+  <!--      <div class="int-times">-->
+  <!--        <div>NYC: 00:00:00 🇺🇸</div>-->
+  <!--        <div>SYD: 00:00:00 🇦🇺</div>-->
+  <!--        <div>JPN: 00:00:00 🇯🇵</div>-->
+  <!--      </div>-->
 
 
-<!--    <div class="date-overlay5 border-blue">-->
-<!--      <div class="date-ellipse1"></div>-->
-<!--&lt;!&ndash;      <quote></quote>&ndash;&gt;-->
-<!--    </div>-->
+  <!--    <div class="date-overlay5 border-blue">-->
+  <!--      <div class="date-ellipse1"></div>-->
+  <!--&lt;!&ndash;      <quote></quote>&ndash;&gt;-->
+  <!--    </div>-->
 
 </template>
 
@@ -127,14 +129,14 @@ export default {
 
 
 <style scoped>
-.border-blue{
+.border-blue {
   /*box-shadow: 0.2vh 0.2vh 2.5vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;*/
   box-shadow: 0vh 0vh 0.1vh 0.7vh #1d94d9, 0vh 0vh 0.1vh 1.5vh #4c2bed;
   /*box-shadow: 0.2vh 0.2vh 0.3vh 0.6vh #7dc5ef,  0.2vh 0.2vh 0.7vh 0.6vh #4587e4,  0.2vh 0.2vh 1vh 0.6vh #0861ef*/
 
 }
 
-.ellipse{
+.ellipse {
   background: linear-gradient(#1ccece, #2072d0);
   border-radius: 50%;
   width: 3vw;
@@ -194,7 +196,6 @@ export default {
 }
 
 
-
 .date-overlay1 h2 {
   font-size: 3vh;
   position: relative;
@@ -210,18 +211,18 @@ export default {
   background: #2a2828;
 }
 
-.quote-container{
+.quote-container {
   position: relative;
   top: 20vh;
   left: 1vw;
   width: 20vw;
 }
 
-.quote-container div:nth-child(1){
+.quote-container div:nth-child(1) {
 
 }
 
-.date-overlay3{
+.date-overlay3 {
   background: #2a2828;
   grid-row: 2/10;
   grid-column: 7/11;
@@ -235,7 +236,7 @@ export default {
 }
 
 
-.int-times{
+.int-times {
   position: relative;
   left: 3vw;
   top: -2vh;
@@ -243,15 +244,14 @@ export default {
   flex-direction: column;
 }
 
-.int-times div{
+.int-times div {
   font-size: 3.5vh;
   margin-top: 4vh;
 }
 
-.int-times span{
+.int-times span {
   font-size: 1.5vh;
 }
-
 
 
 /*.room-title h1 {*/
@@ -286,8 +286,6 @@ export default {
 /*}*/
 
 
-
-
 /*.room-container2 {*/
 /*  width: 5vw;*/
 /*  height: 13vh;*/
@@ -312,13 +310,14 @@ export default {
 /*  text-align: center;*/
 /*}*/
 
-.quote{
+.quote {
   position: relative;
   left: 24.5vw;
   bottom: 47vh;
   width: 11vw;
 }
-.quote div{
+
+.quote div {
   font-size: 3vh;
   width: 13vw;
   position: relative;
@@ -326,7 +325,7 @@ export default {
   text-decoration: underline;
 }
 
-.quote i{
+.quote i {
   position: relative;
   left: 1vw;
   font-size: 1.4vh;
@@ -334,10 +333,9 @@ export default {
 }
 
 
-
-.date-overlay4{
+.date-overlay4 {
   background: #2a2828;
-  box-shadow: 0vh 0vh 0.1vh 0.7vh #2196f3,0vh 0vh 0.1vh 1.6vh #4c2bed;
+  box-shadow: 0vh 0vh 0.1vh 0.7vh #2196f3, 0vh 0vh 0.1vh 1.6vh #4c2bed;
   grid-row: 4/11;
   position: relative;
   top: 8vh;
