@@ -1,6 +1,6 @@
 <template>
   <div class="weather">
-    <div class="weather-overlay1 border-blue">
+    <div class="weather-overlay1 border-blue-shadow">
       <div class="weather-location">Mill Hill Weather
       </div>
       <div class="w-temperature">
@@ -21,13 +21,9 @@
       <div class="wind-speed">
         <p><span style="font-weight: 600;">{{ polledData.wind.kmh }}</span><span> Km/Hr</span></p>
       </div>
-      <div class="weather-time">
-        <p>⏰ Current hour:</p>
-        <p style="font-weight: 400">• {{ polledData.hour }}</p>
-      </div>
 
     </div>
-    <div class="weather-overlay2 border-blue">
+    <div class="weather-overlay2 border-blue-shadow">
       <div class="sunrise">
         <img src='../assets/iconmonstr-weather-107-240.png'>
         <h4>{{ polledData.sunrise }}</h4>
@@ -182,6 +178,11 @@ export default {
 
 .border-red{
   box-shadow: 0.2vh 0.2vh 1vh 0.5vh #ff7420, 0.5vh 0.3vh 1vh 1vh #ed2b2b;
+}
+
+.border-blue-shadow{
+  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed, 0vh 0vh 3vh 2vh #1e1d1d;
+
 }
 
 .weather {
@@ -419,7 +420,7 @@ export default {
 
 .feels-like-text {
   grid-row: 9/14;
-  grid-column: 7/9;
+  grid-column: 6/8;
   position: relative;
   left: 0.5vw;
   border-bottom: 0.1vh solid white;
@@ -437,7 +438,7 @@ export default {
 
 .feels-like-value {
   grid-row: 14/19;
-  grid-column: 7/9;
+  grid-column: 6/8;
   position: relative;
   left: 0.5vw;
   font-size: 2vh;
@@ -456,21 +457,24 @@ export default {
   grid-column: 13/16;
   position: relative;
   right: 2vh;
+  bottom: 1vh;
 }
 
 .w-wind-icon img {
-  width: 3vw;
-  height: 5vh;
+  width: 5vw;
+  height: 7vh;
 }
 
 .w-wind-gust {
-  grid-column: 16/21;
+  grid-column: 16/30;
   position: relative;
-  top: 0.5vh;
+  top: 6vh;
   bottom: 0.2vh;
-  right: 1.3vw;
+  right: 4.6vw;
   grid-row: 3/6;
   font-weight: 100;
+
+
 
 
 
@@ -478,22 +482,40 @@ export default {
 
 .w-wind-gust p {
   font-weight: 400;
-  font-size: 1.4vh;
-
-
+  font-size: 2vh;
 }
+
+.w-wind-gust p::before{
+  content: 'Wind Gust';
+  position: absolute;
+  left: 5.5vw;
+  font-size: 1.3vh;
+  width: 10vw;
+ opacity: 0.5;
+}
+
+.wind-speed p::before{
+  content: 'Wind Speed';
+  position: absolute;
+  left: 5.5vw;
+  font-size: 1vh;
+  width: 10vw;
+  opacity: 0.5;
+}
+
 
 .wind-speed {
   position: relative;
-  top: 0.8vh;
-  right: 2.2vh;
+  top: 7vh;
+  right: 8vh;
   grid-row: 6/9;
   grid-column: 16/20;
-  font-size: 1.4vh;
+  font-size: 2vh;
   border-top: 0.2vh solid white;
 }
 .wind-speed p {
   padding-top: 0.5vh;
+  width: 20vw;
 }
 
 

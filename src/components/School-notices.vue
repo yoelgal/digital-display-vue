@@ -1,9 +1,9 @@
 <template>
   <div class="school-notices">
-    <div class="school-overlay1 border-blue">
+    <div class="school-overlay1 border-blue-shadow">
       <div>🏫 School Notices</div>
     </div>
-    <div class="school-overlay2 border-blue">
+    <div class="school-overlay2 border-blue-shadow">
       <ul>
         <li>2nd XI football team enjoy another big win and continue their unbeaten streak!</li>
       </ul>
@@ -55,7 +55,10 @@ export default {
 .border-blue{
   /*box-shadow: 0.2vh 0.2vh 2.5vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;*/
   box-shadow: 0 0 0.1vh 0.5vh #1d94d9, 0 0 0.1vh 1vh #4c2bed;
+}
 
+.border-blue-shadow{
+  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed, 0vh 0vh 3vh 2vh #1e1d1d;
 
 }
 
@@ -115,9 +118,8 @@ export default {
 
 .school-overlay2{
   background: #2a2828;
-  border-top-right-radius: 2vh;
   border-bottom-right-radius: 2vh;
-  grid-row: 2/10;
+  grid-row: 1/9;
   z-index:-1;
   position: relative;
   bottom: 0.5vh;
@@ -127,7 +129,7 @@ export default {
 
 .school-overlay2 ul{
   position: relative;
-  top: 6.5vh;
+  top: 10vh;
   font-weight: 500;
   line-height: 2.5vh;
   left: 1vw;
