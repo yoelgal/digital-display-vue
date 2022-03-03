@@ -5,18 +5,18 @@
     </div>
     <div class="school-overlay2 border-blue-shadow">
       <ul>
-        <li>There are no notices at this time, come back later!</li>
+        <li>Nothing to see here!</li>
       </ul>
       <div class="school-ellipse1"></div>
     </div>
     <div class="school-overlay3 border-blue">
       <ul>
-        <li>There are no notices at this time, come back later!</li>
+        <li>Nothing to see here!</li>
       </ul>
     </div>
     <div class="school-overlay4 border-blue">
       <ul>
-        <li>There are no notices at this time, come back later!</li>
+        <li>Nothing to see here!</li>
       </ul>
       <div class="school-ellipse2"></div>
     </div>

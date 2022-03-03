@@ -5,24 +5,25 @@
         <div class="ellipse1"></div>
         <div>Sport Fixtures 🏅</div>
         <div class="sport"><span
-            style="position:relative;top: 5vh;overflow: hidden;right:0vw ">{{ fixtures[position].emoji }}</span>️
+            style="position:relative;top: 5vh;overflow: hidden;right:0vw ">{{ fixtures[fixturePos].emoji }}</span>️
         </div>
         <div class="team"><span style="opacity: 0.5;font-weight: 200">Team: </span><span
-            style="display: block;font-size: 2.3vh">{{ fixtures[position].team }}</span></div>
+            style="display: block;font-size: 2.3vh">{{ fixtures[fixturePos].team }}</span></div>
         <div class="line"></div>
-        <div class="date">{{ fixtures[position].dateFormat }}<span style="position: relative;left: 3vw">{{ fixtures[position].sport }}<span
+        <div class="date">{{ fixtures[fixturePos].dateFormat }}<span style="position: relative;left: 3vw">{{ fixtures[fixturePos].sport }}<span
             style="font-size:2vh;font-weight: 800; ">:</span></span></div>
         <div class="opposition"><span style="opacity: 0.5;font-weight: 200">Opposition: </span><span
-            style="display: block;font-size:2.3vh;width: 21vw;">{{ fixtures[position].opponent }}</span></div>
+            style="display: block;font-size:2.3vh;width: 21vw;">{{ fixtures[fixturePos].opponent }}</span></div>
       </div>
     </div>
     <div class="fixtures-overlay2 border-blue">
       <div class="key-dates-container">
         <div class="ellipse2"></div>
         <div>Key Dates 🗓</div>
-        <div class="key-dates-date">Wed 2 Mar</div>
+<!--        <div class="key-dates-date">Wed 2 Mar</div>-->
+        <div class="key-dates-date">{{ dates[datesPos].dateArr[0] }} {{ dates[datesPos].dateArr[2] }} {{ dates[datesPos].dateArr[1] }}</div>
         <div class="key-date-info">
-          sikjdks sdkjsd dskd x wikdmksdd kmskw xkwd w jsokwqsw d
+          {{ dates[datesPos].title }}
         </div>
       </div>
 
@@ -39,17 +40,21 @@ export default {
   data() {
     return {
       polling: null,
-      position: 0,
-      fixtures: []
+      fixturePos: 0,
+      fixtures: [],
+      datesPos:0,
+      dates: []
     }
   },
   methods: {
     pullData() {
       axios.get('https://fathomless-crag-41517.herokuapp.com/fixtures').then(response => (this.fixtures = response.data))
+      axios.get('https://fathomless-crag-41517.herokuapp.com/dates').then(response => (this.dates = response.data))
     },
     getPos() {
       this.polling = setInterval(() => {
-        this.position >= this.fixtures.length ? this.position = 0 : this.position += 1
+        this.fixturePos >= this.fixtures.length ? this.fixturePos = 0 : this.fixturePos += 1
+        this.datesPos >= this.fixtures.length ? this.datesPos = 0 : this.datesPos += 1
       }, 4000)
     }
   },
