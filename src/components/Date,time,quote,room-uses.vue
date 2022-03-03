@@ -12,7 +12,7 @@
     <div class="date-overlay2">
       <div class="quote-container">
         <div>Daily Quote 📔</div>
-        <i class="quote-text">{{quote.text}} - {{quote.author}}</i>
+        <i class="quote-text">{{quote.text}}</i>
       </div>
     </div>
     <div class="date-overlay3 border-blue">
@@ -104,7 +104,6 @@ export default {
       month: "month...",
       quote: {
         text: 'Text...',
-        author: 'Author...'
       }
     }
   },
