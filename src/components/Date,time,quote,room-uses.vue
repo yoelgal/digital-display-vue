@@ -112,9 +112,9 @@ export default {
         pollData() {
           this.polling = setInterval(() => {
             const date = new Date()
-            this.nycHr = date.toLocaleTimeString('en-US', {timeZone: 'America/New_York'}).split(':')[0].padStart(2, '0')
-            this.sydHr = date.toLocaleTimeString('en-US', {timeZone: 'Australia/Sydney'}).split(':')[0].padStart(2, '0')
-            this.tokHr = date.toLocaleTimeString('en-US', {timeZone: 'Asia/Tokyo'}).split(':')[0].padStart(2, '0')
+            this.nycHr = date.toLocaleTimeString('en-GB', {timeZone: 'America/New_York'}).split(':')[0].padStart(2, '0')
+            this.sydHr = date.toLocaleTimeString('en-GB', {timeZone: 'Australia/Sydney'}).split(':')[0].padStart(2, '0')
+            this.tokHr = date.toLocaleTimeString('en-GB', {timeZone: 'Asia/Tokyo'}).split(':')[0].padStart(2, '0')
             //hours
             this.localHr = date.getHours().toString().padStart(2, '0')
             this.mins = date.getMinutes().toString().padStart(2, '0')

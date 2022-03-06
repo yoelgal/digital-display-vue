@@ -8,19 +8,18 @@
             style="position:relative;top: 5vh;overflow: hidden;right:0vw ">{{ fixtures[fixturePos].emoji }}</span>️
         </div>
         <div class="team"><span style="opacity: 0.5;font-weight: 200">Team: </span><span
-            style="display: block;font-size: 2.3vh">{{ fixtures[fixturePos].team }}</span></div>
+            style="display: block; font-size: 2.3vh">{{ fixtures[fixturePos].team }}</span></div>
         <div class="line"></div>
         <div class="date">{{ fixtures[fixturePos].dateFormat }}<span style="position: relative;left: 3vw">{{ fixtures[fixturePos].sport }}<span
             style="font-size:2vh;font-weight: 800; ">:</span></span></div>
         <div class="opposition"><span style="opacity: 0.5;font-weight: 200">Opposition: </span><span
-            style="display: block;font-size:2.3vh;width: 21vw;">{{ fixtures[fixturePos].opponent }}</span></div>
+            style="display: block;width: 21vw;" :class="fixtures[fixturePos].opponent.length > 25 ? 'small-team' : 'reg-team'">{{ fixtures[fixturePos].opponent }}</span></div>
       </div>
     </div>
     <div class="fixtures-overlay2 border-blue">
       <div class="key-dates-container">
         <div class="ellipse2"></div>
         <div>Key Dates 🗓</div>
-<!--        <div class="key-dates-date">Wed 2 Mar</div>-->
         <div class="key-dates-date">{{ dates[datesPos].dateArr[0] }} {{ dates[datesPos].dateArr[2] }} {{ dates[datesPos].dateArr[1] }}</div>
         <div class="key-date-info">
           {{ dates[datesPos].title }}
@@ -72,6 +71,13 @@ export default {
 
 <style scoped>
 
+.small-team{
+  font-size: 1.7vh;
+}
+
+.reg-team{
+  font-size: 2.3vh;
+}
 
 .border-blue {
   /*box-shadow: 0.2vh 0.2vh 2.5vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;*/
