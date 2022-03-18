@@ -15,9 +15,6 @@
         <!--        <img src='../assets/wind1.png'>-->
         <img src='../assets/wind2.png'>
       </div>
-      <div class="w-wind-gust">
-        <p><span style="font-weight: 600;">{{ polledData.wind.ms }}</span><span> m/s</span></p>
-      </div>
       <div class="wind-speed">
         <p><span style="font-weight: 600;">{{ polledData.wind.kmh }}</span><span> Km/Hr</span></p>
       </div>
@@ -486,22 +483,13 @@ export default {
   font-size: 2vh;
 }
 
-.w-wind-gust p::before{
-  content: 'Wind Gust';
-  position: absolute;
-  left: 5.5vw;
-  font-size: 1.3vh;
-  width: 10vw;
- opacity: 0.5;
-}
-
 .wind-speed p::before{
   content: 'Wind Speed';
   position: absolute;
-  left: 5.5vw;
-  font-size: 1vh;
-  width: 10vw;
-  opacity: 0.5;
+  bottom: 2.2vh;
+  font-size: 2vh;
+  width: 7vw;
+  border-bottom: 0.2vh solid white;
 }
 
 
@@ -512,7 +500,7 @@ export default {
   grid-row: 6/9;
   grid-column: 16/20;
   font-size: 2vh;
-  border-top: 0.2vh solid white;
+
 }
 .wind-speed p {
   padding-top: 0.5vh;

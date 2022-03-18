@@ -18,12 +18,12 @@
     <div class="date-overlay3 border-blue">
       <div style="position: absolute;top: 1vh; opacity: 0.2;filter: blur(0.3vh); left: 3vw;width: 4vw;height: 6vh"
            class="ellipse"></div>
-      <div style="position: absolute;top: 20vh; opacity: 0.2;filter: blur(0.3vh); left: 12vw;width: 6vw;height: 9vh"
+      <div style="position: absolute;top: 20vh; opacity: 0.2;filter: blur(0.3vh); left: 10vw;width: 6vw;height: 9vh"
            class="ellipse"></div>
       <div class="int-times">
-        <div><span class="nyc">NYC</span> {{ nycHr }}:{{ mins }} 🇺🇸</div>
-        <div><span class="syd">SYD</span> {{ sydHr }}:{{ mins }} 🇦🇺</div>
-        <div><span class="tky">TKY</span> {{ tokHr }}:{{ mins }} 🇯🇵</div>
+        <div><span class="nyc">NYC</span> {{ nycHr }}:{{ mins }} </div>
+        <div><span class="syd">SYD</span> {{ sydHr }}:{{ mins }} </div>
+        <div><span class="tky">TKY</span> {{ tokHr }}:{{ mins }} </div>
       </div>
     </div>
   </div>
@@ -146,6 +146,7 @@ export default {
 
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap');
 .border-blue {
   /*box-shadow: 0.2vh 0.2vh 2.5vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;*/
   box-shadow: 0vh 0vh 0.1vh 0.7vh #1d94d9, 0vh 0vh 0.1vh 1.5vh #4c2bed;
@@ -175,6 +176,7 @@ export default {
   grid-template-rows: repeat(10, 1fr);
   overflow: hidden;
   color: white;
+  font-family: "Poppins", sans-serif;
 }
 
 
@@ -269,18 +271,21 @@ export default {
 .int-times {
   position: relative;
   left: 3vw;
-  top: -2vh;
+  top: 1vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  height: 25vh;
+  font-family: 'Red Hat Mono', monospace;
 }
 
 .int-times div {
   font-size: 3.5vh;
-  margin-top: 4vh;
 }
 
 .int-times span {
   font-size: 1.5vh;
+
 }
 
 

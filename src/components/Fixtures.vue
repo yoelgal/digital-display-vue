@@ -117,6 +117,7 @@ export default {
   grid-template-rows: repeat(12, 1fr);
   overflow: hidden;
   color: white;
+  font-family: "Poppins", sans-serif;
 }
 
 /*which sport,  date, team, opponent*/
@@ -125,7 +126,7 @@ export default {
   grid-column: 1/8;
   border-radius: 2vh;
   position: relative;
-  left: 1vw;
+  left: -0.2vw;
   overflow: hidden;
   width: 24vw;
 

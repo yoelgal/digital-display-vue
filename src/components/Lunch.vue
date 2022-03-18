@@ -6,7 +6,7 @@ times for remove, fifth form,fourth form in main -->
   <div class="Lunch">
     <div class="lunch-bg">
       <div class="lunch-overlay1 border-blue-shadow">
-        <div>Lunch Menu 🍽</div>
+        <div>Lunch Menu <br>🍽</div>
       </div>
       <div class="lunch-box">
         <div class="lunch-item">
@@ -31,6 +31,11 @@ times for remove, fifth form,fourth form in main -->
           <div>Currently Unavailable</div>
         </div>
       </div>
+      <div class="lunch-deco-1 border-blue"></div>
+      <div class="lunch-deco-2 border-blue"></div>
+      <div class="ellipse1"></div>
+      <div class="ellipse2"></div>
+
     </div>
   </div>
 </template>
@@ -115,6 +120,7 @@ export default {
   grid-template-rows: repeat(10, 1fr);
   grid-template-columns: repeat(10, 1fr);
   color: white;
+  font-family: "Poppins", sans-serif;
 
 }
 .lunch-bg{
@@ -142,20 +148,22 @@ export default {
 
 
 .lunch-box{
-  grid-row: 4/12;
-  grid-column: 1/11;
+  grid-row: 3/12;
+  grid-column: 1/10;
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: left;
-  justify-content: space-around;
-  box-shadow: 0 0 0.1vh 0.7vh #1d94d9, 0 0 0.1vh 1.4vh #4c2bed;
+  align-items: center;
+  /*box-shadow: 0 0 0.1vh 0.7vh #1d94d9, 0 0 0.1vh 1.4vh #4c2bed;*/
   border-top-right-radius: 6vh;
   border-top-left-radius: 6vh;
+  position: relative;
+  top: 1vh;
 }
 
 .lunch-item{
   padding-left: 1vw;
+  margin-top: 3vh;
 }
 
 .lunch-item p{
@@ -165,17 +173,29 @@ export default {
 
 .lunch-item div{
   position: relative;
-  font-size: 1.6vh;
+  font-size: 2vh;
   font-weight: 600;
-
-
-
-
-
 }
 
+.lunch-deco-1{
+  position: absolute;
+  top: 16vh;
+  height: 50vh;
+  width: 1vw;
+  border-top-right-radius: 50vh;
+  border-bottom-right-radius: 50vh;
 
+}
+.lunch-deco-2{
+  position: absolute;
+  top: 16vh;
+  height: 50vh;
+  left: 20.5vw;
+  width: 1vw;
+  border-top-left-radius: 50vh;
+  border-bottom-left-radius: 50vh;
 
+}
 
 
 

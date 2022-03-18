@@ -123,6 +123,7 @@ export default {
   grid-row: 1/10;
   overflow: hidden;
   color: white;
+  font-family: "Poppins", sans-serif;
 }
 
 .news-grid {

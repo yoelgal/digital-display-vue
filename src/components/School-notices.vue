@@ -70,6 +70,7 @@ export default {
   grid-template-rows:repeat(10, 1fr);
   grid-template-columns:repeat(10, 1fr);
   color: white;
+  font-family: "Poppins", sans-serif;
 }
 
 .school-notices li {
@@ -92,6 +93,8 @@ export default {
   position: relative;
   left: 13.5vw;
   top: 12.5vh;
+  filter: blur(0.3vh);
+  opacity: 0.5;
 
 
 }
@@ -104,6 +107,9 @@ export default {
   left: 22vw;
   top: 4.5vh;
   position: relative;
+  filter: blur(0.3vh);
+  opacity: 0.5;
+
 
 
 }
