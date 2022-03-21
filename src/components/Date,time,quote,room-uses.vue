@@ -12,7 +12,7 @@
     <div class="date-overlay2">
       <div class="quote-container">
         <div>Daily Quote 📔</div>
-        <i class="quote-text">{{quote.text}}</i>
+        <i class="quote-text">{{quote}}</i>
       </div>
     </div>
     <div class="date-overlay3 border-blue">
@@ -128,7 +128,7 @@ export default {
         pullData() {
           axios
               .get('https://fathomless-crag-41517.herokuapp.com/quotes')
-              .then(response => (this.quote = response.data.cs))
+              .then(response => (this.quote = response.data[0].text))
         }
       },
   mounted() {

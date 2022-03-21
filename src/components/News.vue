@@ -56,14 +56,14 @@ export default {
   methods: {
     pollData() {
       this.polling = setInterval(async () => {
-        const news = (await (await fetch('https://fathomless-crag-41517.herokuapp.com/news')).json());
+        const news = (await (await fetch('https://fathomless-crag-41517.herokuapp.com/news-db')).json());
         this.polledData = news
         this.startNum >= this.polledData.length ? this.startNum = 0 : this.startNum+=1
       }, 10000)
     },
     pullData() {
       axios
-          .get('https://fathomless-crag-41517.herokuapp.com/news')
+          .get('https://fathomless-crag-41517.herokuapp.com/news-db')
           .then(response => (this.polledData = response.data))
     }
   },
