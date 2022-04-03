@@ -5,15 +5,15 @@
         <div class="ellipse1"></div>
         <div>Sport Fixtures 🏅</div>
         <div class="sport"><span
-            style="position:relative;top: 5vh;overflow: hidden;right:0vw ">{{ fixtures[fixturePos].emoji }}</span>️
+            style="position:relative;top: 5vh;overflow: hidden;right:0vw ">{{ fixtures[fixturePos].emoji || ''}}</span>️
         </div>
         <div class="team"><span style="opacity: 0.5;font-weight: 200">Team: </span><span
-            style="display: block; font-size: 2.3vh">{{ fixtures[fixturePos].team }}</span></div>
+            style="display: block; font-size: 2.3vh">{{ fixtures[fixturePos].team || 'No Current Upcoming Fixtures'}}</span></div>
         <div class="line"></div>
-        <div class="date">{{ fixtures[fixturePos].dateFormat }}<span style="position: relative;left: 3vw">{{ fixtures[fixturePos].sport }}<span
+        <div class="date">{{ fixtures[fixturePos].dateFormat || ''}}<span style="position: relative;left: 3vw">{{ fixtures[fixturePos].sport || ''}}<span
             style="font-size:2vh;font-weight: 800; ">:</span></span></div>
         <div class="opposition"><span style="opacity: 0.5;font-weight: 200">Opposition: </span><span
-            style="display: block;width: 21vw;" :class="fixtures[fixturePos].opponent.length > 25 ? 'small-team' : 'reg-team'">{{ fixtures[fixturePos].opponent }}</span></div>
+            style="display: block;width: 21vw;" :class="fixtures[fixturePos].opponent.length > 25 ? 'small-team' : 'reg-team'">{{ fixtures[fixturePos].opponent|| '' }}</span></div>
       </div>
     </div>
     <div class="fixtures-overlay2 border-blue">
@@ -40,7 +40,14 @@ export default {
     return {
       polling: null,
       fixturePos: 0,
-      fixtures: [],
+      fixtures: [{
+        emoji: '',
+        team: 'No Current Upcoming Fixtures',
+        dateFormat: '',
+        sport:'',
+        opponent:''
+
+      }],
       datesPos:0,
       dates: []
     }
