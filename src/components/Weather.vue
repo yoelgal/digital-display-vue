@@ -10,14 +10,18 @@
       <div class="feels-like-text">
         <div>Feels Like:</div>
       </div>
-      <div class="feels-like-value">{{ polledData.current.feelsLike }}°C</div>
+      <div class="feels-like-value">{{ polledData.current.feelsLike }}<span class = 'temp-blue'>°</span>C</div>
       <div class="w-wind-icon">
         <!--        <img src='../assets/wind1.png'>-->
         <img src='../assets/wind2.png'>
       </div>
+<!--      <div class="wind-speed">-->
+<!--        <p><span style="font-weight: 600;">{{ polledData.wind.kmh }}</span><span> Km/Hr</span></p>-->
+<!--      </div>-->
       <div class="wind-speed">
-        <p><span style="font-weight: 600;">{{ polledData.wind.kmh }}</span><span> Km/Hr</span></p>
+          <p>Wind Speed:</p>
       </div>
+      <div class="wind-speed-value">{{ polledData.wind.kmh }}<span style="font-size: 1.5vh"> Km<span class="temp-blue">/</span>Hr</span></div>
 
     </div>
     <div class="weather-overlay2 border-blue-shadow">
@@ -194,7 +198,7 @@ export default {
 }
 
 .weather-overlay1 {
-  width: 70%;
+  width: 65%;
   height: 30%;
   background: #2a2828;
   /*box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #f18f3f, 0.5vh 0.3vh 0.1vh 1vh #d71f56;*/
@@ -211,7 +215,7 @@ export default {
 .weather-overlay2 {
   width: 11vw;
   background: #2a2828;
-  height: 10vh;
+  height: 13vh;
   position: relative;
   bottom: 16vh;
   left: 23vw;
@@ -240,13 +244,19 @@ export default {
 }
 
 .sunrise img {
-  width: 3vw;
-  height: 5vh;
-  float: left;
+  width: 4vw;
+  height: 6vh;
+  position: relative;
+  right: 1vw;
+  top: 1.75vh;
 }
 
 .sunrise h4 {
   font-weight: 200;
+  font-size: 2.5vh;
+  position: relative;
+  top: 2vh;
+  right: 1vw;
 }
 
 .sunset {
@@ -265,44 +275,31 @@ export default {
 }
 
 .sunset img {
-  width: 3vw;
-  height: 5vh;
+  width: 4vw;
+  height: 6vh;
+  position: relative;
+  right: 0.5vw;
+  top: 1.75vh;
 
 }
 
 .sunset h4 {
   font-weight: 200;
+  font-size: 2.5vh;
+  position: relative;
+  top: 2vh;
+  right: 0.5vw;
 }
 
-.rain-chance {
-  width: 8.5vw;
-  height: 8vh;
-  position: relative;
-  right: 7vw;
-  top: 1vh;
-}
 
-.rain-chance img {
-  position: relative;
-  top: 1vh;
-  float: left;
-  width: 5vw;
-  height: 5vh;
-}
 
-.rain-chance h1 {
-  padding-top: 1vh;
-  position: relative;
-  left: 0.5vw;
-  font-weight: 200;
-}
 
 
 .weather-overlay3 {
   width: 100%;
   height: 80%;
   position: relative;
-  bottom: 20vh;
+  bottom: 22vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -391,8 +388,8 @@ export default {
 
 .weather-location {
   grid-row: 3/8;
-  grid-column: 2/11;
-  font-size: 2.2vh;
+  grid-column: 2/13;
+  font-size: 2.7vh;
   /*border: 2px solid red;*/
 }
 
@@ -418,104 +415,60 @@ export default {
 
 .feels-like-text {
   grid-row: 9/14;
-  grid-column: 6/8;
-  position: relative;
-  left: 0.5vw;
-  border-bottom: 0.1vh solid white;
+  grid-column: 9/13;
+  border-bottom: 0.2vh solid white;
   font-size: 1.5vh;
   font-weight: 500;
+  position: relative;
+  right: 0.5vw;
 }
 
 .feels-like-text div {
   position: relative;
-  top: 1vh;
+  top: 0.8vh;
   width: 10vw;
-  font-size: 1.5vh;
+
 }
-
-
 .feels-like-value {
-  grid-row: 14/19;
-  grid-column: 6/8;
+  grid-row: 14/18;
+  grid-column: 9/13;
+  font-size: 2.5vh;
   position: relative;
-  left: 0.5vw;
-  font-size: 2vh;
-
+  right: 0.5vw;
 }
 
-
-.w-degrees img {
-  width: 1.5vw;
-  height: 2vh;
-}
-
-
-.w-wind-icon {
-  grid-row: 3/11;
-  grid-column: 13/16;
-  position: relative;
-  right: 2vh;
-  bottom: 1vh;
-}
-
-.w-wind-icon img {
-  width: 5vw;
-  height: 7vh;
-}
-
-.w-wind-gust {
-  grid-column: 16/30;
-  position: relative;
-  top: 6vh;
-  bottom: 0.2vh;
-  right: 4.6vw;
-  grid-row: 3/6;
-  font-weight: 100;
-
-
-
-
-
-}
-
-.w-wind-gust p {
-  font-weight: 400;
-  font-size: 2vh;
-}
-
-.wind-speed p::before{
-  content: 'Wind Speed';
-  position: absolute;
-  bottom: 2.2vh;
-  font-size: 2vh;
-  width: 7vw;
+.wind-speed{
+  grid-row: 9/14;
+  grid-column: 15/20;
   border-bottom: 0.2vh solid white;
-}
-
-
-.wind-speed {
-  position: relative;
-  top: 7vh;
-  right: 8vh;
-  grid-row: 6/9;
-  grid-column: 16/20;
-  font-size: 2vh;
-
-}
-.wind-speed p {
-  padding-top: 0.5vh;
-  width: 20vw;
-}
-
-
-.weather-time {
-  grid-row: 12/21;
-  grid-column: 13/20;
+  font-size: 1.5vh;
   font-weight: 400;
   position: relative;
   right: 0.5vw;
-  font-size: 1.6vh;
 }
+
+.wind-speed p{
+  position: relative;
+  top: 0.8vh;
+  width: 10vw;
+}
+
+.wind-speed-value{
+  grid-row: 14/18;
+  grid-column: 15/20;
+  font-size: 2.5vh;
+  position: relative;
+  right: 0.5vw;
+}
+
+.w-wind-icon img{
+  position: absolute;
+  width: 5vw;
+  height: 7vh;
+  left: 15vw;
+}
+
+
 
 
 
