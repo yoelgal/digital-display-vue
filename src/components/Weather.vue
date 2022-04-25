@@ -388,7 +388,7 @@ export default {
 
 .weather-location {
   grid-row: 3/8;
-  grid-column: 2/13;
+  grid-column: 2/16;
   font-size: 2.7vh;
   /*border: 2px solid red;*/
 }
