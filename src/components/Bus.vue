@@ -1,6 +1,6 @@
 <template>
   <div class="bus">
-    <div class="bus-overlay border-blue-shadow"><div>Bus Times 🚌</div>
+    <div class="bus-overlay "><div>Bus Times 🚌</div>
     </div>
     <div class="bus-overlay2">
 
