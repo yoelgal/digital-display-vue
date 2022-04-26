@@ -149,13 +149,13 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap');
 .border-blue {
   /*box-shadow: 0.2vh 0.2vh 2.5vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed;*/
-  box-shadow: 0vh 0vh 0.1vh 0.7vh #1d94d9, 0vh 0vh 0.1vh 1.5vh #4c2bed;
+  box-shadow: 0vh 0vh 0.1vh 0.5vh #1d94d9, 0vh 0vh 0.1vh 1vh #4c2bed;
   /*box-shadow: 0.2vh 0.2vh 0.3vh 0.6vh #7dc5ef,  0.2vh 0.2vh 0.7vh 0.6vh #4587e4,  0.2vh 0.2vh 1vh 0.6vh #0861ef*/
 
 }
 
 .border-blue-shadow {
-  box-shadow: 0.2vh 0.2vh 0.1vh 0.5vh #1d94d9, 0.5vh 0.3vh 0.1vh 1vh #4c2bed, 0vh 0vh 3vh 2vh #1e1d1d;
+  box-shadow: 0.2vh 0.2vh 0.1vh 0.2vh #1d94d9, 0.5vh 0.3vh 0.1vh 0.4vh #4c2bed, 0vh 0vh 3vh 2vh #1e1d1d;
 
 }
 
