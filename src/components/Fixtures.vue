@@ -1,6 +1,6 @@
 <template>
   <div class="fixtures">
-    <div class="fixtures-overlay1 ">
+    <div class="fixtures-overlay1 border-blue">
       <div class="fixture-container">
         <div class="ellipse1"></div>
         <div>Sport Fixtures 🏅</div>
