@@ -26,13 +26,13 @@ export default {
   methods: {
     pollData() {
       this.polling = setInterval(async () => {
-        const quote = (await (await fetch('https://fathomless-crag-41517.herokuapp.com/quotes')).json()).cs;
+        const quote = (await (await fetch('https://mhs-main.herokuapp.com/quotes')).json()).cs;
         this.polledData = quote
       }, 86400000)
     },
     pullData() {
       axios
-          .get('https://fathomless-crag-41517.herokuapp.com/quotes')
+          .get('https://mhs-main.herokuapp.com/quotes')
           .then(response => (this.polledData = response.data.cs))
     }
   },

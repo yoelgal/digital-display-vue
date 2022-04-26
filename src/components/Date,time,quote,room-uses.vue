@@ -127,7 +127,7 @@ export default {
         },
         pullData() {
           axios
-              .get('https://fathomless-crag-41517.herokuapp.com/quotes')
+              .get('https://mhs-main.herokuapp.com/quotes')
               .then(response => (this.quote = response.data[0].text))
         }
       },

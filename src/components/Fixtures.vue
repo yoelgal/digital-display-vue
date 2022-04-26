@@ -54,8 +54,8 @@ export default {
   },
   methods: {
     pullData() {
-      axios.get('https://fathomless-crag-41517.herokuapp.com/fixtures').then(response => (this.fixtures = response.data))
-      axios.get('https://fathomless-crag-41517.herokuapp.com/dates').then(response => (this.dates = response.data))
+      axios.get('https://mhs-main.herokuapp.com/fixtures').then(response => (this.fixtures = response.data))
+      axios.get('https://mhs-main.herokuapp.com/dates').then(response => (this.dates = response.data))
     },
     getPos() {
       this.polling = setInterval(() => {

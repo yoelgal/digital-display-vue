@@ -61,7 +61,7 @@ export default {
     pollData() {
       this.polling = setInterval(async () => {
         const day = new dayjs().day()
-        const menu = (await (await fetch('https://fathomless-crag-41517.herokuapp.com/lunch-menu')).json());
+        const menu = (await (await fetch('https://mhs-main.herokuapp.com/lunch-menu')).json());
         this.polledData = {
           soup: menu.lunchMenu.mainLunch[menu.week - 1][day].soup,
           main: menu.lunchMenu.mainLunch[menu.week - 1][day].main,
@@ -74,7 +74,7 @@ export default {
     pullData() {
       const day = new dayjs().day()
       axios
-          .get('https://fathomless-crag-41517.herokuapp.com/lunch-menu')
+          .get('https://mhs-main.herokuapp.com/lunch-menu')
           .then(response => (this.polledData = {
             soup: response.data.lunchMenu.mainLunch[response.data.week - 1][day].soup,
             main: response.data.lunchMenu.mainLunch[response.data.week - 1][day].main,
